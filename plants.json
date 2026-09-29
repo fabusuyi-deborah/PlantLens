@@ -1,0 +1,1314 @@
+[
+  {
+    "id": "scent-leaf",
+    "name_common": "Scent leaf",
+    "name_scientific": "Ocimum gratissimum",
+    "names_local": {
+      "yoruba": "Efinrin",
+      "igbo": "Nchanwu",
+      "hausa": "Daidoya"
+    },
+    "category": [
+      "medicinal",
+      "culinary"
+    ],
+    "description": "An aromatic herb widely grown in home gardens across Nigeria, valued both as a culinary spice (in pepper soup, native soups, and stews) and as a traditional remedy, commonly nicknamed \"fever leaf.\" Its essential oil composition varies by chemotype: some plants are dominated by eugenol and thymol, others by geraniol, which explains variation in reported phytochemical profiles across studies.",
+    "traditional_uses": [
+      {
+        "use": "Traditionally used across West and Central Africa (Ghana, Sierra Leone, Angola, Upper Volta) to treat fever.",
+        "source_citation": "Ayensu, E.S. (1978). Medicinal Plants of West Africa. Reference Publications, Inc. — via Duke's Ethnobotanical Database"
+      },
+      {
+        "use": "Used in Nigeria to treat catarrh.",
+        "source_citation": "Ayensu, E.S. (1978). Medicinal Plants of West Africa. Reference Publications, Inc. — via Duke's Ethnobotanical Database"
+      },
+      {
+        "use": "Used in Nigeria to treat piles (hemorrhoids).",
+        "source_citation": "Ayensu, E.S. (1978). Medicinal Plants of West Africa. Reference Publications, Inc. — via Duke's Ethnobotanical Database"
+      }
+    ],
+    "cautions": [],
+    "photo_url": "",
+    "phytochemicals": [
+      {
+        "compound": "Eugenol",
+        "associated_properties": "A major essential-oil compound in the eugenol chemotype of this plant, associated with antimicrobial activity and responsible for much of its characteristic scent.",
+        "source_citation": "USDA Dr. Duke's Phytochemical and Ethnobotanical Database (phytochem.nal.usda.gov), Ocimum gratissimum entry"
+      },
+      {
+        "compound": "Thymol",
+        "associated_properties": "An essential-oil compound found alongside eugenol in some chemotypes, associated with antimicrobial and antifungal activity.",
+        "source_citation": "USDA Dr. Duke's Phytochemical and Ethnobotanical Database (phytochem.nal.usda.gov), Ocimum gratissimum entry"
+      }
+    ]
+  },
+  {
+    "id": "bitter-leaf",
+    "name_common": "Bitter leaf",
+    "name_scientific": "Vernonia amygdalina",
+    "names_local": {
+      "yoruba": "Ewuro",
+      "igbo": "Onugbu",
+      "hausa": "Shuwaka",
+      "other": [
+        {
+          "label": "Edo",
+          "name": "Olubu"
+        },
+        {
+          "label": "Efik",
+          "name": "Etidot"
+        }
+      ]
+    },
+    "category": [
+      "leafy_vegetable",
+      "medicinal"
+    ],
+    "description": "A small shrub with bitter-tasting leaves, widely grown across tropical Africa and one of the most-used vegetables and traditional remedies in Nigeria. The leaves are cooked as a vegetable in soups and separately used in traditional medicine for a wide range of ailments.",
+    "traditional_uses": [
+      {
+        "use": "Used traditionally for infections; leaf extracts have shown activity against Staphylococcus aureus and E. coli in lab studies.",
+        "source_citation": "Erasto et al. (2007), via NMPPDB (nmppdb.com.ng)"
+      },
+      {
+        "use": "Used in Ghana for arthritis; associated with reduced inflammation in animal studies.",
+        "source_citation": "Adedapo et al. (2014), via NMPPDB (nmppdb.com.ng)"
+      },
+      {
+        "use": "Used in Cameroon for oxidative stress; leaf extracts show free-radical scavenging activity in lab studies.",
+        "source_citation": "Erasto et al. (2007), via NMPPDB (nmppdb.com.ng)"
+      },
+      {
+        "use": "Widely used in Nigeria for managing type 2 diabetes; associated with lowered blood glucose in animal studies.",
+        "source_citation": "Ijeh & Ejike (2011), via NMPPDB (nmppdb.com.ng)"
+      },
+      {
+        "use": "Used in Togo for cardiovascular health; associated with reduced LDL cholesterol in animal studies.",
+        "source_citation": "Adaramoye et al. (2008), via NMPPDB (nmppdb.com.ng)"
+      },
+      {
+        "use": "Leaf infusions used in Uganda to treat dysentery; tannin content linked to gut health support.",
+        "source_citation": "Yeap et al. (2010), via NMPPDB (nmppdb.com.ng)"
+      },
+      {
+        "use": "Traditionally used for malaria, with documented antimalarial activity.",
+        "source_citation": "NMPPDB (nmppdb.com.ng)"
+      },
+      {
+        "use": "Used in Nigeria for liver cleansing/detoxification; associated with liver protection in animal studies.",
+        "source_citation": "Farombi & Owoeye (2011), via NMPPDB (nmppdb.com.ng)"
+      },
+      {
+        "use": "Used in South Africa for tumor prevention; vernolide shown to induce apoptosis in cancer cells in lab studies.",
+        "source_citation": "Toyang & Verpoorte (2013), via NMPPDB (nmppdb.com.ng)"
+      },
+      {
+        "use": "Used in Ethiopia for menstrual issues; leaf extracts shown to enhance uterine contractions in animal studies.",
+        "source_citation": "Kamatenesi-Mugisha & Oryem-Origa (2007), via NMPPDB (nmppdb.com.ng)"
+      }
+    ],
+    "cautions": [
+      {
+        "note": "No acute toxicity observed at traditional doses in animal studies; excessive use may cause nausea, hypoglycemia, or uterine stimulation.",
+        "source_citation": "Farombi & Owoeye (2011), via NMPPDB (nmppdb.com.ng)"
+      },
+      {
+        "note": "Pregnant women are advised to avoid it due to potential abortifacient risk.",
+        "source_citation": "Farombi & Owoeye (2011), via NMPPDB (nmppdb.com.ng)"
+      },
+      {
+        "note": "May reduce iron absorption with regular use.",
+        "source_citation": "Farombi & Owoeye (2011), via NMPPDB (nmppdb.com.ng)"
+      }
+    ],
+    "photo_url": "",
+    "phytochemicals": [
+      {
+        "compound": "Vernolide",
+        "associated_properties": "A sesquiterpene lactone studied for anticancer activity, shown to induce apoptosis in cancer cells in lab studies.",
+        "source_citation": "Toyang & Verpoorte (2013), via NMPPDB (nmppdb.com.ng)"
+      },
+      {
+        "compound": "Vernodalin",
+        "associated_properties": "A sesquiterpene lactone associated with antimalarial and anticancer effects.",
+        "source_citation": "NMPPDB (nmppdb.com.ng)"
+      },
+      {
+        "compound": "Vernomygdin",
+        "associated_properties": "A sesquiterpene lactone associated with antimalarial and anticancer effects.",
+        "source_citation": "NMPPDB (nmppdb.com.ng)"
+      },
+      {
+        "compound": "Luteolin",
+        "associated_properties": "A flavonoid associated with antioxidant and anti-inflammatory activity.",
+        "source_citation": "NMPPDB (nmppdb.com.ng)"
+      },
+      {
+        "compound": "Apigenin",
+        "associated_properties": "A flavonoid associated with antioxidant and anti-inflammatory activity.",
+        "source_citation": "NMPPDB (nmppdb.com.ng)"
+      },
+      {
+        "compound": "Vernoniosides",
+        "associated_properties": "A group of steroidal glycosides linked to anti-inflammatory properties.",
+        "source_citation": "NMPPDB (nmppdb.com.ng)"
+      }
+    ]
+  },
+  {
+    "id": "moringa",
+    "name_common": "Moringa",
+    "name_scientific": "Moringa oleifera",
+    "names_local": {
+      "yoruba": "Ewe ile / Ewe igbale",
+      "igbo": "Okwe oyibo",
+      "hausa": "Zogale",
+      "other": [
+        {
+          "label": "Swahili (Kenya)",
+          "name": "Mlonge"
+        }
+      ]
+    },
+    "category": [
+      "medicinal",
+      "leafy_vegetable"
+    ],
+    "description": "A fast-growing tree native to northern India and now widely grown across Nigeria, from the northern savanna to Lagos. The leaves are eaten as a vegetable and dried into powder as a supplement; the seeds are pressed for ben oil and, ground into powder, used to clear cloudy water in some rural communities.",
+    "traditional_uses": [
+      {
+        "use": "Leaves eaten as a vegetable to help combat malnutrition, including in Hausa and Yoruba diets.",
+        "source_citation": "Odugbemi, T. (2008), as cited via NMPPDB (nmppdb.com.ng)"
+      },
+      {
+        "use": "Leaf and seed pastes used on skin infections and wounds; decoctions used for dysentery.",
+        "source_citation": "Neuwinger, H.D. (2000). African Traditional Medicine: A Dictionary of Plant Use and Applications. Medpharm Scientific Publishers."
+      },
+      {
+        "use": "Leaf and root extracts used for arthritis, headaches, and fever.",
+        "source_citation": "Burkill, H.M. (1985). The Useful Plants of West Tropical Africa. Royal Botanic Gardens, Kew, as cited via NMPPDB (nmppdb.com.ng)"
+      },
+      {
+        "use": "Leaves used to boost breast-milk supply; roots used as a contraceptive in some cultures.",
+        "source_citation": "Neuwinger, H.D. (2000). African Traditional Medicine: A Dictionary of Plant Use and Applications. Medpharm Scientific Publishers."
+      },
+      {
+        "use": "Leaf infusions traditionally taken to help manage blood sugar and blood pressure; leaf powder has been tested in a randomized clinical trial in adults with type 2 diabetes (effects on blood glucose, blood pressure, and cholesterol).",
+        "source_citation": "Mathieu, G., & Meissa, D. (2007). African Journal of Traditional, Complementary and Alternative Medicines, 4(4), 469–475 (traditional use, Senegal); Afiaenyi, I.C., Owolabi, O.J., & Akpan, E.E. (2023). Journal of Ethnopharmacology, 308, 116283 (clinical trial) — both as cited via NMPPDB"
+      }
+    ],
+    "photo_url": "",
+    "phytochemicals": [
+      {
+        "compound": "Moringinine",
+        "associated_properties": "An alkaloid found in the root and bark, associated with blood-pressure-lowering and neurological effects at high doses, which is why those parts are not recommended for consumption.",
+        "source_citation": "Neuwinger, H.D. (2000). African Traditional Medicine: A Dictionary of Plant Use and Applications. Medpharm Scientific Publishers."
+      },
+      {
+        "compound": "Behenic acid",
+        "associated_properties": "A long-chain fatty acid abundant in the seed (ben) oil, which helps make the oil stable against going rancid and valued in cosmetics and cooking.",
+        "source_citation": "Anwar, F., Latif, S., Ashraf, M., & Gilani, A.H. (2007). Moringa oleifera: A food plant with multiple medicinal uses. Phytotherapy Research, 21(1), 17–25. (as cited via NMPPDB)"
+      }
+    ],
+    "cautions": [
+      {
+        "note": "The root and bark contain alkaloids (such as moringinine) that may cause low blood pressure or neurological effects at high doses; they are not recommended for consumption.",
+        "source_citation": "Neuwinger, H.D. (2000). African Traditional Medicine: A Dictionary of Plant Use and Applications. Medpharm Scientific Publishers."
+      },
+      {
+        "note": "Leaf extract has been shown in lab studies to inhibit CYP3A4, a liver enzyme that processes many medicines, so it could interact with some drugs; check with a doctor or pharmacist if you take regular medication.",
+        "source_citation": "Monera, T.G., Wolfe, A.R., Maponga, C.C., Benet, L.Z., & Guglielmo, J. (2008). Journal of Infection in Developing Countries, 2(5), 379–383."
+      },
+      {
+        "note": "Root extracts may have abortifacient effects; use is contraindicated in pregnancy.",
+        "source_citation": "Fahey, J.W. (2005). Moringa oleifera: A review of the medical evidence for its nutritional, therapeutic, and prophylactic properties. Part 1. Trees for Life Journal, 1, 5."
+      },
+      {
+        "note": "Leaf powder at around 6 g/day is reported as safe for most adults; medical advice is recommended for prolonged use or alongside medication.",
+        "source_citation": "Anwar, F., Latif, S., Ashraf, M., & Gilani, A.H. (2007). Moringa oleifera: A food plant with multiple medicinal uses. Phytotherapy Research, 21(1), 17–25."
+      }
+    ]
+  },
+  {
+    "id": "neem",
+    "name_common": "Neem",
+    "name_scientific": "Azadirachta indica",
+    "names_local": {
+      "yoruba": "Igi neem",
+      "igbo": "Ogwu akị isi",
+      "hausa": "Dogonyaro"
+    },
+    "category": [
+      "medicinal"
+    ],
+    "description": "A fast-growing evergreen tree native to the Indian subcontinent and now found across tropical Africa. Its leaves, bark, seeds, and oil are used in traditional medicine, and it is also well known as a natural insecticide.",
+    "traditional_uses": [
+      {
+        "use": "Used in traditional medicine for malaria, diabetes, intestinal worms, and heart and skin diseases.",
+        "source_citation": "Drugs.com. Neem (Azadirachta indica) professional monograph, drugs.com/npp/neem.html (last updated 14 Jul 2026)."
+      },
+      {
+        "use": "Used to bring down fever and relieve pain.",
+        "source_citation": "A Review of Chemical Constituents and Traditional Usage of Neem Plant (Azadirachta indica). Palestinian Medical and Pharmaceutical Journal, 2, 75–81 (2017). (Author names not confirmed.)"
+      },
+      {
+        "use": "Applied to skin ulcers, wounds, ringworm, and itching.",
+        "source_citation": "A Review of Chemical Constituents and Traditional Usage of Neem Plant (Azadirachta indica). Palestinian Medical and Pharmaceutical Journal, 2, 75–81 (2017). (Author names not confirmed.)"
+      },
+      {
+        "use": "Used as a natural insecticide and insect repellent, and as an oral dentifrice for cleaning teeth.",
+        "source_citation": "Drugs.com. Neem (Azadirachta indica) professional monograph, drugs.com/npp/neem.html (last updated 14 Jul 2026)."
+      }
+    ],
+    "photo_url": "",
+    "phytochemicals": [
+      {
+        "compound": "Azadirachtin",
+        "associated_properties": "The best-known neem limonoid, concentrated in the seed kernel and widely used as a natural insecticide.",
+        "source_citation": "Rahmani, A.H., Almatroudi, A., Alrumaihi, F., & Khan, A.A. (2018). Pharmacological and therapeutic potential of neem (Azadirachta indica). Pharmacognosy Reviews, 12(24), 250."
+      },
+      {
+        "compound": "Nimbidin",
+        "associated_properties": "A limonoid characteristic of neem; neem limonoids as a group are associated with anti-inflammatory, antimicrobial, and anti-ulcer activity in the literature.",
+        "source_citation": "Rahmani, A.H., Almatroudi, A., Alrumaihi, F., & Khan, A.A. (2018). Pharmacological and therapeutic potential of neem (Azadirachta indica). Pharmacognosy Reviews, 12(24), 250."
+      },
+      {
+        "compound": "Nimbin",
+        "associated_properties": "A limonoid characteristic of neem; neem limonoids as a group are associated with anti-inflammatory, antimicrobial, and anti-ulcer activity in the literature.",
+        "source_citation": "Rahmani, A.H., Almatroudi, A., Alrumaihi, F., & Khan, A.A. (2018). Pharmacological and therapeutic potential of neem (Azadirachta indica). Pharmacognosy Reviews, 12(24), 250."
+      },
+      {
+        "compound": "Quercetin",
+        "associated_properties": "A flavonoid found in neem, associated with antioxidant activity.",
+        "source_citation": "Rahmani, A.H., Almatroudi, A., Alrumaihi, F., & Khan, A.A. (2018). Pharmacological and therapeutic potential of neem (Azadirachta indica). Pharmacognosy Reviews, 12(24), 250."
+      }
+    ],
+    "cautions": [
+      {
+        "note": "Few human clinical trials support neem's traditional therapeutic claims, and no established therapeutic dose exists.",
+        "source_citation": "Drugs.com. Neem (Azadirachta indica) professional monograph, drugs.com/npp/neem.html (last updated 14 Jul 2026)."
+      },
+      {
+        "note": "Oral neem oil should not be given to children; deaths and severe poisoning in infants have been reported.",
+        "source_citation": "Drugs.com. Neem (Azadirachta indica) professional monograph, drugs.com/npp/neem.html (last updated 14 Jul 2026)."
+      },
+      {
+        "note": "Safety in pregnancy and breastfeeding has not been established; avoiding use is advised.",
+        "source_citation": "Drugs.com. Neem (Azadirachta indica) professional monograph, drugs.com/npp/neem.html (last updated 14 Jul 2026)."
+      },
+      {
+        "note": "Drug-induced liver injury has been reported, and drinking large amounts of neem oil has caused serious harm, including a reported case of vision loss.",
+        "source_citation": "Drugs.com. Neem (Azadirachta indica) professional monograph, drugs.com/npp/neem.html (last updated 14 Jul 2026)."
+      }
+    ]
+  },
+  {
+    "id": "bitter-kola",
+    "name_common": "Bitter kola",
+    "name_scientific": "Garcinia kola",
+    "names_local": {
+      "yoruba": "Orogbo",
+      "igbo": "Adi",
+      "hausa": "Namijin Goro",
+      "other": [
+        {
+          "label": "Igala",
+          "name": "Ogholigo"
+        }
+      ]
+    },
+    "category": [
+      "medicinal"
+    ],
+    "description": "A medium-sized evergreen tree native to the rainforests of West and Central Africa. The seeds ('bitter kola nuts') are widely chewed across Nigeria, both traditionally and for their reputed stimulant effect, and hold cultural significance as a ceremonial offering at events like weddings.",
+    "traditional_uses": [
+      {
+        "use": "Seeds chewed to relieve coughs, hoarseness, and bronchitis.",
+        "source_citation": "Indabawa, I., & Arzai, A. (2011). Antibacterial activity of Garcinia kola and Cola nitida seed extracts. Bayero Journal of Pure and Applied Sciences, 4(1), 52–55."
+      },
+      {
+        "use": "Bark and seed extracts used for their broad antimicrobial effects.",
+        "source_citation": "Okunji, C.O., Ware, T.A., Hicks, R.P., & Iwu, M.M. (2012). Antimicrobial activity of Garcinia kola biflavonones. Planta Medica, 68(5), 440–444."
+      },
+      {
+        "use": "Root and seed extracts used to protect the liver; shown to reduce chemically-induced liver damage in rats.",
+        "source_citation": "Wegwu, M.O. et al. (2000). Kolaviron and liver protection studies, cited in Tauchen et al. (2023), Phytochemistry Reviews, 22(5), 1305–1351."
+      },
+      {
+        "use": "Bark decoctions used as an aphrodisiac and to treat sterility; seed extracts shown to raise testosterone levels in male rats.",
+        "source_citation": "Sewani-Rusike, C.R., Ralebona, N., & Nkeh-Chungag, B.N. (2016). Andrologia, 48(3), 300–307."
+      },
+      {
+        "use": "Seeds and bark consumed for stomach pains and dysentery; shown to inhibit gastric acid secretion and protect against ulcer formation in animal studies.",
+        "source_citation": "Ibironke, G.F., Olaleye, S.B., Balogun, O., & Aremu, A. (1997). Phytotherapy Research, 11(4), 312–313."
+      }
+    ],
+    "cautions": [
+      {
+        "note": "Generally considered safe with traditional use, with no significant toxicity shown in animal or in vitro studies; however, high doses or prolonged consumption may be linked to fertility issues.",
+        "source_citation": "Tauchen, J. et al. (2023). Garcinia kola: a critical review on chemistry and pharmacology of an important West African medicinal plant. Phytochemistry Reviews, 22(5), 1305–1351."
+      }
+    ],
+    "photo_url": "",
+    "phytochemicals": [
+      {
+        "compound": "Kolaviron",
+        "associated_properties": "The major biflavonoid complex in bitter kola seeds; associated with antimicrobial, anti-inflammatory, hepatoprotective, antioxidant, antimalarial, and antidiabetic activity, mostly demonstrated in animal studies.",
+        "source_citation": "Tauchen, J. et al. (2023). Phytochemistry Reviews, 22(5), 1305–1351."
+      },
+      {
+        "compound": "Garcinoic acid",
+        "associated_properties": "A compound found in the seeds that appears specific to this species among plants studied so far.",
+        "source_citation": "Tauchen, J. et al. (2023). Phytochemistry Reviews, 22(5), 1305–1351."
+      },
+      {
+        "compound": "Garcinal",
+        "associated_properties": "A compound found in the seeds that appears specific to this species among plants studied so far.",
+        "source_citation": "Tauchen, J. et al. (2023). Phytochemistry Reviews, 22(5), 1305–1351."
+      },
+      {
+        "compound": "Kolanone",
+        "associated_properties": "A benzophenone found in the fruit pulp, seeds, and roots; one of several compounds that appear specific to this species.",
+        "source_citation": "Tauchen, J. et al. (2023). Phytochemistry Reviews, 22(5), 1305–1351 (citing Hussain et al., 1982)."
+      }
+    ]
+  },
+  {
+    "id": "kola-nut",
+    "name_common": "Kola nut",
+    "name_scientific": "Cola nitida",
+    "names_local": {
+      "yoruba": "Obi",
+      "igbo": "Oji",
+      "hausa": "Goro"
+    },
+    "category": [
+      "medicinal",
+      "stimulant"
+    ],
+    "description": "An evergreen tree native to the West African rainforests, closely related to the cacao tree. Its seeds ('kola nuts') are chewed fresh as a stimulant and are deeply significant culturally across Nigeria — offered to guests, used in traditional ceremonies, and referenced in Yoruba divination and Igbo hospitality customs.",
+    "traditional_uses": [
+      {
+        "use": "Chewed as a stimulant to counteract fatigue, overstrain, and low mood.",
+        "source_citation": "World Agroforestry Centre, Cola nitida species database (apps.worldagroforestry.org)"
+      },
+      {
+        "use": "Used to treat diarrhoea and dysentery, and to prevent vomiting during high fever.",
+        "source_citation": "World Agroforestry Centre, Cola nitida species database (apps.worldagroforestry.org)"
+      },
+      {
+        "use": "Bark infusion combined with ginger and pepper, taken to treat stomach ulcers.",
+        "source_citation": "World Agroforestry Centre, Cola nitida species database (apps.worldagroforestry.org)"
+      },
+      {
+        "use": "Crushed nuts boiled with Morinda lucida leaves, taken to treat piles (hemorrhoids).",
+        "source_citation": "World Agroforestry Centre, Cola nitida species database (apps.worldagroforestry.org)"
+      }
+    ],
+    "cautions": [
+      {
+        "note": "Contains natural caffeine and theobromine; the same general precautions around caffeine intake (e.g. during pregnancy, or with heart conditions) apply as with other caffeinated foods and beverages.",
+        "source_citation": "Burdock, G.A., Carabin, I.G., & Crincoli, C.M. (2009). Safety assessment of kola nut extract as a food ingredient. Food and Chemical Toxicology, 47, 1725–1732."
+      }
+    ],
+    "photo_url": "",
+    "phytochemicals": [
+      {
+        "compound": "Caffeine",
+        "associated_properties": "The primary active stimulant compound in kola nut, present at roughly 2–3.5% by weight — among the higher natural caffeine concentrations of any plant source.",
+        "source_citation": "Burdock, G.A., Carabin, I.G., & Crincoli, C.M. (2009). Food and Chemical Toxicology, 47, 1725–1732."
+      },
+      {
+        "compound": "Theobromine",
+        "associated_properties": "A related stimulant alkaloid present at roughly 1–2.5% by weight, also found in cacao; contributes to kola nut's cardiac and stimulant effects.",
+        "source_citation": "Burdock, G.A., Carabin, I.G., & Crincoli, C.M. (2009). Food and Chemical Toxicology, 47, 1725–1732."
+      },
+      {
+        "compound": "Kolatin (kolanin)",
+        "associated_properties": "A glucoside relatively distinctive to fresh kola nut, which readily breaks down into glucose and caffeine as the nut ripens or dries; historically noted for a distinct cardiac-stimulant effect alongside caffeine's general stimulant action.",
+        "source_citation": "Knebel & Higler, as cited in kola nut phytochemistry reviews (e.g. Journal of Exploratory Research in Pharmacology, 2017)"
+      }
+    ]
+  },
+  {
+    "id": "uziza",
+    "name_common": "Uziza",
+    "name_scientific": "Piper guineense",
+    "names_local": {
+      "yoruba": "Iyere / Ata-iyere",
+      "igbo": "Ozeza",
+      "hausa": "Masooroo",
+      "other": [
+        {
+          "label": "Akan (Ghana)",
+          "name": "Soro wisa"
+        }
+      ]
+    },
+    "category": [
+      "spice",
+      "medicinal"
+    ],
+    "description": "A perennial climbing vine native to West African rainforests, closely related to true black pepper. Both the leaves and the peppery seeds are widely used across Nigeria to flavor soups and stews (uziza soup, pepper soup), alongside a long history of traditional medicinal use.",
+    "traditional_uses": [
+      {
+        "use": "Leaf infusions used in Nigeria to treat stomachaches and constipation.",
+        "source_citation": "Mgbeahuruike, E.E., Yrjönen, T., Vuorela, H., & Holm, Y. (2019). South African Journal of Botany, 112, 54–69."
+      },
+      {
+        "use": "Fruit decoctions used in Ghana to manage arthritis.",
+        "source_citation": "Akinloye, O., Somade, O.T., & Oyewopo, A.O. (2020). Journal of Ethnopharmacology, 258, 112927."
+      },
+      {
+        "use": "Seeds used in Cameroon to treat infections, including skin and fungal infections.",
+        "source_citation": "Mgbeahuruike, E.E., Fyhrquist, P., Vuorela, H., Julkunen-Tiitto, R., & Holm, Y. (2017). Journal of Ethnopharmacology, 229, 157–166."
+      },
+      {
+        "use": "Leaf teas used in Côte d'Ivoire to help regulate blood sugar.",
+        "source_citation": "Sulaimon, L.A. et al. (2020). Clinical Phytoscience, 6, 1–13."
+      },
+      {
+        "use": "Seeds traditionally used in Nigeria to support fertility and postpartum recovery.",
+        "source_citation": "Udoh et al. (1999), as cited via NMPPDB (nmppdb.com.ng)"
+      },
+      {
+        "use": "Fruit extracts traditionally used in Benin for seizures; essential oils shown to protect against induced convulsions in animal studies.",
+        "source_citation": "Ngo Bum, E. et al. (2009). Epilepsy & Behavior, 15(4), 434–440."
+      }
+    ],
+    "cautions": [
+      {
+        "note": "Generally safe in typical culinary amounts; excessive intake (above roughly 1 g/kg) may cause gastrointestinal irritation.",
+        "source_citation": "Williams, F.E., Obianwu, H., Adedeji, O.S., & Oyewepo, A.O. (2013). Biokemistri, 25(2), 92–95."
+      },
+      {
+        "note": "Has oxytocic (uterine-stimulating) properties; contraindicated during pregnancy.",
+        "source_citation": "Williams, F.E., Obianwu, H., Adedeji, O.S., & Oyewepo, A.O. (2013). Biokemistri, 25(2), 92–95."
+      }
+    ],
+    "photo_url": "",
+    "phytochemicals": [
+      {
+        "compound": "Piperine",
+        "associated_properties": "The main pungent alkaloid (5–9% content); linked to carminative/digestive effects and antimicrobial activity.",
+        "source_citation": "Mgbeahuruike, E.E., Yrjönen, T., Vuorela, H., & Holm, Y. (2019). South African Journal of Botany, 112, 54–69."
+      },
+      {
+        "compound": "Piperlongumine",
+        "associated_properties": "An alkaloid contributing to antimicrobial activity, shown effective against Staphylococcus aureus and Candida albicans in lab studies.",
+        "source_citation": "Mgbeahuruike, E.E. et al. (2017). Journal of Ethnopharmacology, 229, 157–166."
+      },
+      {
+        "compound": "Beta-caryophyllene",
+        "associated_properties": "A terpenoid associated with anti-inflammatory activity, shown to reduce inflammation in animal studies.",
+        "source_citation": "Akinloye, O., Somade, O.T., & Oyewopo, A.O. (2020). Journal of Ethnopharmacology, 258, 112927."
+      },
+      {
+        "compound": "Beta-sesquiphellandrene",
+        "associated_properties": "The major essential-oil component (around 20.9%), linked to central-nervous-system activity in behavioral studies on mice.",
+        "source_citation": "Oyemitan, I.A., Oladipo, O.T., & Akanmu, M.A. (2015). Journal of Ethnopharmacology, 166, 240–249."
+      },
+      {
+        "compound": "Quercetin",
+        "associated_properties": "A flavonoid associated with antioxidant activity.",
+        "source_citation": "Oyemitan, I.A. et al. (2015). Journal of Ethnopharmacology, 166, 240–249."
+      },
+      {
+        "compound": "Kaempferol",
+        "associated_properties": "A flavonoid associated with antioxidant activity.",
+        "source_citation": "Oyemitan, I.A. et al. (2015). Journal of Ethnopharmacology, 166, 240–249."
+      }
+    ]
+  },
+  {
+    "id": "aloe-vera",
+    "name_common": "Aloe vera",
+    "name_scientific": "Aloe vera",
+    "names_local": {
+      "yoruba": "Eti erin",
+      "igbo": "Aloe"
+    },
+    "category": [
+      "medicinal"
+    ],
+    "description": "A succulent whose thick leaves hold a clear inner gel and a bitter yellow latex just under the skin. The gel is used on the skin and for burns, while the latex is the source of aloe's laxative effect.",
+    "traditional_uses": [
+      {
+        "use": "Gel applied to wounds and burns; healing has been shown in animal studies, though human clinical trial results are mixed.",
+        "source_citation": "Tang Center for Herbal Medicine Research, University of Chicago. Aloe (tangcenter.uchicago.edu)."
+      },
+      {
+        "use": "Taken internally for digestive problems, asthma, diabetes, and gum disease, and applied to the skin for skin conditions and burns.",
+        "source_citation": "Phytochemistry, Pharmacology and Toxicity of Aloe vera: A Versatile Plant with Extensive Therapeutic Potential. Plant Archives. (Author names not confirmed.)"
+      },
+      {
+        "use": "Dried leaf juice (latex) used as a stimulant laxative for constipation.",
+        "source_citation": "European Medicines Agency (2007). Assessment report on Aloe barbadensis Miller and Aloe (various species, mainly Aloe ferox Miller) and its preparations (superseded)."
+      }
+    ],
+    "photo_url": "",
+    "phytochemicals": [
+      {
+        "compound": "Aloe-emodin",
+        "associated_properties": "An anthraquinone found in the leaf latex and part of the group behind aloe's laxative action; experimental data suggest a genotoxic risk for anthranoids like it, which is why oral use is not advised in pregnancy.",
+        "source_citation": "Egyptian Drug Authority (2026). Egyptian Herbal Monograph: Aloe vera."
+      },
+      {
+        "compound": "Barbaloin",
+        "associated_properties": "A bitter anthraquinone glycoside in the leaf latex; anthraquinones as a group give aloe its bitter taste and laxative effect.",
+        "source_citation": "Phytochemistry, Pharmacology and Toxicity of Aloe vera: A Versatile Plant with Extensive Therapeutic Potential. Plant Archives. (Author names not confirmed.)"
+      },
+      {
+        "compound": "Emodin",
+        "associated_properties": "The main phenolic component of aloe, studied for anti-inflammatory and anti-tumour activity as well as toxicological potential.",
+        "source_citation": "The phytochemical constituents and therapeutic uses of genus Aloe: A review. Notulae Botanicae Horti Agrobotanici Cluj-Napoca. (Author names not confirmed.)"
+      },
+      {
+        "compound": "Acemannan",
+        "associated_properties": "The main polysaccharide in aloe gel, studied for wound healing, oral health, and metabolic applications.",
+        "source_citation": "The phytochemical constituents and therapeutic uses of genus Aloe: A review. Notulae Botanicae Horti Agrobotanici Cluj-Napoca. (Author names not confirmed.)"
+      }
+    ],
+    "cautions": [
+      {
+        "note": "Oral use is contraindicated during pregnancy and breastfeeding, because experimental data point to a genotoxic risk from some of its anthranoid compounds.",
+        "source_citation": "Egyptian Drug Authority (2026). Egyptian Herbal Monograph: Aloe vera."
+      },
+      {
+        "note": "Prolonged laxative use can cause potassium loss, which may interact with heart medications, diuretics, and corticosteroids; people with diabetes should consult a doctor or pharmacist before using aloe gel.",
+        "source_citation": "Egyptian Drug Authority (2026). Egyptian Herbal Monograph: Aloe vera."
+      },
+      {
+        "note": "Its anthraquinone compounds raise questions about the safety of oral consumption, and a review advises caution.",
+        "source_citation": "The dark side of miracle plant – Aloe vera: a review. Molecular Biology Reports, 49(6), 5029–5040 (2022). doi:10.1007/s11033-022-07176-9"
+      }
+    ]
+  },
+  {
+    "id": "roselle-zobo",
+    "name_common": "Roselle (Zobo)",
+    "name_scientific": "Hibiscus sabdariffa",
+    "names_local": {
+      "yoruba": "Isapa",
+      "hausa": "Zoborodo / Zobo",
+      "other": [
+        {
+          "label": "West Africa (French-speaking)",
+          "name": "Bissap"
+        }
+      ]
+    },
+    "category": [
+      "medicinal",
+      "beverage"
+    ],
+    "description": "An upright herb grown across the tropics for its fleshy red calyces, which are dried and brewed into the tart, deep-red drink known as zobo in Nigeria (hibiscus tea or bissap elsewhere). Its native range runs from West Tropical Africa to Sudan.",
+    "traditional_uses": [
+      {
+        "use": "Dried calyces brewed into a tart, cooling drink and taken as a wellness tonic.",
+        "source_citation": "Riaz, G., & Chopra, R. (2018). A review on phytochemistry and therapeutic uses of Hibiscus sabdariffa L. Biomedicine & Pharmacotherapy, 102, 575–586."
+      },
+      {
+        "use": "Calyx tea has been tested in randomized clinical trials for lowering blood pressure: in one trial, three servings a day for six weeks lowered systolic pressure more than placebo in adults with prehypertension or mild hypertension, and meta-analyses report overall reductions in systolic and diastolic pressure, though results vary by preparation and effects on cholesterol and blood sugar are less consistent.",
+        "source_citation": "McKay, D.L., Chen, C.-Y.O., Saltzman, E., & Blumberg, J.B. (2010). Hibiscus sabdariffa L. tea (tisane) lowers blood pressure in prehypertensive and mildly hypertensive adults. The Journal of Nutrition, 140(2), 298–303. Ellis, L.R., Zulfiqar, S., Holmes, M., Marshall, L., Dye, L., & Boesch, C. (2022). A systematic review and meta-analysis of the effects of Hibiscus sabdariffa on blood pressure and cardiometabolic markers. Nutrition Reviews, 80(6), 1723–1737."
+      },
+      {
+        "use": "Used traditionally as a diuretic; an extract showed measurable diuretic and natriuretic (salt-excreting) effects in experimental models.",
+        "source_citation": "Alarcón-Alonso, J., Zamilpa, A., Aguilar, F.A., Herrera-Ruiz, M., Tortoriello, J., & Jimenez-Ferrer, E. (2012). Pharmacological characterization of the diuretic effect of Hibiscus sabdariffa Linn (Malvaceae) extract. Journal of Ethnopharmacology, 139(3), 751–756."
+      },
+      {
+        "use": "Calyx extracts show antioxidant activity, and antibacterial and antifungal activity in lab studies, attributed largely to polyphenols and anthocyanins.",
+        "source_citation": "Riaz, G., & Chopra, R. (2018). A review on phytochemistry and therapeutic uses of Hibiscus sabdariffa L. Biomedicine & Pharmacotherapy, 102, 575–586."
+      }
+    ],
+    "photo_url": "",
+    "phytochemicals": [
+      {
+        "compound": "Anthocyanin sambubiosides",
+        "associated_properties": "Red-pigment anthocyanins commonly reported in the calyces, linked to much of roselle's antioxidant activity and deep red color.",
+        "source_citation": "Riaz, G., & Chopra, R. (2018). A review on phytochemistry and therapeutic uses of Hibiscus sabdariffa L. Biomedicine & Pharmacotherapy, 102, 575–586."
+      },
+      {
+        "compound": "Malic acid",
+        "associated_properties": "An organic acid that contributes to roselle's tart taste; Duke's records up to about 65,000 ppm (6.5%) in the plant.",
+        "source_citation": "USDA Dr. Duke's Phytochemical and Ethnobotanical Database (phytochem.nal.usda.gov), Hibiscus sabdariffa entry"
+      }
+    ],
+    "cautions": [
+      {
+        "note": "Human studies of brewed hibiscus report good tolerability with mostly mild side effects, but safety varies by dose and preparation.",
+        "source_citation": "Ellis, L.R., Zulfiqar, S., Holmes, M., Marshall, L., Dye, L., & Boesch, C. (2022). A systematic review and meta-analysis of the effects of Hibiscus sabdariffa on blood pressure and cardiometabolic markers. Nutrition Reviews, 80(6), 1723–1737."
+      },
+      {
+        "note": "Caution if you take blood-pressure medication: roselle can lower blood pressure itself, and a rat study found that roselle extract changed the body's exposure to the antihypertensive drug captopril.",
+        "source_citation": "Nurfaradilla, S.A., Saputri, F.C., & Harahap, Y. (2020). Pharmacokinetic herb-drug interaction between Hibiscus sabdariffa calyces aqueous extract and captopril in rats. Evidence-Based Complementary and Alternative Medicine, 2020, 5013898."
+      },
+      {
+        "note": "Animal studies have raised organ-toxicity concerns under high or prolonged exposure. This should not be equated with normal drink-sized intake, but supports conservative dosing if used medicinally.",
+        "source_citation": "Koffuor et al. (2015), as cited via NMPPDB (nmppdb.com.ng)"
+      }
+    ]
+  },
+  {
+    "id": "pawpaw",
+    "name_common": "Pawpaw",
+    "name_scientific": "Carica papaya",
+    "names_local": {
+      "yoruba": "Ibepe",
+      "igbo": "Okwuru bekee",
+      "hausa": "Gwanda"
+    },
+    "category": [
+      "medicinal"
+    ],
+    "description": "A fast-growing tropical fruit tree that originated in Central America and is now grown across Africa and Asia. The ripe fruit is eaten fresh, while the leaves, seeds, and latex have long been used in traditional medicine.",
+    "traditional_uses": [
+      {
+        "use": "Used in many parts of the world (including Haiti, Malaya, Panama, Samoa, and Turkey) as a dewormer.",
+        "source_citation": "USDA Dr. Duke's Phytochemical and Ethnobotanical Database (phytochem.nal.usda.gov), Carica papaya entry (underlying source references not retrieved)"
+      },
+      {
+        "use": "Applied to warts and corns in several regions (including Indonesia, Jamaica, Peru, South Africa, Sri Lanka, India, and the Philippines).",
+        "source_citation": "USDA Dr. Duke's Phytochemical and Ethnobotanical Database (phytochem.nal.usda.gov), Carica papaya entry (underlying source references not retrieved)"
+      },
+      {
+        "use": "Used as a digestive aid (reported in China, the Dominican Republic, Panama, and Turkey).",
+        "source_citation": "USDA Dr. Duke's Phytochemical and Ethnobotanical Database (phytochem.nal.usda.gov), Carica papaya entry (underlying source references not retrieved)"
+      },
+      {
+        "use": "Leaf extract showed antisickling activity in a Nigerian lab study, relevant to interest in papaya for sickle-cell care.",
+        "source_citation": "Imaga, N.O., Gbenle, G.O., Okochi, V.I., Akanbi, S.O., Edeoghon, S.O., Oigbochie, V., Kehinde, M.O., & Bamiro, S.B. (2009). Antisickling property of Carica papaya leaf extract. African Journal of Biochemistry Research, 3(4). Also listed among papaya's studied activities in Kaur, M., Talniya, N.C., Sahrawat, S., Kumar, A., & Stashenko, E.E. (2019). Ethnomedicinal uses, phytochemistry and pharmacology of Carica papaya plant: a compendious review. Mini-Reviews in Organic Chemistry, 16(5), 463–480. doi:10.2174/1570193X15666180816110733"
+      },
+      {
+        "use": "Reviews report antioxidant, antiulcer, antibacterial, wound-healing, and anti-inflammatory activity in lab and animal studies.",
+        "source_citation": "Kaur, M., Talniya, N.C., Sahrawat, S., Kumar, A., & Stashenko, E.E. (2019). Ethnomedicinal uses, phytochemistry and pharmacology of Carica papaya plant: a compendious review. Mini-Reviews in Organic Chemistry, 16(5), 463–480. doi:10.2174/1570193X15666180816110733"
+      }
+    ],
+    "photo_url": "",
+    "phytochemicals": [
+      {
+        "compound": "Carpaine",
+        "associated_properties": "The signature alkaloid of pawpaw, reported across many parts of the plant (leaf, bark, root, fruit, and seed).",
+        "source_citation": "USDA Dr. Duke's Phytochemical and Ethnobotanical Database (phytochem.nal.usda.gov), Carica papaya entry (underlying source references not retrieved)"
+      },
+      {
+        "compound": "Beta-carotene",
+        "associated_properties": "A pigment the body converts to vitamin A, reported in the fruit, leaf, and seed oil at up to about 514 ppm.",
+        "source_citation": "USDA Dr. Duke's Phytochemical and Ethnobotanical Database (phytochem.nal.usda.gov), Carica papaya entry (underlying source references not retrieved)"
+      }
+    ],
+    "cautions": [
+      {
+        "note": "Traditionally used in some regions (Java, Panama, Turkey) as an abortifacient and to bring on menstruation, so medicinal use is best avoided during pregnancy.",
+        "source_citation": "USDA Dr. Duke's Phytochemical and Ethnobotanical Database (phytochem.nal.usda.gov), Carica papaya entry (underlying source references not retrieved)"
+      },
+      {
+        "note": "Reviews note that dosage, mechanisms, and safety of medicinal papaya preparations still need proper study.",
+        "source_citation": "Khatun, M.A., Akter, T., & Chowdhury, A.R. (2026). Traditional uses, phytoconstituents and pharmacological activities of Carica papaya L.: a comprehensive review. Dhaka University Journal of Pharmaceutical Sciences, 25(1), 81–91."
+      }
+    ]
+  },
+  {
+    "id": "guava",
+    "name_common": "Guava",
+    "name_scientific": "Psidium guajava",
+    "names_local": {
+      "yoruba": "Gilofa",
+      "igbo": "Ugwaba",
+      "hausa": "Goba"
+    },
+    "category": [
+      "medicinal"
+    ],
+    "description": "An evergreen shrub or small tree originating from Central and South America and now naturalized across Africa. The fruit is eaten fresh or juiced, and the leaves are widely used in traditional medicine, especially for diarrhea.",
+    "traditional_uses": [
+      {
+        "use": "Leaf decoctions used to treat diarrhea and dysentery, including in Nigeria and Ghana; the plant is best known for antispasmodic and antimicrobial properties in this use, and clinical applications have been suggested for diarrhea and infantile rotaviral enteritis.",
+        "source_citation": "Gutiérrez, R.M.P., Mitchell, S., & Solis, R.V. (2008). Psidium guajava: a review of its traditional uses, phytochemistry and pharmacology. Journal of Ethnopharmacology, 117(1), 1–27. Nigerian use as reported on NMPPDB (nmppdb.com.ng); Ghanaian use per USDA Dr. Duke's Ethnobotanical Database."
+      },
+      {
+        "use": "Leaf pastes used on wounds (reported in India); aqueous leaf extracts showed antibacterial activity against Staphylococcus aureus in lab tests.",
+        "source_citation": "Nair, R., & Chanda, S.V. (2007). Antibacterial activities of some medicinal plants of the western region of India. Turkish Journal of Biology, 31(4), 231–236."
+      },
+      {
+        "use": "Leaves and fruit taken as teas to help manage blood sugar; guava has been used extensively as a hypoglycaemic (blood-sugar-lowering) agent.",
+        "source_citation": "Gutiérrez, R.M.P., Mitchell, S., & Solis, R.V. (2008). Psidium guajava: a review of its traditional uses, phytochemistry and pharmacology. Journal of Ethnopharmacology, 117(1), 1–27."
+      },
+      {
+        "use": "Leaf extract shown to reduce inflammation and pain responses in rats and mice.",
+        "source_citation": "Ojewole, J.A.O. (2006). Antiinflammatory and analgesic effects of Psidium guajava Linn. (Myrtaceae) leaf aqueous extract in rats and mice. Methods and Findings in Experimental and Clinical Pharmacology, 28(7), 441–446."
+      },
+      {
+        "use": "Aqueous leaf extract inhibited Gram-positive bacteria, including antibiotic-resistant strains, in lab tests, but did not inhibit the Gram-negative E. coli strains tested at the concentrations used.",
+        "source_citation": "Pereira, G.A. et al. (2023). Antimicrobial activity of Psidium guajava aqueous extract against sensitive and resistant bacterial strains. Microorganisms, 11(7), 1784."
+      }
+    ],
+    "photo_url": "",
+    "phytochemicals": [
+      {
+        "compound": "Tannins",
+        "associated_properties": "Astringent plant compounds found in the bark, leaf, and root at high levels (up to roughly 30% by weight in Duke's records); the plant's traditional use as an astringent and for diarrhea is commonly linked to them.",
+        "source_citation": "Ahamad, A., & Ansari, S.H. (2022). A review on multipurpose medicinal properties of traditionally used Psidium guajava leaves. Asian Journal of Pharmaceutical and Clinical Research, 15(8). doi:10.22159/ajpcr.2022.v15i8.43179; amounts per USDA Dr. Duke's Phytochemical and Ethnobotanical Database (phytochem.nal.usda.gov), Psidium guajava entry"
+      },
+      {
+        "compound": "Quercetin",
+        "associated_properties": "A flavonoid found in the flowers, fruit, wood, leaves, and roots; associated with antioxidant and anti-inflammatory activity.",
+        "source_citation": "Ahamad, A., & Ansari, S.H. (2022). A review on multipurpose medicinal properties of traditionally used Psidium guajava leaves. Asian Journal of Pharmaceutical and Clinical Research, 15(8). doi:10.22159/ajpcr.2022.v15i8.43179"
+      },
+      {
+        "compound": "Guaijaverin",
+        "associated_properties": "A quercetin-based flavonoid glycoside named after the guava plant itself (guajava), reported in the flowers, fruit, and leaves.",
+        "source_citation": "USDA Dr. Duke's Phytochemical and Ethnobotanical Database (phytochem.nal.usda.gov), Psidium guajava entry"
+      },
+      {
+        "compound": "Ellagic acid",
+        "associated_properties": "A phenolic compound reported in the bark, flowers, fruit, and leaves; phenolic compounds in guava are associated with its antioxidant activity.",
+        "source_citation": "Gutiérrez, R.M.P., Mitchell, S., & Solis, R.V. (2008). Psidium guajava: a review of its traditional uses, phytochemistry and pharmacology. Journal of Ethnopharmacology, 117(1), 1–27. Occurrence per USDA Dr. Duke's Phytochemical and Ethnobotanical Database (phytochem.nal.usda.gov), Psidium guajava entry"
+      },
+      {
+        "compound": "Leucocyanidin",
+        "associated_properties": "A proanthocyanidin (a tannin-related phenolic compound) reported across many parts of the plant, including the flowers, fruit, wood, leaves, roots, and stem bark.",
+        "source_citation": "Ahamad, A., & Ansari, S.H. (2022). A review on multipurpose medicinal properties of traditionally used Psidium guajava leaves. Asian Journal of Pharmaceutical and Clinical Research, 15(8). doi:10.22159/ajpcr.2022.v15i8.43179; occurrence per USDA Dr. Duke's Phytochemical and Ethnobotanical Database (phytochem.nal.usda.gov), Psidium guajava entry"
+      }
+    ],
+    "cautions": [
+      {
+        "note": "Guava fruit is safe in moderation. NMPPDB reports that the seeds contain small amounts of cyanogenic compounds that can release cyanide if chewed excessively, though normal intake is far below toxic levels.",
+        "source_citation": "Morton, J.F. (1987). Fruits of Warm Climates. Creative Resource Systems, Inc., as cited via NMPPDB (nmppdb.com.ng)"
+      }
+    ]
+  },
+  {
+    "id": "mango",
+    "name_common": "Mango",
+    "name_scientific": "Mangifera indica",
+    "names_local": {
+      "yoruba": "Mangoro",
+      "igbo": "Mangoro",
+      "hausa": "Mangwaro"
+    },
+    "category": [
+      "medicinal"
+    ],
+    "description": "A large evergreen tree, native to South and Southeast Asia and one of the world's most widely grown tropical fruits, with Nigeria among the top producing countries. Beyond the fruit, the bark and leaves have a long history in Ayurvedic and other traditional medicine systems, centered on a signature compound called mangiferin.",
+    "traditional_uses": [
+      {
+        "use": "Leaf and bark decoctions traditionally used for diarrhea and dysentery, reported across many countries including China, India, Mexico, and Trinidad.",
+        "source_citation": "USDA Dr. Duke's Phytochemical and Ethnobotanical Database (phytochem.nal.usda.gov), Mangifera indica entry"
+      },
+      {
+        "use": "Used as a traditional dewormer (vermifuge) in several regions, including China, Haiti, Mexico, and Turkey.",
+        "source_citation": "USDA Dr. Duke's Phytochemical and Ethnobotanical Database (phytochem.nal.usda.gov), Mangifera indica entry"
+      },
+      {
+        "use": "Used in Ayurvedic and other traditional medicine for fever.",
+        "source_citation": "Shah, K.A., Patel, M.B., Patel, R.J., & Parmar, P.K. (2010). Mangifera Indica (Mango). Pharmacognosy Reviews, 4(7), 42–48."
+      },
+      {
+        "use": "Bark and leaves, largely through the compound mangiferin, studied for antidiabetic, antioxidant, anti-inflammatory, hepatoprotective, and antimicrobial activity.",
+        "source_citation": "Wauthoz, N. et al. (2007). Ethnopharmacology of Mangifera indica L. bark and its main C-glucosylxanthone, mangiferin. International Journal of Biomedical and Pharmaceutical Sciences."
+      },
+      {
+        "use": "Used traditionally for piles (hemorrhoids) in China and Malaya, and for hypertension in Trinidad and Curacao.",
+        "source_citation": "USDA Dr. Duke's Phytochemical and Ethnobotanical Database (phytochem.nal.usda.gov), Mangifera indica entry"
+      }
+    ],
+    "photo_url": "",
+    "phytochemicals": [
+      {
+        "compound": "Mangiferin",
+        "associated_properties": "The major compound in mango bark, leaves, heartwood, roots, and fruit, and the one believed to be behind most of the plant's studied effects, including antioxidant, anti-inflammatory, antidiabetic, and antitumor activity in lab and animal studies.",
+        "source_citation": "Wauthoz, N. et al. (2007). Ethnopharmacology of Mangifera indica L. bark and its main C-glucosylxanthone, mangiferin. International Journal of Biomedical and Pharmaceutical Sciences."
+      }
+    ],
+    "cautions": [
+      {
+        "note": "Most of mango's medicinal properties have been studied in lab and animal settings rather than human clinical trials, so dosing and safety for therapeutic (non-culinary) use are not well established.",
+        "source_citation": "Shah, K.A., Patel, M.B., Patel, R.J., & Parmar, P.K. (2010). Mangifera Indica (Mango). Pharmacognosy Reviews, 4(7), 42–48."
+      }
+    ]
+  },
+  {
+    "id": "lemongrass",
+    "name_common": "Lemongrass",
+    "name_scientific": "Cymbopogon citratus",
+    "names_local": {
+      "yoruba": "Kooko-Oba / Kokoroko",
+      "igbo": "Acharaehi"
+    },
+    "category": [
+      "medicinal",
+      "beverage"
+    ],
+    "description": "A tall, tufted perennial grass with a strong lemon scent, native to South and Southeast Asia and now widely grown in Nigeria. The stalks flavor teas, soups, and curries, and the essential oil is used in aromatherapy, cosmetics, and as a natural insect repellent.",
+    "traditional_uses": [
+      {
+        "use": "Essential oil used in aromatherapy in Thailand to reduce anxiety; inhalation has been shown to lower stress-hormone (cortisol) levels in humans.",
+        "source_citation": "Leite, J.R. et al. (1986). Journal of Ethnopharmacology, 17(1), 75–83."
+      },
+      {
+        "use": "Used in Nigeria for its antimicrobial properties; the oil inhibits Staphylococcus aureus and is effective against Candida albicans in lab tests.",
+        "source_citation": "Boukhatern, M.N., Ferhat, M.A., Kameli, A., Saidi, F., & Mekarnia, M. (2014). Lemon grass (Cymbopogon citratus) essential oil as a potent anti-inflammatory and antifungal drug. Libyan Journal of Medicine, 9, 25431."
+      },
+      {
+        "use": "Leaf infusion used in Brazil to reduce inflammation; citral (its main aromatic compound) has been shown to block a key inflammatory signaling pathway in lab studies.",
+        "source_citation": "Francisco, V. et al. (2013). Journal of Ethnopharmacology, 148(1), 126–134."
+      },
+      {
+        "use": "Tea used in the Philippines for headaches; citral has been shown to reduce pain responses in rats.",
+        "source_citation": "Viana, G.S., Vale, T.G., Pinho, R.S., & Matos, F.J. (2010). Journal of Ethnopharmacology, 129(3), 416–419."
+      },
+      {
+        "use": "Tea used in India as a digestive aid; aqueous extracts relieve intestinal spasms in lab tests.",
+        "source_citation": "Figueirinha, A. et al. (2008). Food Chemistry, 110(3), 718–728."
+      },
+      {
+        "use": "Used in Ghana for detoxification; its polyphenols show strong free-radical-scavenging (antioxidant) activity in lab tests.",
+        "source_citation": "Cheel, J., Theoduloz, C., Rodríguez, J., & Schmeda-Hirschmann, G. (2005). Journal of Agricultural and Food Chemistry, 53(7), 2511–2517."
+      }
+    ],
+    "photo_url": "",
+    "phytochemicals": [
+      {
+        "compound": "Citral",
+        "associated_properties": "The dominant component of the essential oil (about 65–85%), responsible for the lemon scent; associated with antimicrobial and pain-relieving (analgesic) activity.",
+        "source_citation": "Boukhatern, M.N., Ferhat, M.A., Kameli, A., Saidi, F., & Mekarnia, M. (2014). Lemon grass (Cymbopogon citratus) essential oil as a potent anti-inflammatory and antifungal drug. Libyan Journal of Medicine, 9, 25431."
+      },
+      {
+        "compound": "Luteolin",
+        "associated_properties": "A flavonoid associated with antioxidant and anti-inflammatory activity.",
+        "source_citation": "Francisco, V. et al. (2013). Journal of Ethnopharmacology, 148(1), 126–134."
+      },
+      {
+        "compound": "Chlorogenic acid",
+        "associated_properties": "A phenolic compound associated with antioxidant activity.",
+        "source_citation": "Cheel, J. et al. (2005). Journal of Agricultural and Food Chemistry, 53(7), 2511–2517."
+      }
+    ],
+    "cautions": [
+      {
+        "note": "Generally safe in food amounts, with low toxicity for the essential oil at tested doses. Undiluted essential oil may cause skin irritation in some people, and it is best avoided in pregnancy due to limited safety data.",
+        "source_citation": "Oladeji, O.S., Adelowo, F.E., & Oyelakin, A.O. (2020). Scientific African, 9, e00437."
+      }
+    ]
+  },
+  {
+    "id": "soursop",
+    "name_common": "Soursop",
+    "name_scientific": "Annona muricata",
+    "names_local": {
+      "yoruba": "Abo / Ebo / Apekan",
+      "igbo": "Ogbaka nti",
+      "other": [
+        {
+          "label": "General Nigerian",
+          "name": "Sharp-sharp"
+        }
+      ]
+    },
+    "category": [
+      "medicinal"
+    ],
+    "description": "A small evergreen tree native to the tropical Americas, now grown across Nigeria and other tropical regions for its large spiny fruit. The pulp is eaten fresh or juiced, while the leaves and bark are widely used in traditional medicine and have drawn particular scientific interest for their anticancer compounds.",
+    "traditional_uses": [
+      {
+        "use": "Leaf and bark decoctions traditionally used for fevers, malaria, hypertension, pain, respiratory illness, and gastrointestinal disorders such as diarrhea and dysentery.",
+        "source_citation": "NMPPDB (nmppdb.com.ng)"
+      },
+      {
+        "use": "Extracts studied for anticancer activity against breast, prostate, and colon cancer cells in lab studies, working by triggering cancer-cell death and slowing cell growth.",
+        "source_citation": "Ilango, S. et al. (2022). A review on Annona muricata and its anticancer activity. Cancers, 14(18), 4539."
+      },
+      {
+        "use": "Leaf and fruit extracts shown to lower blood sugar in diabetic animal models.",
+        "source_citation": "Florence, N.T. et al. (2014). Journal of Ethnopharmacology, 151(2), 784–790."
+      },
+      {
+        "use": "Extracts shown to have antibacterial and antifungal activity in lab studies, supporting traditional use for infections.",
+        "source_citation": "Abdel-Rahman, T. et al. (2019). Open Access Macedonian Journal of Medical Sciences, 7(19), 3127."
+      },
+      {
+        "use": "Extracts shown to protect against gastric ulcers in animal studies.",
+        "source_citation": "Moghadamtousi, S.Z. et al. (2014). Drug Design, Development and Therapy, 8, 2099–2111."
+      }
+    ],
+    "photo_url": "",
+    "phytochemicals": [
+      {
+        "compound": "Annonacin",
+        "associated_properties": "An acetogenin compound linked to neurotoxic effects; high, sustained consumption has been associated with an atypical form of Parkinsonism in some populations.",
+        "source_citation": "Caparros-Lefebvre, D., & Elbaz, A. (1999). Possible relation of atypical parkinsonism in the French West Indies with consumption of tropical plants: A case-control study. The Lancet, 354(9175), 281–286."
+      },
+      {
+        "compound": "Annonaceous acetogenins (as a class)",
+        "associated_properties": "The main group of compounds behind soursop's studied anticancer activity, shown in lab studies to inhibit the growth of several types of cancer cells.",
+        "source_citation": "Ilango, S. et al. (2022). A review on Annona muricata and its anticancer activity. Cancers, 14(18), 4539."
+      }
+    ],
+    "cautions": [
+      {
+        "note": "Annonacin, a compound in soursop, has been linked to neurotoxic effects, and high, sustained consumption has been associated with an atypical form of Parkinsonism in some populations (notably the French West Indies). Excessive intake may also cause low blood pressure and low blood sugar.",
+        "source_citation": "Caparros-Lefebvre, D., & Elbaz, A. (1999). Possible relation of atypical parkinsonism in the French West Indies with consumption of tropical plants: A case-control study. The Lancet, 354(9175), 281–286."
+      }
+    ]
+  },
+  {
+    "id": "garden-egg",
+    "name_common": "Garden egg",
+    "name_scientific": "Solanum aethiopicum",
+    "names_local": {
+      "yoruba": "Igba",
+      "igbo": "Anara",
+      "hausa": "Gauta"
+    },
+    "category": [
+      "vegetable"
+    ],
+    "description": "A widely grown fruiting vegetable across Nigeria and West Africa, eaten fresh, cooked in stews, or pickled. Used both as a staple food crop and, in some communities, as a traditional remedy.",
+    "traditional_uses": [
+      {
+        "use": "Fruit extract shown to protect against experimentally induced stomach ulcers in rats, comparable to a standard ulcer medication (ranitidine).",
+        "source_citation": "University of Nigeria, Nsukka research paper, \"Does the African garden egg offer protection against experimentally induced ulcers?\" (full journal citation not confirmed — sourced from a UNN institutional PDF)"
+      },
+      {
+        "use": "Fruit extract shown to reduce inflammation in animal studies, consistent with reports that people who eat it often experience relief from arthritic pain and swelling.",
+        "source_citation": "Study published via Springer, DOI: 10.1186/2008-2231-20-76"
+      },
+      {
+        "use": "Used in ethnomedicine for anaemia, constipation, and weight management; leaf extract shown to improve markers of anaemia and support liver/kidney function in rats.",
+        "source_citation": "Ekweogu, C.N., Ude, V.C., Nwankpa, P., Emmanuel, O., & Ugbogu, E.A. (2019). Toxicological Research, 36(3), 227–238."
+      }
+    ],
+    "cautions": [],
+    "photo_url": "",
+    "phytochemicals": []
+  },
+  {
+    "id": "cashew",
+    "name_common": "Cashew",
+    "name_scientific": "Anacardium occidentale",
+    "names_local": {
+      "yoruba": "Okpokpo",
+      "igbo": "Akwe olu",
+      "hausa": "Kashu / Kanju"
+    },
+    "category": [
+      "medicinal"
+    ],
+    "description": "A tropical evergreen tree native to northeastern Brazil, spread by Portuguese traders in the 16th century and now widely cultivated in Nigeria. The cashew nut is eaten as a snack, and the bark, leaves, and seeds are used in traditional medicine, while the nut shell yields an industrial oil (CNSL) used in lubricants and resins.",
+    "traditional_uses": [
+      {
+        "use": "Bark and leaf extracts traditionally used for diarrhea, dysentery, ulcers, inflammatory conditions, toothaches, and sore throats.",
+        "source_citation": "NMPPDB (nmppdb.com.ng)"
+      },
+      {
+        "use": "Cashew nuts shown to reduce inflammation and oxidative stress in a mouse model of colitis.",
+        "source_citation": "Siracusa, R. et al. (2020). Nutrients, 12(3), 834."
+      },
+      {
+        "use": "Leaf and bark extracts shown to have significant antibacterial activity against Staphylococcus aureus and Escherichia coli in lab studies.",
+        "source_citation": "Amorim, L.S. et al. (2022). Drug and Chemical Toxicology, 45(6), 2653–2663."
+      },
+      {
+        "use": "Hexane leaf extract shown to lower blood sugar in diabetic rats, supporting traditional use for managing diabetes.",
+        "source_citation": "Tedong, L. et al. (2007). Acute and subchronic toxicity of Anacardium occidentale Linn (Anacardiaceae) leaves hexane extract in mice. African Journal of Traditional, Complementary and Alternative Medicines, 4(2), 140–147."
+      },
+      {
+        "use": "Ethanolic leaf extract shown to improve sexual function and raise testosterone levels in stress-exposed male rats.",
+        "source_citation": "Wattanathorn, J. et al. (2019). BioMed Research International, 2019, 1459141."
+      }
+    ],
+    "photo_url": "",
+    "phytochemicals": [
+      {
+        "compound": "Anacardic acid",
+        "associated_properties": "A caustic phenolic lipid found in the nut shell, responsible for skin-irritant/contact-dermatitis effects; also studied for cytotoxic (anticancer) activity against certain cancer cell lines.",
+        "source_citation": "Wikipedia: Anacardic acids, as cited via NMPPDB; toxicity per Tedong, L. et al. (2007). Acute and subchronic toxicity of Anacardium occidentale Linn (Anacardiaceae) leaves hexane extract in mice. African Journal of Traditional, Complementary and Alternative Medicines, 4(2), 140–147."
+      },
+      {
+        "compound": "Cardol",
+        "associated_properties": "A caustic phenolic lipid found alongside anacardic acid in the nut shell, contributing to its contact-dermatitis-causing properties.",
+        "source_citation": "Tedong, L. et al. (2007). Acute and subchronic toxicity of Anacardium occidentale Linn (Anacardiaceae) leaves hexane extract in mice. African Journal of Traditional, Complementary and Alternative Medicines, 4(2), 140–147."
+      }
+    ],
+    "cautions": [
+      {
+        "note": "The nut shell contains anacardic acid and cardol, caustic compounds (related to those in poison ivy) that can cause contact dermatitis, so raw shells need careful processing before the nut is safe to handle and eat.",
+        "source_citation": "Tedong, L. et al. (2007). Acute and subchronic toxicity of Anacardium occidentale Linn (Anacardiaceae) leaves hexane extract in mice. African Journal of Traditional, Complementary and Alternative Medicines, 4(2), 140–147."
+      },
+      {
+        "note": "In mice, high doses of leaf extract (10–14 g/kg body weight) over a prolonged period caused reduced food intake, weight loss, and changes to liver and kidney tissue.",
+        "source_citation": "Tedong, L. et al. (2007). Acute and subchronic toxicity of Anacardium occidentale Linn (Anacardiaceae) leaves hexane extract in mice. African Journal of Traditional, Complementary and Alternative Medicines, 4(2), 140–147."
+      },
+      {
+        "note": "Cashew nuts are a common food allergen and can cause reactions ranging from mild symptoms to severe anaphylaxis in sensitive individuals.",
+        "source_citation": "Wikipedia: Cashew, as cited via NMPPDB (nmppdb.com.ng) — a lower-reliability source; worth confirming with a medical reference"
+      }
+    ]
+  },
+  {
+    "id": "ugwu",
+    "name_common": "Ugwu (fluted pumpkin)",
+    "name_scientific": "Telfairia occidentalis",
+    "names_local": {
+      "yoruba": "Eweroko",
+      "igbo": "Ugu",
+      "other": [
+        {
+          "label": "Efik/Ibibio",
+          "name": "Ikong-ubong"
+        },
+        {
+          "label": "Ibibio",
+          "name": "Ubong"
+        },
+        {
+          "label": "Ikwerre",
+          "name": "Okwukwo-wiri"
+        },
+        {
+          "label": "Etche",
+          "name": "Akwukwor ri"
+        },
+        {
+          "label": "Edo",
+          "name": "Umeke"
+        }
+      ]
+    },
+    "category": [
+      "leafy_vegetable"
+    ],
+    "description": "A vigorous climbing vine native to southern Nigeria, grown for its iron-rich leaves and oil-rich seeds. The leaves are a key ingredient in Nigerian soups such as egusi and ogbono, and hold particular cultural significance in Igbo tradition, where they are associated with rituals for health and fertility.",
+    "traditional_uses": [
+      {
+        "use": "Leaf extract shown to inhibit and reverse sickling of HbSS (sickle-cell) blood cells in lab studies, relevant to its traditional use around sickle-cell anemia in Nigeria.",
+        "source_citation": "Osukoya, O.A., Oladimeji-Salami, J.A., & Adegbenro, D. (2018). Journal of Traditional and Complementary Medicine, 8(3), 369–373."
+      },
+      {
+        "use": "Leaf extract shown to lower blood glucose in diabetic rats, comparable to a standard antidiabetic drug (glibenclamide).",
+        "source_citation": "Eseyin, O.A., Oforah, E., & Dooka, B.D. (2000). Global Journal of Pure and Applied Sciences, 6(4), 639–641. (Note: NMPPDB's own page cites this as \"Eseyin et al., 2010\" — a likely typo, as their reference list only includes 2000 and 2018 Eseyin papers.)"
+      },
+      {
+        "use": "Leaf extract shown to reduce pain response in animal studies, comparable to aspirin.",
+        "source_citation": "Akindele, A.J., Oladimeji-Salami, J.A., & Usuwah, B.A. (2015). Journal of Medicinal Food, 18(10), 1157–1163."
+      },
+      {
+        "use": "Root extract shown to have antimalarial activity comparable to chloroquine in animal studies.",
+        "source_citation": "Okokon, J.E., Ekpe, O.O., & Eseyin, O.A. (2007). Journal of Medicinal Plants Research, 1(4), 79–83."
+      },
+      {
+        "use": "Leaf extract shown to protect the liver in rats with induced liver damage.",
+        "source_citation": "Nwanna, E.E., Oboh, G., & Ekperigin, M.M. (2008). African Journal of Food Science, 2(8), 131–135."
+      },
+      {
+        "use": "Leaf extract shown to have a calming (anxiolytic) effect at lower doses and a sedative effect at higher doses in mice.",
+        "source_citation": "Ajao, M.Y., & Akindele, A.J. (2013). Brazilian Journal of Pharmacognosy, 23(5), 801–809."
+      }
+    ],
+    "cautions": [
+      {
+        "note": "No mortality observed in rats even at high acute doses (up to 3,000 mg/kg); however, sub-chronic dosing over 60 days caused a reversible reduction in testicular weight and mild testicular tissue changes, with no significant effects on blood or biochemical markers.",
+        "source_citation": "Akindele, A.J., Oladimeji-Salami, J.A., Oyetola, R.A., & Osiagwu, D.D. (2018). Medicines, 5(1), 4."
+      },
+      {
+        "note": "High doses (over 1,000 mg/kg) over 30 days led to a mild rise (around 10%) in a liver enzyme marker (ALT).",
+        "source_citation": "Akindele, A.J. et al. (2018). Medicines, 5(1), 4."
+      },
+      {
+        "note": "Safety during pregnancy or childhood has not been evaluated; wild-harvested plants may carry heavy-metal contamination risk.",
+        "source_citation": "Akindele, A.J. et al. (2018). Medicines, 5(1), 4."
+      }
+    ],
+    "photo_url": "",
+    "phytochemicals": []
+  },
+  {
+    "id": "bitter-melon",
+    "name_common": "Bitter melon",
+    "name_scientific": "Momordica charantia",
+    "names_local": {
+      "yoruba": "Ejinrin were",
+      "igbo": "Ejinrin",
+      "hausa": "Garahuni"
+    },
+    "category": [
+      "medicinal"
+    ],
+    "description": "A climbing vine bearing warty, bitter-tasting fruit, eaten as a vegetable across Nigeria and much of Asia and Africa once picked unripe. Beyond food, it has one of the longest traditional-medicine track records of any plant on this list, especially for diabetes, though which of its compounds actually drive that effect is still an active research question.",
+    "traditional_uses": [
+      {
+        "use": "Used since ancient times in Traditional Chinese Medicine, and across many other cultures, to help manage diabetes and high blood sugar.",
+        "source_citation": "Çiçek, S.S. (2022). Momordica charantia L.—Diabetes-Related Bioactivities, Quality Control, and Safety Considerations. Frontiers in Pharmacology, 13, 904643."
+      },
+      {
+        "use": "Fruit traditionally used as a stomachic, laxative, or dewormer, including reported use in Trinidad and Ghana.",
+        "source_citation": "Çiçek, S.S. (2022). Momordica charantia L.—Diabetes-Related Bioactivities, Quality Control, and Safety Considerations. Frontiers in Pharmacology, 13, 904643. Regional use per USDA Dr. Duke's Phytochemical and Ethnobotanical Database (phytochem.nal.usda.gov), Momordica charantia entry"
+      },
+      {
+        "use": "Used traditionally for fever and malaria in several countries, including Ghana, Haiti, and Trinidad.",
+        "source_citation": "USDA Dr. Duke's Phytochemical and Ethnobotanical Database (phytochem.nal.usda.gov), Momordica charantia entry"
+      },
+      {
+        "use": "Used traditionally for dysentery and rheumatism in various regions.",
+        "source_citation": "USDA Dr. Duke's Phytochemical and Ethnobotanical Database (phytochem.nal.usda.gov), Momordica charantia entry"
+      }
+    ],
+    "photo_url": "",
+    "phytochemicals": [
+      {
+        "compound": "Charantin",
+        "associated_properties": "A mixture of two sterol glucosides, historically the first compound linked to bitter melon's blood-sugar-lowering effect; however, its naturally low concentration in the fruit means it likely can't fully explain the effect on its own.",
+        "source_citation": "Çiçek, S.S. (2022). Momordica charantia L.—Diabetes-Related Bioactivities, Quality Control, and Safety Considerations. Frontiers in Pharmacology, 13, 904643."
+      },
+      {
+        "compound": "Momordicosides (as a class)",
+        "associated_properties": "Cucurbitane-type triterpenoid saponins found throughout the fruit and seeds; current research increasingly points to this group, rather than charantin alone, as the more likely driver of bitter melon's studied antidiabetic activity.",
+        "source_citation": "Çiçek, S.S. (2022). Momordica charantia L.—Diabetes-Related Bioactivities, Quality Control, and Safety Considerations. Frontiers in Pharmacology, 13, 904643."
+      },
+      {
+        "compound": "Polypeptide-p",
+        "associated_properties": "A plant protein historically studied for insulin-like, blood-sugar-lowering activity, though its low bioavailability in the body limits how much of bitter melon's overall effect it can account for.",
+        "source_citation": "Çiçek, S.S. (2022). Momordica charantia L.—Diabetes-Related Bioactivities, Quality Control, and Safety Considerations. Frontiers in Pharmacology, 13, 904643."
+      }
+    ],
+    "cautions": [
+      {
+        "note": "Can cause hypoglycemia (blood sugar dropping too low), especially when combined with diabetes medication, so caution and medical guidance are advised if using both together. Some people also experience gastrointestinal disturbances.",
+        "source_citation": "Çiçek, S.S. (2022). Momordica charantia L.—Diabetes-Related Bioactivities, Quality Control, and Safety Considerations. Frontiers in Pharmacology, 13, 904643."
+      },
+      {
+        "note": "Listed among plants traditionally used as an abortifacient in some cultures; best avoided medicinally during pregnancy.",
+        "source_citation": "USDA Dr. Duke's Phytochemical and Ethnobotanical Database (phytochem.nal.usda.gov), Momordica charantia entry"
+      }
+    ]
+  },
+  {
+    "id": "turmeric",
+    "name_common": "Turmeric",
+    "name_scientific": "Curcuma longa",
+    "names_local": {
+      "yoruba": "Ata-ile pupa",
+      "igbo": "Ose Oji",
+      "hausa": "Gangamau / Gangamin Turmi"
+    },
+    "category": [
+      "spice",
+      "medicinal"
+    ],
+    "description": "A perennial rhizomatous herb, originally from southwestern India and now grown across the tropics including West Africa. The bright orange-yellow rhizome is used fresh or dried as both a culinary spice and a long-standing medicinal ingredient, particularly in Ayurvedic tradition.",
+    "traditional_uses": [
+      {
+        "use": "Used in Ayurveda for swelling, sprains, arthritis, and musculoskeletal pain; clinical trials show curcumin preparations relieve pain and improve function in knee osteoarthritis about as well as standard anti-inflammatory drugs, with fewer stomach-related side effects.",
+        "source_citation": "Shep, D., Khanwelkar, C., Gade, P., & Karad, S. (2019). Trials, 20(1), 214."
+      },
+      {
+        "use": "Used traditionally as a carminative and digestive aid; a clinical trial found that adding curcumin to standard treatment improved remission in patients with mild-to-moderate ulcerative colitis.",
+        "source_citation": "Lang, A. et al. (2015). Clinical Gastroenterology and Hepatology, 13(8), 1444–1449."
+      },
+      {
+        "use": "Used in traditional medicine for wounds, cuts, and skin conditions; curcumin has been shown in lab studies to support the wound-healing process.",
+        "source_citation": "Fuloria, S. et al. (2022). A Comprehensive Review on the Therapeutic Potential of Curcuma longa Linn. in Relation to its Major Active Constituent Curcumin. Frontiers in Pharmacology, 13, 820806."
+      },
+      {
+        "use": "Curcumin supplementation shown in meta-analyses of clinical trials to produce modest but real improvements in depressive symptoms, with good tolerability.",
+        "source_citation": "Ng, Q.X., Koh, S.S.H., Chan, H.W., & Ho, C.Y.X. (2017). Journal of the American Medical Directors Association, 18(6), 503–508."
+      },
+      {
+        "use": "Curcumin supplementation shown in systematic reviews to improve liver enzymes, inflammatory markers, and lipid profiles in some patients with non-alcoholic fatty liver disease, though results vary by formulation.",
+        "source_citation": "Ebrahimzadeh, A. et al. (2024). Food Science & Nutrition, 13(1), e4144."
+      }
+    ],
+    "photo_url": "",
+    "phytochemicals": [
+      {
+        "compound": "Curcumin",
+        "associated_properties": "Turmeric's main active compound, behind most of its studied anti-inflammatory, antioxidant, and therapeutic effects; naturally has low bioavailability in the body, which is why some supplements use special formulations to improve absorption (formulations that also carry the liver-injury caution noted above).",
+        "source_citation": "Fuloria, S. et al. (2022). A Comprehensive Review on the Therapeutic Potential of Curcuma longa Linn. in Relation to its Major Active Constituent Curcumin. Frontiers in Pharmacology, 13, 820806."
+      }
+    ],
+    "cautions": [
+      {
+        "note": "Culinary use of turmeric is generally considered safe. However, clinical reports describe cases of drug-induced liver injury linked to high-dose turmeric supplements, particularly formulations designed to boost curcumin absorption, typically appearing after weeks to months of use. Caution is advised for people with existing liver disease or those taking high-dose supplements.",
+        "source_citation": "Halegoua-DeMarzio, D. et al. (2023). Liver Injury Associated with Turmeric – A Growing Problem: Ten Cases from the Drug-Induced Liver Injury Network (DILIN). American Journal of Medicine, 136(2), 200–206."
+      }
+    ]
+  },
+  {
+    "id": "ginger",
+    "name_common": "Ginger",
+    "name_scientific": "Zingiber officinale",
+    "names_local": {
+      "yoruba": "Ata-ile",
+      "igbo": "Jinja",
+      "hausa": "Citta",
+      "other": [
+        {
+          "label": "Efik",
+          "name": "Umuji"
+        }
+      ]
+    },
+    "category": [
+      "spice",
+      "medicinal"
+    ],
+    "description": "A perennial herb grown for its aromatic, knobby rhizome, used fresh or dried as both a kitchen spice and a long-standing traditional medicine across Ayurvedic, Chinese, and African systems. Nigeria is among the countries where it is cultivated at scale.",
+    "traditional_uses": [
+      {
+        "use": "Rhizome used in India to relieve arthritis pain.",
+        "source_citation": "NMPPDB (nmppdb.com.ng)"
+      },
+      {
+        "use": "Used in China for oxidative stress; gingerols show free-radical-scavenging activity in lab tests.",
+        "source_citation": "Mao, Q.Q. et al. (2019). Bioactive compounds and bioactivities of ginger (Zingiber officinale Roscoe). Foods, 8(6), 185."
+      },
+      {
+        "use": "Used in Thailand for morning sickness; shown in a clinical trial to reduce nausea in pregnancy at about 1 g/day.",
+        "source_citation": "Vutyavanich, T., Kraisarin, T., & Ruangsri, R. (2001). Obstetrics & Gynecology, 97(4), 577–582."
+      },
+      {
+        "use": "Used in Nigeria as a digestive aid; shown to enhance gastric motility.",
+        "source_citation": "Giacosa, A. et al. (2015). European Review for Medical and Pharmacological Sciences, 19(7), 1291–1296."
+      },
+      {
+        "use": "Used in Malaysia for muscle pain; shown to reduce pain in patients with knee osteoarthritis.",
+        "source_citation": "Altman, R.D., & Marcussen, K.C. (2001). Arthritis & Rheumatism, 44(11), 2531–2538."
+      },
+      {
+        "use": "Used in Ghana for infections; shown to inhibit E. coli growth in lab tests.",
+        "source_citation": "Akoachere, J.F. et al. (2002). East African Medical Journal, 79(11), 588–592."
+      }
+    ],
+    "photo_url": "",
+    "phytochemicals": [
+      {
+        "compound": "[6]-Gingerol",
+        "associated_properties": "The main pungent compound in fresh ginger; associated with anti-inflammatory and analgesic (pain-relieving) activity.",
+        "source_citation": "Mao, Q.Q. et al. (2019). Bioactive compounds and bioactivities of ginger (Zingiber officinale Roscoe). Foods, 8(6), 185."
+      },
+      {
+        "compound": "[6]-Shogaol",
+        "associated_properties": "Formed from gingerol on drying and more concentrated in dried ginger; shown to induce cancer-cell death in colorectal cancer cells in lab studies.",
+        "source_citation": "Pan, M.H. et al. (2008). Molecular Nutrition & Food Research, 52(5), 527–537."
+      },
+      {
+        "compound": "Zingerone",
+        "associated_properties": "An antioxidant compound formed from gingerol during cooking.",
+        "source_citation": "Mao, Q.Q. et al. (2019). Bioactive compounds and bioactivities of ginger (Zingiber officinale Roscoe). Foods, 8(6), 185."
+      },
+      {
+        "compound": "Zingiberene",
+        "associated_properties": "The dominant component (roughly 30–70%) of ginger's essential oil, associated with antimicrobial activity.",
+        "source_citation": "Mao, Q.Q. et al. (2019). Bioactive compounds and bioactivities of ginger (Zingiber officinale Roscoe). Foods, 8(6), 185."
+      }
+    ],
+    "cautions": [
+      {
+        "note": "Safe at typical culinary doses (up to about 4 g/day). Higher doses (over 5 g/day) may cause heartburn or diarrhea. Ginger may strengthen the effect of blood-thinning medication or lower blood sugar too much, so caution is advised alongside such medicines and in pregnancy beyond ordinary food amounts.",
+        "source_citation": "Ali, B.H., Blunden, G., Tanira, M.O., & Nemmar, A. (2008). Some phytochemical, pharmacological and toxicological properties of ginger (Zingiber officinale Roscoe): A review of recent research. Food and Chemical Toxicology, 46(2), 409–420."
+      }
+    ]
+  }
+]
