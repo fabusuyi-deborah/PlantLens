@@ -17,6 +17,20 @@ export function getPlantsByIds(ids: string[]): Plant[] {
     .filter((plant): plant is Plant => plant !== undefined);
 }
 
+/** Plants sharing the most categories with the given one. */
+export function getRelatedPlants(plant: Plant, limit = 3): Plant[] {
+  return plants
+    .filter((other) => other.id !== plant.id)
+    .map((other) => ({
+      other,
+      shared: other.category.filter((category) => plant.category.includes(category)).length,
+    }))
+    .filter(({ shared }) => shared > 0)
+    .sort((a, b) => b.shared - a.shared)
+    .slice(0, limit)
+    .map(({ other }) => other);
+}
+
 /** Categories with their plant counts, most common first. */
 export function getCategoryCounts(): { category: PlantCategory; count: number }[] {
   const counts = new Map<PlantCategory, number>();

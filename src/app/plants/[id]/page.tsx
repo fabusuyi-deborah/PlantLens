@@ -1,20 +1,34 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ChevronRight } from "lucide-react";
+import { CautionsPanel, PhytochemicalsPanel, UsesPanel } from "@/components/plant-detail/panels";
+import { PlantTabs } from "@/components/plant-detail/plant-tabs";
+import {
+  EducationalNotice,
+  QuickFacts,
+  RelatedPlants,
+  SeverityLegend,
+} from "@/components/plant-detail/sidebar";
+import { PlantPhoto } from "@/components/plant-photo";
 import { CategoryPill } from "@/components/ui/category-pill";
-import { getAllPlants, getPlantById } from "@/lib/plants";
+import { LabeledNameTag } from "@/components/ui/local-name-tag";
+import { getPlantCitations } from "@/lib/citations";
+import { getAllPlants, getPlantById, getRelatedPlants } from "@/lib/plants";
+import type { CautionSeverity } from "@/types/plant";
 
 export function generateStaticParams() {
   return getAllPlants().map((plant) => ({ id: plant.id }));
 }
 
-export async function generateMetadata(
-  props: PageProps<"/plants/[id]">,
-): Promise<Metadata> {
+export async function generateMetadata(props: PageProps<"/plants/[id]">): Promise<Metadata> {
   const { id } = await props.params;
   const plant = getPlantById(id);
   return plant
-    ? { title: `${plant.name_common} · PlantLens`, description: plant.description }
+    ? {
+        title: `${plant.name_common} (${plant.name_scientific}) · PlantLens`,
+        description: plant.description,
+      }
     : {};
 }
 
@@ -23,93 +37,97 @@ export default async function PlantPage(props: PageProps<"/plants/[id]">) {
   const plant = getPlantById(id);
   if (!plant) notFound();
 
-  const { other = [], ...mainNames } = plant.names_local;
+  const citations = getPlantCitations(plant);
+  const related = getRelatedPlants(plant);
+  const severities = plant.cautions
+    .map((caution) => caution.severity)
+    .filter((severity): severity is CautionSeverity => Boolean(severity));
+
+  const { yoruba, igbo, hausa, other = [] } = plant.names_local;
   const localNames = [
-    ...Object.entries(mainNames),
-    ...other.map(({ label, name }) => [label, name] as const),
-  ];
+    { label: "Yoruba", name: yoruba },
+    { label: "Igbo", name: igbo },
+    { label: "Hausa", name: hausa },
+    ...other,
+  ].filter((entry): entry is { label: string; name: string } => Boolean(entry.name));
 
   return (
-    <main className="mx-auto w-full max-w-3xl px-4 py-12">
-      <Link href="/" className="text-body text-accent hover:underline">
-        ← All plants
-      </Link>
-
-      <h1 className="mt-4 text-4xl font-semibold tracking-tight">
-        {plant.name_common}
-      </h1>
-      <p className="italic text-ink-tertiary">{plant.name_scientific}</p>
-
-      <div className="mt-3 flex flex-wrap gap-1.5">
-        {plant.category.map((category) => (
-          <CategoryPill key={category} category={category} />
-        ))}
-      </div>
-
-      {localNames.length > 0 && (
-        <dl className="mt-6 grid grid-cols-[auto_1fr] gap-x-4 gap-y-1 text-sm">
-          {localNames.map(([language, name]) => (
-            <div key={language} className="contents">
-              <dt className="capitalize text-ink-tertiary">{language}</dt>
-              <dd>{name}</dd>
-            </div>
+    <>
+      <nav aria-label="Breadcrumb" className="border-b border-border bg-bg-secondary">
+        <ol className="mx-auto flex max-w-336 items-center gap-2 px-4 py-2.5 text-body text-ink-tertiary md:px-8">
+          {[
+            { href: "/", label: "Home" },
+            { href: "/explore", label: "Explore" },
+          ].map((crumb) => (
+            <li key={crumb.href} className="flex items-center gap-2">
+              <Link href={crumb.href} className="transition-colors hover:text-ink">
+                {crumb.label}
+              </Link>
+              <ChevronRight className="size-3.5" aria-hidden />
+            </li>
           ))}
-        </dl>
-      )}
+          <li aria-current="page" className="font-medium text-ink">{plant.name_common}</li>
+        </ol>
+      </nav>
 
-      <p className="mt-6 leading-relaxed">{plant.description}</p>
+      <main className="mx-auto max-w-336 px-4 pt-10 pb-16 md:px-8">
+        <header className="grid gap-8 md:grid-cols-[minmax(0,480px)_1fr] md:gap-10">
+          <div className="relative aspect-4/3 overflow-hidden rounded-lg">
+            <PlantPhoto
+              plant={plant}
+              sizes="(min-width: 768px) 480px, 100vw"
+              priority
+              iconClassName="size-16"
+            />
+          </div>
+          <div>
+            <div className="flex flex-wrap gap-2">
+              {plant.category.map((category) => (
+                <CategoryPill key={category} category={category} withIcon />
+              ))}
+            </div>
+            <h1 className="mt-5 text-[2rem] leading-tight font-bold tracking-[-0.8px] text-ink sm:text-page-title">
+              {plant.name_common}
+            </h1>
+            <p className="mt-2 text-[17px] text-ink-tertiary italic">{plant.name_scientific}</p>
+            <p className="mt-4 text-base leading-relaxed text-ink-secondary">{plant.description}</p>
+            {localNames.length > 0 && (
+              <ul className="mt-5 flex flex-wrap gap-3" aria-label="Local names">
+                {localNames.map(({ label, name }) => (
+                  <li key={label}>
+                    <LabeledNameTag label={label} name={name} />
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        </header>
 
-      <Section title="Traditional uses">
-        {plant.traditional_uses.map((item, i) => (
-          <Cited key={i} text={item.use} citation={item.source_citation} />
-        ))}
-      </Section>
-
-      <Section title="Phytochemicals">
-        {plant.phytochemicals?.map((item) => (
-          <Cited
-            key={item.compound}
-            text={
-              <>
-                <strong className="font-medium">{item.compound}</strong>:{" "}
-                {item.associated_properties}
-              </>
-            }
-            citation={item.source_citation}
+        <div className="mt-10 grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[minmax(0,1fr)_360px]">
+          <PlantTabs
+            tabs={[
+              {
+                id: "traditional-uses",
+                label: "Traditional Uses",
+                content: <UsesPanel plant={plant} citations={citations} />,
+              },
+              {
+                id: "phytochemicals",
+                label: "Phytochemicals",
+                content: <PhytochemicalsPanel plant={plant} citations={citations} />,
+              },
+              { id: "cautions", label: "Cautions", content: <CautionsPanel plant={plant} /> },
+            ]}
           />
-        ))}
-      </Section>
 
-      <Section title="Cautions">
-        {plant.cautions.map((item, i) => (
-          <Cited key={i} text={item.note} citation={item.source_citation} />
-        ))}
-      </Section>
-    </main>
-  );
-}
-
-function Section({
-  title,
-  children,
-}: {
-  title: string;
-  children: React.ReactNode[] | undefined;
-}) {
-  if (!children || children.length === 0) return null;
-  return (
-    <section className="mt-10">
-      <h2 className="mb-3 text-xl font-semibold">{title}</h2>
-      <ul className="space-y-4">{children}</ul>
-    </section>
-  );
-}
-
-function Cited({ text, citation }: { text: React.ReactNode; citation: string }) {
-  return (
-    <li>
-      <p>{text}</p>
-      <p className="mt-1 text-xs text-ink-muted">Source: {citation}</p>
-    </li>
+          <aside className="space-y-6">
+            <QuickFacts plant={plant} citations={citations} />
+            <EducationalNotice />
+            {severities.length > 0 && <SeverityLegend severities={severities} />}
+            <RelatedPlants plants={related} />
+          </aside>
+        </div>
+      </main>
+    </>
   );
 }

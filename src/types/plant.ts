@@ -21,17 +21,26 @@ export interface LocalNames {
 }
 
 export interface TraditionalUse {
+  /** Optional short heading, e.g. "Fever & Malaria Treatment". */
+  title?: string;
   use: string;
   source_citation: string;
 }
 
+export type CautionSeverity = "high" | "moderate" | "low";
+
 export interface Caution {
+  /** Optional short heading, e.g. "Pregnancy & Breastfeeding". */
+  title?: string;
+  severity?: CautionSeverity;
   note: string;
   source_citation: string;
 }
 
 export interface Phytochemical {
   compound: string;
+  /** Optional compound class, e.g. "Flavonoid" or "Sesquiterpene lactone". */
+  class?: string;
   associated_properties: string;
   source_citation: string;
 }
@@ -43,6 +52,10 @@ export interface Plant {
   names_local: LocalNames;
   category: PlantCategory[];
   description: string;
+  /** Optional botanical family, e.g. "Asteraceae". */
+  family?: string;
+  /** Optional plant parts used, e.g. ["Leaves", "Roots"]. */
+  parts_used?: string[];
   traditional_uses: TraditionalUse[];
   cautions: Caution[];
   /** Not yet curated for every plant. */

@@ -19,6 +19,8 @@ interface CategoryMeta {
   text: string;
   /** Tinted background, used by pills and icon tiles. */
   bg: string;
+  /** Pill colours, when they differ from the icon tile (per the design system). */
+  pill?: string;
 }
 
 export const categoryMeta: Record<PlantCategory, CategoryMeta> = {
@@ -28,6 +30,7 @@ export const categoryMeta: Record<PlantCategory, CategoryMeta> = {
     icon: HeartPulse,
     text: "text-danger",
     bg: "bg-danger-light",
+    pill: "bg-accent-light text-accent-dark",
   },
   leafy_vegetable: {
     label: "Leafy Vegetable",
