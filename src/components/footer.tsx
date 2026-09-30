@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { Mail } from "lucide-react";
 import { Logo } from "@/components/logo";
-import { GithubIcon, TwitterIcon } from "@/components/ui/brand-icons";
-import { repoUrl } from "@/lib/site";
+import { TwitterIcon } from "@/components/ui/brand-icons";
 
 // TODO: replace "#" with the real writing series, social and email links.
 const columns = [
@@ -26,14 +25,12 @@ const columns = [
     title: "Project",
     links: [
       { label: "About", href: "/about" },
-      { label: "GitHub", href: repoUrl },
       { label: "Writing Series", href: "#" },
     ],
   },
 ];
 
 const socials = [
-  { label: "GitHub", href: repoUrl, icon: GithubIcon },
   { label: "Twitter", href: "#", icon: TwitterIcon },
   { label: "Email", href: "#", icon: Mail },
 ];

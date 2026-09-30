@@ -1,7 +1,5 @@
-import { FlaskConical, Info, MessageSquareWarning, ShieldAlert, TriangleAlert } from "lucide-react";
-import { buttonStyles } from "@/components/ui/button";
+import { FlaskConical, Info, ShieldAlert, TriangleAlert } from "lucide-react";
 import { shortCitation } from "@/lib/citations";
-import { reportIssueUrl } from "@/lib/site";
 import type { Caution, CautionSeverity, Plant } from "@/types/plant";
 import { Card, Citation, classPillStyle, EmptyNote, SourcesCard } from "./shared";
 
@@ -255,26 +253,6 @@ export function CautionsPanel({ plant }: { plant: Plant }) {
           </EmptyNote>
         )}
       </Card>
-
-      <div className="flex flex-col gap-4 rounded-lg border border-accent/40 bg-accent-light p-5 sm:flex-row sm:items-center sm:justify-between">
-        <div className="flex gap-3">
-          <MessageSquareWarning className="mt-0.5 size-5 shrink-0 text-accent" aria-hidden />
-          <div>
-            <h2 className="text-body font-semibold text-accent-dark">Report an issue with this data</h2>
-            <p className="text-body-sm text-ink-secondary">
-              If you notice inaccurate or outdated information, help us improve by flagging it.
-            </p>
-          </div>
-        </div>
-        <a
-          href={reportIssueUrl(plant.name_common)}
-          target="_blank"
-          rel="noreferrer"
-          className={`${buttonStyles({ size: "sm" })} shrink-0`}
-        >
-          Report
-        </a>
-      </div>
     </div>
   );
 }
