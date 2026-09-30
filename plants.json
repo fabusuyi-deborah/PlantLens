@@ -1052,7 +1052,32 @@
     ],
     "cautions": [],
     "photo_url": "/plants/garden-egg-b1d30e8d.jpg",
-    "phytochemicals": [],
+    "phytochemicals": [
+      {
+        "compound": "Chlorogenic acid",
+        "class": "Hydroxycinnamic acid",
+        "associated_properties": "The main phenolic compound in the fruit across dozens of garden egg varieties, associated with antioxidant activity; varieties richer in it showed stronger antioxidant effects in lab tests.",
+        "source_citation": "Plazas, M., Prohens, J., Cuñat, A.N., et al. (2014). Reducing capacity, chlorogenic acid content and biological activity in a collection of scarlet (Solanum aethiopicum) and gboma (S. macrocarpon) eggplants. International Journal of Molecular Sciences, 15(10), 17221–17241."
+      },
+      {
+        "compound": "Quercetin",
+        "class": "Flavonol",
+        "associated_properties": "One of the most abundant flavonoids measured in Nigerian garden egg fruit, associated with antioxidant and anti-inflammatory activity.",
+        "source_citation": "Nwanna, E.E., Ibukun, E.O., Oboh, G., et al. (2014). HPLC-DAD analysis and in-vitro property of polyphenols extracts from (Solanum aethiopium) fruits on α-amylase, α-glucosidase and angiotensin-1-converting enzyme activities. International Journal of Biomedical Science, 10(4), 272–281."
+      },
+      {
+        "compound": "Rutin",
+        "class": "Flavonol glycoside",
+        "associated_properties": "A quercetin-based flavonoid found in the fruit, associated with antioxidant activity.",
+        "source_citation": "Nwanna, E.E., Ibukun, E.O., Oboh, G., et al. (2014). HPLC-DAD analysis and in-vitro property of polyphenols extracts from (Solanum aethiopium) fruits on α-amylase, α-glucosidase and angiotensin-1-converting enzyme activities. International Journal of Biomedical Science, 10(4), 272–281."
+      },
+      {
+        "compound": "β-Carotene",
+        "class": "Carotenoid",
+        "associated_properties": "A pigment the body converts into vitamin A, measured at roughly 15–30 mg per 100 g (dry weight) in fresh African garden egg.",
+        "source_citation": "Mbondo, N.N., Owino, W.O., Ambuko, J., & Sila, D.N. (2018). Effect of drying methods on the retention of bioactive compounds in African eggplant. Food Science & Nutrition, 6(4), 814–823."
+      }
+    ],
     "photo_credit": {
       "author": "St Lucky R",
       "license": "CC0",
@@ -1202,7 +1227,38 @@
       }
     ],
     "photo_url": "/plants/ugwu-b7e6e3b2.jpg",
-    "phytochemicals": [],
+    "phytochemicals": [
+      {
+        "compound": "4-Hydroxybenzoic acid",
+        "class": "Phenolic acid",
+        "associated_properties": "The most abundant phenolic compound measured in the leaf, a simple phenolic acid associated with antioxidant activity.",
+        "source_citation": "Eseyin, O.A., Sattar, M.A., Rathore, H.A., et al. (2018). GC-MS and HPLC profiles of phenolic fractions of the leaf of Telfairia occidentalis. Pakistan Journal of Pharmaceutical Sciences, 31(1), 45–50."
+      },
+      {
+        "compound": "Catechin",
+        "class": "Flavan-3-ol",
+        "associated_properties": "A flavonoid also found in tea and cocoa, present in high amounts in the leaf and associated with antioxidant activity.",
+        "source_citation": "Eseyin, O.A., Sattar, M.A., Rathore, H.A., et al. (2018). GC-MS and HPLC profiles of phenolic fractions of the leaf of Telfairia occidentalis. Pakistan Journal of Pharmaceutical Sciences, 31(1), 45–50."
+      },
+      {
+        "compound": "Quercetin",
+        "class": "Flavonol",
+        "associated_properties": "The main compound in the leaf's flavonoid fraction, a widely studied flavonoid associated with antioxidant and anti-inflammatory activity.",
+        "source_citation": "Eseyin, O.A., Sattar, M.A., Rathore, H.A., et al. (2018). GC-MS and HPLC profiles of phenolic fractions of the leaf of Telfairia occidentalis. Pakistan Journal of Pharmaceutical Sciences, 31(1), 45–50."
+      },
+      {
+        "compound": "Caffeic acid",
+        "class": "Hydroxycinnamic acid",
+        "associated_properties": "A phenolic acid found throughout the leaf extract, associated with antioxidant activity.",
+        "source_citation": "Eseyin, O.A., Sattar, M.A., Rathore, H.A., et al. (2018). GC-MS and HPLC profiles of phenolic fractions of the leaf of Telfairia occidentalis. Pakistan Journal of Pharmaceutical Sciences, 31(1), 45–50."
+      },
+      {
+        "compound": "β-Carotene",
+        "class": "Carotenoid",
+        "associated_properties": "An orange-yellow pigment identified in the leaf, which the body converts into vitamin A.",
+        "source_citation": "Ogunlakin, A.D., Gyebi, G.A., Elbasyouni, A., et al. (2025). Ethnomedicinal validation of Telfairia occidentalis L. leaf: a dual experimental and computational approach to uterine leiomyoma therapy. Frontiers in Nutrition, 12, 1669528."
+      }
+    ],
     "photo_credit": {
       "author": "Dorcas Atule",
       "license": "CC BY-SA 4.0",
