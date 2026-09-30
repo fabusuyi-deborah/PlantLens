@@ -10,7 +10,7 @@ import {
   RelatedPlants,
   SeverityLegend,
 } from "@/components/plant-detail/sidebar";
-import { PlantPhoto } from "@/components/plant-photo";
+import { PhotoCredit, PlantPhoto } from "@/components/plant-photo";
 import { CategoryPill } from "@/components/ui/category-pill";
 import { LabeledNameTag } from "@/components/ui/local-name-tag";
 import { getPlantCitations } from "@/lib/citations";
@@ -72,14 +72,21 @@ export default async function PlantPage(props: PageProps<"/plants/[id]">) {
 
       <main className="mx-auto max-w-336 px-4 pt-10 pb-16 md:px-8">
         <header className="grid gap-8 md:grid-cols-[minmax(0,480px)_1fr] md:gap-10">
-          <div className="relative aspect-4/3 overflow-hidden rounded-lg">
-            <PlantPhoto
-              plant={plant}
-              sizes="(min-width: 768px) 480px, 100vw"
-              priority
-              iconClassName="size-16"
-            />
-          </div>
+          <figure>
+            <div className="relative aspect-4/3 overflow-hidden rounded-lg">
+              <PlantPhoto
+                plant={plant}
+                sizes="(min-width: 768px) 480px, 100vw"
+                priority
+                iconClassName="size-16"
+              />
+            </div>
+            {plant.photo_credit && (
+              <figcaption>
+                <PhotoCredit credit={plant.photo_credit} className="mt-2" />
+              </figcaption>
+            )}
+          </figure>
           <div>
             <div className="flex flex-wrap gap-2">
               {plant.category.map((category) => (

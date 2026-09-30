@@ -61,4 +61,13 @@ export interface Plant {
   /** Not yet curated for every plant. */
   phytochemicals?: Phytochemical[];
   photo_url: string;
+  /** Attribution for `photo_url`; required by CC BY / CC BY-SA licenses. */
+  photo_credit?: PhotoCredit;
+}
+
+export interface PhotoCredit {
+  author: string;
+  /** e.g. "CC BY-SA 4.0" or "CC0". */
+  license: string;
+  source_url: string;
 }

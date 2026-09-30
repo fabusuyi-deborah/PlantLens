@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ArrowUpRight, BookOpen, Database, type LucideIcon } from "lucide-react";
 import { PageHeader } from "@/components/page-header";
+import { PhotoCredit } from "@/components/plant-photo";
 import { citesDuke, citesNmppdb, getPlantCitations } from "@/lib/citations";
 import { getAllPlants } from "@/lib/plants";
 
@@ -30,6 +32,7 @@ const steps = [
 
 export default function SourcesPage() {
   const plants = getAllPlants();
+  const photographed = plants.filter((plant) => plant.photo_credit);
   const citations = new Set(plants.flatMap(getPlantCitations));
   const countPlantsCiting = (test: (citation: string) => boolean) =>
     plants.filter((plant) => getPlantCitations(plant).some(test)).length;
@@ -96,6 +99,29 @@ export default function SourcesPage() {
           ))}
         </ol>
       </section>
+
+      {photographed.length > 0 && (
+        <section className="mt-16">
+          <h2 className="text-section text-ink">Photo credits</h2>
+          <p className="mt-2 max-w-2xl text-body text-ink-secondary">
+            Plant photos come from Wikimedia Commons and iNaturalist, used under their Creative
+            Commons or public domain licenses.
+          </p>
+          <ul className="mt-6 grid gap-x-8 sm:grid-cols-2 lg:grid-cols-3">
+            {photographed.map((plant) => (
+              <li key={plant.id} className="border-b border-border-light py-3">
+                <Link
+                  href={`/plants/${plant.id}`}
+                  className="text-body font-medium text-ink transition-colors hover:text-accent"
+                >
+                  {plant.name_common}
+                </Link>
+                <PhotoCredit credit={plant.photo_credit} />
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
     </main>
   );
 }

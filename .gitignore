@@ -47,3 +47,7 @@ __pycache__/
 # source data (download per README)
 /Duke-Source-CSV/
 
+
+# photo picking working files (regenerate with fetch_plant_photos.py candidates)
+/photo_candidates.json
+/photo_review.html

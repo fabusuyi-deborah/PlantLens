@@ -28,7 +28,7 @@
       }
     ],
     "cautions": [],
-    "photo_url": "",
+    "photo_url": "/plants/scent-leaf-5ed92197.jpg",
     "phytochemicals": [
       {
         "compound": "Eugenol",
@@ -40,7 +40,12 @@
         "associated_properties": "An essential-oil compound found alongside eugenol in some chemotypes, associated with antimicrobial and antifungal activity.",
         "source_citation": "USDA Dr. Duke's Phytochemical and Ethnobotanical Database (phytochem.nal.usda.gov), Ocimum gratissimum entry"
       }
-    ]
+    ],
+    "photo_credit": {
+      "author": "Forest & Kim Starr",
+      "license": "CC BY 3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Starr_030202-0053_Ocimum_gratissimum.jpg"
+    }
   },
   {
     "id": "bitter-leaf",
@@ -122,7 +127,7 @@
         "source_citation": "Farombi & Owoeye (2011), via NMPPDB (nmppdb.com.ng)"
       }
     ],
-    "photo_url": "",
+    "photo_url": "/plants/bitter-leaf-3d6c646a.jpg",
     "phytochemicals": [
       {
         "compound": "Vernolide",
@@ -154,7 +159,12 @@
         "associated_properties": "A group of steroidal glycosides linked to anti-inflammatory properties.",
         "source_citation": "NMPPDB (nmppdb.com.ng)"
       }
-    ]
+    ],
+    "photo_credit": {
+      "author": "Daniel Paullll",
+      "license": "CC BY-SA 4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Greenish_Bitter_leave_plant.jpg"
+    }
   },
   {
     "id": "moringa",
@@ -198,7 +208,7 @@
         "source_citation": "Mathieu, G., & Meissa, D. (2007). African Journal of Traditional, Complementary and Alternative Medicines, 4(4), 469–475 (traditional use, Senegal); Afiaenyi, I.C., Owolabi, O.J., & Akpan, E.E. (2023). Journal of Ethnopharmacology, 308, 116283 (clinical trial) — both as cited via NMPPDB"
       }
     ],
-    "photo_url": "",
+    "photo_url": "/plants/moringa-25ddc248.jpg",
     "phytochemicals": [
       {
         "compound": "Moringinine",
@@ -228,7 +238,12 @@
         "note": "Leaf powder at around 6 g/day is reported as safe for most adults; medical advice is recommended for prolonged use or alongside medication.",
         "source_citation": "Anwar, F., Latif, S., Ashraf, M., & Gilani, A.H. (2007). Moringa oleifera: A food plant with multiple medicinal uses. Phytotherapy Research, 21(1), 17–25."
       }
-    ]
+    ],
+    "photo_credit": {
+      "author": "Forest & Kim Starr",
+      "license": "CC BY 3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Starr_080609-7911_Moringa_oleifera.jpg"
+    }
   },
   {
     "id": "neem",
@@ -261,7 +276,7 @@
         "source_citation": "Drugs.com. Neem (Azadirachta indica) professional monograph, drugs.com/npp/neem.html (last updated 14 Jul 2026)."
       }
     ],
-    "photo_url": "",
+    "photo_url": "/plants/neem-a766232a.jpg",
     "phytochemicals": [
       {
         "compound": "Azadirachtin",
@@ -301,7 +316,12 @@
         "note": "Drug-induced liver injury has been reported, and drinking large amounts of neem oil has caused serious harm, including a reported case of vision loss.",
         "source_citation": "Drugs.com. Neem (Azadirachta indica) professional monograph, drugs.com/npp/neem.html (last updated 14 Jul 2026)."
       }
-    ]
+    ],
+    "photo_credit": {
+      "author": "Dinesh Valke from Thane, India",
+      "license": "CC BY-SA 2.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Aryavepp_(Malayalam-_%E0%B4%86%E0%B4%B0%E0%B5%8D%E0%B4%AF%E0%B4%B5%E0%B5%87%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B5%8D)_(4657024874).jpg"
+    }
   },
   {
     "id": "bitter-kola",
@@ -350,7 +370,7 @@
         "source_citation": "Tauchen, J. et al. (2023). Garcinia kola: a critical review on chemistry and pharmacology of an important West African medicinal plant. Phytochemistry Reviews, 22(5), 1305–1351."
       }
     ],
-    "photo_url": "",
+    "photo_url": "/plants/bitter-kola-2fd578bf.jpg",
     "phytochemicals": [
       {
         "compound": "Kolaviron",
@@ -372,7 +392,12 @@
         "associated_properties": "A benzophenone found in the fruit pulp, seeds, and roots; one of several compounds that appear specific to this species.",
         "source_citation": "Tauchen, J. et al. (2023). Phytochemistry Reviews, 22(5), 1305–1351 (citing Hussain et al., 1982)."
       }
-    ]
+    ],
+    "photo_credit": {
+      "author": "Roger Culos",
+      "license": "CC BY-SA 3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Garcinia_kola_MHNT.BOT.2009.13.6.jpg"
+    }
   },
   {
     "id": "kola-nut",
@@ -412,7 +437,7 @@
         "source_citation": "Burdock, G.A., Carabin, I.G., & Crincoli, C.M. (2009). Safety assessment of kola nut extract as a food ingredient. Food and Chemical Toxicology, 47, 1725–1732."
       }
     ],
-    "photo_url": "",
+    "photo_url": "/plants/kola-nut-6a0f0b4f.jpg",
     "phytochemicals": [
       {
         "compound": "Caffeine",
@@ -429,7 +454,12 @@
         "associated_properties": "A glucoside relatively distinctive to fresh kola nut, which readily breaks down into glucose and caffeine as the nut ripens or dries; historically noted for a distinct cardiac-stimulant effect alongside caffeine's general stimulant action.",
         "source_citation": "Knebel & Higler, as cited in kola nut phytochemistry reviews (e.g. Journal of Exploratory Research in Pharmacology, 2017)"
       }
-    ]
+    ],
+    "photo_credit": {
+      "author": "HK RIGASA2",
+      "license": "CC0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Goro_hausa.jpg"
+    }
   },
   {
     "id": "uziza",
@@ -487,7 +517,7 @@
         "source_citation": "Williams, F.E., Obianwu, H., Adedeji, O.S., & Oyewepo, A.O. (2013). Biokemistri, 25(2), 92–95."
       }
     ],
-    "photo_url": "",
+    "photo_url": "/plants/uziza-f0044165.jpg",
     "phytochemicals": [
       {
         "compound": "Piperine",
@@ -519,7 +549,12 @@
         "associated_properties": "A flavonoid associated with antioxidant activity.",
         "source_citation": "Oyemitan, I.A. et al. (2015). Journal of Ethnopharmacology, 166, 240–249."
       }
-    ]
+    ],
+    "photo_credit": {
+      "author": "Samsule2",
+      "license": "CC BY-SA 4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Uziza_Seeds_at_Bakin_Dogo_Market,_Kaduna_North.jpg"
+    }
   },
   {
     "id": "aloe-vera",
@@ -547,7 +582,7 @@
         "source_citation": "European Medicines Agency (2007). Assessment report on Aloe barbadensis Miller and Aloe (various species, mainly Aloe ferox Miller) and its preparations (superseded)."
       }
     ],
-    "photo_url": "",
+    "photo_url": "/plants/aloe-vera-1c461767.jpg",
     "phytochemicals": [
       {
         "compound": "Aloe-emodin",
@@ -583,7 +618,12 @@
         "note": "Its anthraquinone compounds raise questions about the safety of oral consumption, and a review advises caution.",
         "source_citation": "The dark side of miracle plant – Aloe vera: a review. Molecular Biology Reports, 49(6), 5029–5040 (2022). doi:10.1007/s11033-022-07176-9"
       }
-    ]
+    ],
+    "photo_credit": {
+      "author": "Forest & Kim Starr",
+      "license": "CC BY 3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Starr_011104-0040_Aloe_vera.jpg"
+    }
   },
   {
     "id": "roselle-zobo",
@@ -622,7 +662,7 @@
         "source_citation": "Riaz, G., & Chopra, R. (2018). A review on phytochemistry and therapeutic uses of Hibiscus sabdariffa L. Biomedicine & Pharmacotherapy, 102, 575–586."
       }
     ],
-    "photo_url": "",
+    "photo_url": "/plants/roselle-zobo-8afd0d59.jpg",
     "phytochemicals": [
       {
         "compound": "Anthocyanin sambubiosides",
@@ -648,7 +688,12 @@
         "note": "Animal studies have raised organ-toxicity concerns under high or prolonged exposure. This should not be equated with normal drink-sized intake, but supports conservative dosing if used medicinally.",
         "source_citation": "Koffuor et al. (2015), as cited via NMPPDB (nmppdb.com.ng)"
       }
-    ]
+    ],
+    "photo_credit": {
+      "author": "Dominik Maximilián Ramík",
+      "license": "CC BY 4.0",
+      "source_url": "https://www.inaturalist.org/photos/206475042"
+    }
   },
   {
     "id": "pawpaw",
@@ -685,7 +730,7 @@
         "source_citation": "Kaur, M., Talniya, N.C., Sahrawat, S., Kumar, A., & Stashenko, E.E. (2019). Ethnomedicinal uses, phytochemistry and pharmacology of Carica papaya plant: a compendious review. Mini-Reviews in Organic Chemistry, 16(5), 463–480. doi:10.2174/1570193X15666180816110733"
       }
     ],
-    "photo_url": "",
+    "photo_url": "/plants/pawpaw-dcf5cacb.jpg",
     "phytochemicals": [
       {
         "compound": "Carpaine",
@@ -707,7 +752,12 @@
         "note": "Reviews note that dosage, mechanisms, and safety of medicinal papaya preparations still need proper study.",
         "source_citation": "Khatun, M.A., Akter, T., & Chowdhury, A.R. (2026). Traditional uses, phytoconstituents and pharmacological activities of Carica papaya L.: a comprehensive review. Dhaka University Journal of Pharmaceutical Sciences, 25(1), 81–91."
       }
-    ]
+    ],
+    "photo_credit": {
+      "author": "Esskay",
+      "license": "CC BY-SA 3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Papayabaum.jpg"
+    }
   },
   {
     "id": "guava",
@@ -744,7 +794,7 @@
         "source_citation": "Pereira, G.A. et al. (2023). Antimicrobial activity of Psidium guajava aqueous extract against sensitive and resistant bacterial strains. Microorganisms, 11(7), 1784."
       }
     ],
-    "photo_url": "",
+    "photo_url": "/plants/guava-724cd10d.jpg",
     "phytochemicals": [
       {
         "compound": "Tannins",
@@ -777,7 +827,12 @@
         "note": "Guava fruit is safe in moderation. NMPPDB reports that the seeds contain small amounts of cyanogenic compounds that can release cyanide if chewed excessively, though normal intake is far below toxic levels.",
         "source_citation": "Morton, J.F. (1987). Fruits of Warm Climates. Creative Resource Systems, Inc., as cited via NMPPDB (nmppdb.com.ng)"
       }
-    ]
+    ],
+    "photo_credit": {
+      "author": "Abdul Hanif Arromy",
+      "license": "CC BY 4.0",
+      "source_url": "https://www.inaturalist.org/photos/690539392"
+    }
   },
   {
     "id": "mango",
@@ -814,7 +869,7 @@
         "source_citation": "USDA Dr. Duke's Phytochemical and Ethnobotanical Database (phytochem.nal.usda.gov), Mangifera indica entry"
       }
     ],
-    "photo_url": "",
+    "photo_url": "/plants/mango-8cb75456.jpg",
     "phytochemicals": [
       {
         "compound": "Mangiferin",
@@ -827,7 +882,12 @@
         "note": "Most of mango's medicinal properties have been studied in lab and animal settings rather than human clinical trials, so dosing and safety for therapeutic (non-culinary) use are not well established.",
         "source_citation": "Shah, K.A., Patel, M.B., Patel, R.J., & Parmar, P.K. (2010). Mangifera Indica (Mango). Pharmacognosy Reviews, 4(7), 42–48."
       }
-    ]
+    ],
+    "photo_credit": {
+      "author": "Chris.urs-o - Maria Marinho",
+      "license": "CC BY-SA 3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mangifera_indica._Tropical_Brazil.JPG"
+    }
   },
   {
     "id": "lemongrass",
@@ -868,7 +928,7 @@
         "source_citation": "Cheel, J., Theoduloz, C., Rodríguez, J., & Schmeda-Hirschmann, G. (2005). Journal of Agricultural and Food Chemistry, 53(7), 2511–2517."
       }
     ],
-    "photo_url": "",
+    "photo_url": "/plants/lemongrass-e3b3b3db.jpg",
     "phytochemicals": [
       {
         "compound": "Citral",
@@ -891,7 +951,12 @@
         "note": "Generally safe in food amounts, with low toxicity for the essential oil at tested doses. Undiluted essential oil may cause skin irritation in some people, and it is best avoided in pregnancy due to limited safety data.",
         "source_citation": "Oladeji, O.S., Adelowo, F.E., & Oyelakin, A.O. (2020). Scientific African, 9, e00437."
       }
-    ]
+    ],
+    "photo_credit": {
+      "author": "Yosri",
+      "license": "CC BY 2.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:YosriNov04Pokok_Serai.JPG"
+    }
   },
   {
     "id": "soursop",
@@ -933,7 +998,7 @@
         "source_citation": "Moghadamtousi, S.Z. et al. (2014). Drug Design, Development and Therapy, 8, 2099–2111."
       }
     ],
-    "photo_url": "",
+    "photo_url": "/plants/soursop-e840b3ba.jpg",
     "phytochemicals": [
       {
         "compound": "Annonacin",
@@ -951,7 +1016,12 @@
         "note": "Annonacin, a compound in soursop, has been linked to neurotoxic effects, and high, sustained consumption has been associated with an atypical form of Parkinsonism in some populations (notably the French West Indies). Excessive intake may also cause low blood pressure and low blood sugar.",
         "source_citation": "Caparros-Lefebvre, D., & Elbaz, A. (1999). Possible relation of atypical parkinsonism in the French West Indies with consumption of tropical plants: A case-control study. The Lancet, 354(9175), 281–286."
       }
-    ]
+    ],
+    "photo_credit": {
+      "author": "Judgefloro",
+      "license": "CC BY-SA 4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:3621jfAnnona_muricata_Soursop_Guyabano_Philippines_Pampangafvf_13.JPG"
+    }
   },
   {
     "id": "garden-egg",
@@ -981,8 +1051,13 @@
       }
     ],
     "cautions": [],
-    "photo_url": "",
-    "phytochemicals": []
+    "photo_url": "/plants/garden-egg-b1d30e8d.jpg",
+    "phytochemicals": [],
+    "photo_credit": {
+      "author": "St Lucky R",
+      "license": "CC0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:African_eggplant_Djamba_F1.jpg"
+    }
   },
   {
     "id": "cashew",
@@ -1019,7 +1094,7 @@
         "source_citation": "Wattanathorn, J. et al. (2019). BioMed Research International, 2019, 1459141."
       }
     ],
-    "photo_url": "",
+    "photo_url": "/plants/cashew-3d648c78.jpg",
     "phytochemicals": [
       {
         "compound": "Anacardic acid",
@@ -1045,7 +1120,12 @@
         "note": "Cashew nuts are a common food allergen and can cause reactions ranging from mild symptoms to severe anaphylaxis in sensitive individuals.",
         "source_citation": "Wikipedia: Cashew, as cited via NMPPDB (nmppdb.com.ng) — a lower-reliability source; worth confirming with a medical reference"
       }
-    ]
+    ],
+    "photo_credit": {
+      "author": "ସୁରଥ କୁମାର ପାଢ଼ୀ",
+      "license": "CC BY-SA 3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cashew_flower_fruit_seed.JPG"
+    }
   },
   {
     "id": "ugwu",
@@ -1121,8 +1201,13 @@
         "source_citation": "Akindele, A.J. et al. (2018). Medicines, 5(1), 4."
       }
     ],
-    "photo_url": "",
-    "phytochemicals": []
+    "photo_url": "/plants/ugwu-b7e6e3b2.jpg",
+    "phytochemicals": [],
+    "photo_credit": {
+      "author": "Dorcas Atule",
+      "license": "CC BY-SA 4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ugu_leaf_at_monday_market_02.jpg"
+    }
   },
   {
     "id": "bitter-melon",
@@ -1155,7 +1240,7 @@
         "source_citation": "USDA Dr. Duke's Phytochemical and Ethnobotanical Database (phytochem.nal.usda.gov), Momordica charantia entry"
       }
     ],
-    "photo_url": "",
+    "photo_url": "/plants/bitter-melon-d1ff4c3f.jpg",
     "phytochemicals": [
       {
         "compound": "Charantin",
@@ -1182,7 +1267,12 @@
         "note": "Listed among plants traditionally used as an abortifacient in some cultures; best avoided medicinally during pregnancy.",
         "source_citation": "USDA Dr. Duke's Phytochemical and Ethnobotanical Database (phytochem.nal.usda.gov), Momordica charantia entry"
       }
-    ]
+    ],
+    "photo_credit": {
+      "author": "Thamizhpparithi Maari",
+      "license": "CC BY-SA 4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bitter_Guard_of_Tamilnadu.jpg"
+    }
   },
   {
     "id": "turmeric",
@@ -1220,7 +1310,7 @@
         "source_citation": "Ebrahimzadeh, A. et al. (2024). Food Science & Nutrition, 13(1), e4144."
       }
     ],
-    "photo_url": "",
+    "photo_url": "/plants/turmeric-c3683682.jpg",
     "phytochemicals": [
       {
         "compound": "Curcumin",
@@ -1233,7 +1323,12 @@
         "note": "Culinary use of turmeric is generally considered safe. However, clinical reports describe cases of drug-induced liver injury linked to high-dose turmeric supplements, particularly formulations designed to boost curcumin absorption, typically appearing after weeks to months of use. Caution is advised for people with existing liver disease or those taking high-dose supplements.",
         "source_citation": "Halegoua-DeMarzio, D. et al. (2023). Liver Injury Associated with Turmeric – A Growing Problem: Ten Cases from the Drug-Induced Liver Injury Network (DILIN). American Journal of Medicine, 136(2), 200–206."
       }
-    ]
+    ],
+    "photo_credit": {
+      "author": "Simon A. Eugster",
+      "license": "CC BY-SA 3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Curcuma_longa_roots.jpg"
+    }
   },
   {
     "id": "ginger",
@@ -1281,7 +1376,7 @@
         "source_citation": "Akoachere, J.F. et al. (2002). East African Medical Journal, 79(11), 588–592."
       }
     ],
-    "photo_url": "",
+    "photo_url": "/plants/ginger-0f5e0b00.jpg",
     "phytochemicals": [
       {
         "compound": "[6]-Gingerol",
@@ -1309,6 +1404,11 @@
         "note": "Safe at typical culinary doses (up to about 4 g/day). Higher doses (over 5 g/day) may cause heartburn or diarrhea. Ginger may strengthen the effect of blood-thinning medication or lower blood sugar too much, so caution is advised alongside such medicines and in pregnancy beyond ordinary food amounts.",
         "source_citation": "Ali, B.H., Blunden, G., Tanira, M.O., & Nemmar, A. (2008). Some phytochemical, pharmacological and toxicological properties of ginger (Zingiber officinale Roscoe): A review of recent research. Food and Chemical Toxicology, 46(2), 409–420."
       }
-    ]
+    ],
+    "photo_credit": {
+      "author": "ritirene",
+      "license": "CC BY 4.0",
+      "source_url": "https://www.inaturalist.org/photos/230935597"
+    }
   }
 ]
