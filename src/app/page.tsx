@@ -11,7 +11,7 @@ const researchPoints = [
   {
     icon: Database,
     title: "Curated Data",
-    body: "Sourced from Dr. Duke's USDA database and NMPPDB — Nigeria's own medicinal plant database.",
+    body: "Sourced from Dr. Duke's USDA database, NMPPDB — Nigeria's own medicinal plant database — and peer-reviewed studies.",
   },
   {
     icon: Languages,
@@ -128,7 +128,8 @@ export default function Home() {
         <div className="text-center">
           <h2 className="text-section text-ink">Built on Real Research</h2>
           <p className="mx-auto mt-5 max-w-md text-body-lg text-ink-secondary">
-            Every data point is sourced from published phytochemical and ethnobotanical databases.
+            Every data point cites its source: a phytochemical or ethnobotanical database, or a
+            peer-reviewed study.
           </p>
         </div>
         <ol className="mt-10 grid gap-6 md:grid-cols-3">
