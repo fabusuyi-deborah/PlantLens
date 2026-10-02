@@ -51,7 +51,7 @@ export default async function ExplorePage(props: PageProps<"/explore">) {
   const hasResults = results.length > 0;
 
   return (
-    <main className="mx-auto max-w-[1344px] px-4 pt-10 pb-16 md:px-8">
+    <main className="mx-auto max-w-336 px-4 pt-10 pb-16 md:px-8">
       <header className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <h1 className="text-[2rem] leading-tight font-bold tracking-[-0.8px] text-ink sm:text-page-title">

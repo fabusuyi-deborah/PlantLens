@@ -1,14 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowUpRight, BookOpen, Database, type LucideIcon } from "lucide-react";
-import { PageHeader } from "@/components/page-header";
+import {
+  ArrowUpRight,
+  BookOpen,
+  ChevronDown,
+  Database,
+  type LucideIcon,
+} from "lucide-react";
 import { PhotoCredit } from "@/components/plant-photo";
 import { citesDuke, citesNmppdb, getPlantCitations } from "@/lib/citations";
 import { getAllPlants } from "@/lib/plants";
 
 export const metadata: Metadata = {
   title: "Data Sources · PlantLens",
-  description: "The databases and published literature behind every PlantLens entry.",
+  description:
+    "The databases and published literature behind every PlantLens entry.",
 };
 
 const steps = [
@@ -60,59 +66,86 @@ export default function SourcesPage() {
   ).length;
 
   return (
-    <main className="mx-auto max-w-336 px-4 pt-10 pb-16 md:px-8">
-      <PageHeader
-        title="Data Sources"
-        subtitle="Every use, compound and caution on PlantLens is tied to a source. Here's where the data comes from and how it's put together."
-      />
+    <main className="mx-auto max-w-[1344px] px-4 pt-8 pb-10 md:px-8">
+      <header className="text-center">
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-accent-light px-3 py-1 text-overline text-accent-dark">
+          <Database className="size-3" aria-hidden />
+          Data Sources
+        </span>
+        <h1 className="mx-auto mt-3 text-[2rem] leading-tight font-bold tracking-[-0.8px] text-ink sm:text-page-title">
+          Our Data Sources
+        </h1>
+        <p className="mx-auto mt-2 max-w-2xl text-body-lg text-ink-secondary">
+          PlantLens brings together database records and published
+          ethnobotanical research.
+        </p>
+      </header>
 
-      <section className="mt-10 grid gap-5 md:grid-cols-3">
-        {databases.map((db) => (
-          <SourceCard
-            key={db.name}
-            icon={Database}
-            title={db.name}
-            kicker={db.fullName}
-            body={db.body}
-            stat={`Cited on ${db.plantCount} of ${plants.length} plants`}
-            link={{ href: db.href, label: db.host }}
-          />
-        ))}
+      <section className="mt-7">
+        <SectionHeading>Primary Databases</SectionHeading>
+        <div className="mt-3 grid gap-3">
+          {databases.map((db) => (
+            <SourceCard
+              key={db.name}
+              icon={Database}
+              title={db.name}
+              kicker={db.fullName}
+              body={db.body}
+              stat={`Cited on ${db.plantCount} of ${plants.length} plants`}
+              link={{ href: db.href, label: db.host }}
+            />
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-7">
+        <SectionHeading>Supplementary &amp; Literature Sources</SectionHeading>
         <SourceCard
+          className="mt-3"
           icon={BookOpen}
-          title="Published literature"
-          kicker="Journals, reviews and monographs"
-          body="Peer-reviewed studies, review articles and regulatory monographs fill in what the databases don't cover, especially cautions and clinical findings."
+          title="Published Ethnobotanical Literature"
+          kicker="Peer-reviewed journals and published research"
+          body="Published studies provide evidence for traditional uses and phytochemical findings that are not covered by the databases."
           stat={`${literatureCount} references cited`}
         />
       </section>
 
-      <section className="mt-16">
-        <h2 className="text-section text-ink">How the data is put together</h2>
-        <ol className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <section className="mt-7">
+        <SectionHeading>How We Handle Data</SectionHeading>
+        <ol className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((step, i) => (
-            <li key={step.title} className="rounded-md bg-bg-secondary p-6">
-              <span className="text-caption text-accent uppercase">Step {i + 1}</span>
-              <h3 className="mt-2 text-subheading text-ink">{step.title}</h3>
-              <p className="mt-2 text-body text-ink-secondary">{step.body}</p>
+            <li
+              key={step.title}
+              className="rounded-md border border-border bg-bg-secondary p-4"
+            >
+              <span className="text-overline text-accent">Step {i + 1}</span>
+              <h3 className="mt-1 text-subheading text-ink">{step.title}</h3>
+              <p className="mt-1 text-body-sm text-ink-secondary">
+                {step.body}
+              </p>
             </li>
           ))}
         </ol>
       </section>
-
       {photographed.length > 0 && (
-        <section className="mt-16">
-          <h2 className="text-section text-ink">Photo credits</h2>
-          <p className="mt-2 max-w-2xl text-body text-ink-secondary">
-            Plant photos come from Wikimedia Commons and iNaturalist, used under their Creative
-            Commons or public domain licenses.
+        <details className="group mt-7 rounded-md border border-border px-4">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-3 text-body font-medium text-ink marker:hidden">
+            <span>Photo credits ({photographed.length} plants)</span>
+            <ChevronDown
+              className="size-4 shrink-0 text-ink-secondary transition-transform group-open:rotate-180"
+              aria-hidden
+            />
+          </summary>
+          <p className="border-t border-border pt-3 text-body-sm text-ink-secondary">
+            Plant photos come from Wikimedia Commons and iNaturalist, used under
+            their Creative Commons or public domain licenses.
           </p>
-          <ul className="mt-6 grid gap-x-8 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="grid gap-x-8 py-2 sm:grid-cols-2 lg:grid-cols-3">
             {photographed.map((plant) => (
-              <li key={plant.id} className="border-b border-border-light py-3">
+              <li key={plant.id} className="border-b border-border-light py-2">
                 <Link
                   href={`/plants/${plant.id}`}
-                  className="text-body font-medium text-ink transition-colors hover:text-accent"
+                  className="text-body-sm font-medium text-ink transition-colors hover:text-accent"
                 >
                   {plant.name_common}
                 </Link>
@@ -120,7 +153,7 @@ export default function SourcesPage() {
               </li>
             ))}
           </ul>
-        </section>
+        </details>
       )}
     </main>
   );
@@ -133,6 +166,7 @@ function SourceCard({
   body,
   stat,
   link,
+  className = "",
 }: {
   icon: LucideIcon;
   title: string;
@@ -140,27 +174,47 @@ function SourceCard({
   body: string;
   stat: string;
   link?: { href: string; label: string };
+  className?: string;
 }) {
   return (
-    <article className="flex flex-col rounded-lg border border-border p-6">
-      <span className="flex size-11 items-center justify-center rounded-sm bg-accent-light">
-        <Icon className="size-5 text-accent" aria-hidden />
-      </span>
-      <h3 className="mt-5 text-card-heading text-ink">{title}</h3>
-      <p className="text-body-sm text-ink-tertiary">{kicker}</p>
-      <p className="mt-3 flex-1 text-body text-ink-secondary">{body}</p>
-      <p className="mt-5 text-body-sm font-semibold text-ink">{stat}</p>
-      {link && (
-        <a
-          href={link.href}
-          target="_blank"
-          rel="noreferrer"
-          className="mt-3 inline-flex items-center gap-1 border-t border-border-light pt-3 text-body font-medium text-accent transition-colors hover:text-accent-dark"
-        >
-          {link.label}
-          <ArrowUpRight className="size-4" aria-hidden />
-        </a>
-      )}
+    <article className={`rounded-md border border-border p-3.5 ${className}`}>
+      <div className="flex items-start gap-3">
+        <span className="flex size-8 shrink-0 items-center justify-center rounded-sm bg-accent-light">
+          <Icon className="size-4 text-accent" aria-hidden />
+        </span>
+        <div className="min-w-0 flex-1">
+          <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+            <div>
+              <h3 className="text-subheading text-ink">{title}</h3>
+              <p className="text-body-sm text-ink-tertiary">{kicker}</p>
+            </div>
+            <p className="text-body-sm font-medium text-ink-secondary">
+              {stat}
+            </p>
+          </div>
+          <p className="mt-2 text-body-sm text-ink-secondary">{body}</p>
+          {link && (
+            <a
+              href={link.href}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-2 inline-flex items-center gap-1 text-body-sm font-medium text-accent transition-colors hover:text-accent-dark"
+            >
+              {link.label}
+              <ArrowUpRight className="size-3.5" aria-hidden />
+            </a>
+          )}
+        </div>
+      </div>
     </article>
+  );
+}
+
+function SectionHeading({ children }: { children: React.ReactNode }) {
+  return (
+    <h2 className="flex items-center gap-2 text-subheading text-ink">
+      <span className="size-1.5 rounded-full bg-accent" aria-hidden />
+      {children}
+    </h2>
   );
 }

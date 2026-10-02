@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/logo";
+import { MobileMenu } from "@/components/mobile-menu";
 import { NavSearch } from "@/components/nav-search";
 import { getAllPlants } from "@/lib/plants";
 import { toSearchable } from "@/lib/search";
@@ -28,7 +29,10 @@ export function Navbar() {
             </li>
           ))}
         </ul>
-        <NavSearch plants={getAllPlants().map(toSearchable)} />
+        <div className="flex items-center gap-2">
+          <NavSearch plants={getAllPlants().map(toSearchable)} />
+          <MobileMenu links={links} />
+        </div>
       </nav>
     </header>
   );
