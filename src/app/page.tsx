@@ -34,10 +34,6 @@ export default function Home() {
     <main>
       {/* Hero */}
       <section className="px-4 pt-16 pb-14 text-center md:pt-20">
-        <span className="inline-flex items-center gap-2 rounded-full border border-border px-3 py-1 text-body-sm font-medium text-ink-secondary">
-          <span className="size-1.5 rounded-full bg-accent" aria-hidden />
-          Powered by real phytochemical research
-        </span>
         <h1 className="mt-6 text-[2.5rem] leading-tight font-bold tracking-[-1px] text-ink sm:text-display">
           Discover Nigeria&apos;s Plants
         </h1>

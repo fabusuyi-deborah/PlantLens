@@ -24,7 +24,7 @@ export function CategoryTabs({ categories, active, q }: CategoryFilterProps) {
   ];
 
   return (
-    <nav aria-label="Categories" className="border-b border-border">
+    <nav aria-label="Categories" className="">
       <ul className="-mb-px flex gap-2 overflow-x-auto pb-2.5">
         {tabs.map((tab) => (
           <li key={tab.key} className="shrink-0">

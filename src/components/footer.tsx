@@ -19,6 +19,7 @@ const columns = [
       { label: "Data Sources", href: "/sources" },
       { label: "NMPPDB", href: "https://nmppdb.com.ng" },
       { label: "Dr. Duke's DB", href: "https://phytochem.nal.usda.gov" },
+      { label: "Photo Credits", href: "/sources#photo-credits" },
     ],
   },
   {

@@ -128,7 +128,7 @@ export default function SourcesPage() {
         </ol>
       </section>
       {photographed.length > 0 && (
-        <details className="group mt-7 rounded-md border border-border px-4">
+        <details id="photo-credits" className="group mt-7 rounded-md border border-border px-4">
           <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-3 text-body font-medium text-ink marker:hidden">
             <span>Photo credits ({photographed.length} plants)</span>
             <ChevronDown
