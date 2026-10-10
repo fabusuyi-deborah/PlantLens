@@ -115,14 +115,17 @@
     ],
     "cautions": [
       {
+        "severity": "moderate",
         "note": "No acute toxicity observed at traditional doses in animal studies; excessive use may cause nausea, hypoglycemia, or uterine stimulation.",
         "source_citation": "Farombi & Owoeye (2011), via NMPPDB (nmppdb.com.ng)"
       },
       {
+        "severity": "high",
         "note": "Pregnant women are advised to avoid it due to potential abortifacient risk.",
         "source_citation": "Farombi & Owoeye (2011), via NMPPDB (nmppdb.com.ng)"
       },
       {
+        "severity": "low",
         "note": "May reduce iron absorption with regular use.",
         "source_citation": "Farombi & Owoeye (2011), via NMPPDB (nmppdb.com.ng)"
       }
@@ -173,13 +176,7 @@
     "names_local": {
       "yoruba": "Ewe ile / Ewe igbale",
       "igbo": "Okwe oyibo",
-      "hausa": "Zogale",
-      "other": [
-        {
-          "label": "Swahili (Kenya)",
-          "name": "Mlonge"
-        }
-      ]
+      "hausa": "Zogale"
     },
     "category": [
       "medicinal",
@@ -223,18 +220,22 @@
     ],
     "cautions": [
       {
+        "severity": "high",
         "note": "The root and bark contain alkaloids (such as moringinine) that may cause low blood pressure or neurological effects at high doses; they are not recommended for consumption.",
         "source_citation": "Neuwinger, H.D. (2000). African Traditional Medicine: A Dictionary of Plant Use and Applications. Medpharm Scientific Publishers."
       },
       {
+        "severity": "moderate",
         "note": "Leaf extract has been shown in lab studies to inhibit CYP3A4, a liver enzyme that processes many medicines, so it could interact with some drugs; check with a doctor or pharmacist if you take regular medication.",
         "source_citation": "Monera, T.G., Wolfe, A.R., Maponga, C.C., Benet, L.Z., & Guglielmo, J. (2008). Journal of Infection in Developing Countries, 2(5), 379–383."
       },
       {
+        "severity": "high",
         "note": "Root extracts may have abortifacient effects; use is contraindicated in pregnancy.",
         "source_citation": "Fahey, J.W. (2005). Moringa oleifera: A review of the medical evidence for its nutritional, therapeutic, and prophylactic properties. Part 1. Trees for Life Journal, 1, 5."
       },
       {
+        "severity": "low",
         "note": "Leaf powder at around 6 g/day is reported as safe for most adults; medical advice is recommended for prolonged use or alongside medication.",
         "source_citation": "Anwar, F., Latif, S., Ashraf, M., & Gilani, A.H. (2007). Moringa oleifera: A food plant with multiple medicinal uses. Phytotherapy Research, 21(1), 17–25."
       }
@@ -250,8 +251,8 @@
     "name_common": "Neem",
     "name_scientific": "Azadirachta indica",
     "names_local": {
-      "yoruba": "Igi neem",
-      "igbo": "Ogwu akị isi",
+      "yoruba": "Dongoyaro/ igi-oba / igi-neem",
+      "igbo": "Ogwu akuma",
       "hausa": "Dogonyaro"
     },
     "category": [
@@ -301,18 +302,22 @@
     ],
     "cautions": [
       {
+        "severity": "low",
         "note": "Few human clinical trials support neem's traditional therapeutic claims, and no established therapeutic dose exists.",
         "source_citation": "Drugs.com. Neem (Azadirachta indica) professional monograph, drugs.com/npp/neem.html (last updated 14 Jul 2026)."
       },
       {
+        "severity": "high",
         "note": "Oral neem oil should not be given to children; deaths and severe poisoning in infants have been reported.",
         "source_citation": "Drugs.com. Neem (Azadirachta indica) professional monograph, drugs.com/npp/neem.html (last updated 14 Jul 2026)."
       },
       {
+        "severity": "moderate",
         "note": "Safety in pregnancy and breastfeeding has not been established; avoiding use is advised.",
         "source_citation": "Drugs.com. Neem (Azadirachta indica) professional monograph, drugs.com/npp/neem.html (last updated 14 Jul 2026)."
       },
       {
+        "severity": "high",
         "note": "Drug-induced liver injury has been reported, and drinking large amounts of neem oil has caused serious harm, including a reported case of vision loss.",
         "source_citation": "Drugs.com. Neem (Azadirachta indica) professional monograph, drugs.com/npp/neem.html (last updated 14 Jul 2026)."
       }
@@ -329,7 +334,7 @@
     "name_scientific": "Garcinia kola",
     "names_local": {
       "yoruba": "Orogbo",
-      "igbo": "Adi",
+      "igbo": "Aki ilu / Aku inu",
       "hausa": "Namijin Goro",
       "other": [
         {
@@ -366,6 +371,7 @@
     ],
     "cautions": [
       {
+        "severity": "low",
         "note": "Generally considered safe with traditional use, with no significant toxicity shown in animal or in vitro studies; however, high doses or prolonged consumption may be linked to fertility issues.",
         "source_citation": "Tauchen, J. et al. (2023). Garcinia kola: a critical review on chemistry and pharmacology of an important West African medicinal plant. Phytochemistry Reviews, 22(5), 1305–1351."
       }
@@ -433,6 +439,7 @@
     ],
     "cautions": [
       {
+        "severity": "low",
         "note": "Contains natural caffeine and theobromine; the same general precautions around caffeine intake (e.g. during pregnancy, or with heart conditions) apply as with other caffeinated foods and beverages.",
         "source_citation": "Burdock, G.A., Carabin, I.G., & Crincoli, C.M. (2009). Safety assessment of kola nut extract as a food ingredient. Food and Chemical Toxicology, 47, 1725–1732."
       }
@@ -468,13 +475,7 @@
     "names_local": {
       "yoruba": "Iyere / Ata-iyere",
       "igbo": "Ozeza",
-      "hausa": "Masooroo",
-      "other": [
-        {
-          "label": "Akan (Ghana)",
-          "name": "Soro wisa"
-        }
-      ]
+      "hausa": "Masooroo"
     },
     "category": [
       "spice",
@@ -509,10 +510,12 @@
     ],
     "cautions": [
       {
+        "severity": "low",
         "note": "Generally safe in typical culinary amounts; excessive intake (above roughly 1 g/kg) may cause gastrointestinal irritation.",
         "source_citation": "Williams, F.E., Obianwu, H., Adedeji, O.S., & Oyewepo, A.O. (2013). Biokemistri, 25(2), 92–95."
       },
       {
+        "severity": "high",
         "note": "Has oxytocic (uterine-stimulating) properties; contraindicated during pregnancy.",
         "source_citation": "Williams, F.E., Obianwu, H., Adedeji, O.S., & Oyewepo, A.O. (2013). Biokemistri, 25(2), 92–95."
       }
@@ -561,8 +564,8 @@
     "name_common": "Aloe vera",
     "name_scientific": "Aloe vera",
     "names_local": {
-      "yoruba": "Eti erin",
-      "igbo": "Aloe"
+      "yoruba": "Eti erin / Asejo Elewa",
+      "igbo": "Akwarara"
     },
     "category": [
       "medicinal"
@@ -607,14 +610,17 @@
     ],
     "cautions": [
       {
+        "severity": "high",
         "note": "Oral use is contraindicated during pregnancy and breastfeeding, because experimental data point to a genotoxic risk from some of its anthranoid compounds.",
         "source_citation": "Egyptian Drug Authority (2026). Egyptian Herbal Monograph: Aloe vera."
       },
       {
+        "severity": "moderate",
         "note": "Prolonged laxative use can cause potassium loss, which may interact with heart medications, diuretics, and corticosteroids; people with diabetes should consult a doctor or pharmacist before using aloe gel.",
         "source_citation": "Egyptian Drug Authority (2026). Egyptian Herbal Monograph: Aloe vera."
       },
       {
+        "severity": "moderate",
         "note": "Its anthraquinone compounds raise questions about the safety of oral consumption, and a review advises caution.",
         "source_citation": "The dark side of miracle plant – Aloe vera: a review. Molecular Biology Reports, 49(6), 5029–5040 (2022). doi:10.1007/s11033-022-07176-9"
       }
@@ -631,13 +637,7 @@
     "name_scientific": "Hibiscus sabdariffa",
     "names_local": {
       "yoruba": "Isapa",
-      "hausa": "Zoborodo / Zobo",
-      "other": [
-        {
-          "label": "West Africa (French-speaking)",
-          "name": "Bissap"
-        }
-      ]
+      "hausa": "Zoborodo / Zobo/ Yakuwa"
     },
     "category": [
       "medicinal",
@@ -677,14 +677,17 @@
     ],
     "cautions": [
       {
+        "severity": "low",
         "note": "Human studies of brewed hibiscus report good tolerability with mostly mild side effects, but safety varies by dose and preparation.",
         "source_citation": "Ellis, L.R., Zulfiqar, S., Holmes, M., Marshall, L., Dye, L., & Boesch, C. (2022). A systematic review and meta-analysis of the effects of Hibiscus sabdariffa on blood pressure and cardiometabolic markers. Nutrition Reviews, 80(6), 1723–1737."
       },
       {
+        "severity": "moderate",
         "note": "Caution if you take blood-pressure medication: roselle can lower blood pressure itself, and a rat study found that roselle extract changed the body's exposure to the antihypertensive drug captopril.",
         "source_citation": "Nurfaradilla, S.A., Saputri, F.C., & Harahap, Y. (2020). Pharmacokinetic herb-drug interaction between Hibiscus sabdariffa calyces aqueous extract and captopril in rats. Evidence-Based Complementary and Alternative Medicine, 2020, 5013898."
       },
       {
+        "severity": "low",
         "note": "Animal studies have raised organ-toxicity concerns under high or prolonged exposure. This should not be equated with normal drink-sized intake, but supports conservative dosing if used medicinally.",
         "source_citation": "Koffuor et al. (2015), as cited via NMPPDB (nmppdb.com.ng)"
       }
@@ -745,10 +748,12 @@
     ],
     "cautions": [
       {
+        "severity": "high",
         "note": "Traditionally used in some regions (Java, Panama, Turkey) as an abortifacient and to bring on menstruation, so medicinal use is best avoided during pregnancy.",
         "source_citation": "USDA Dr. Duke's Phytochemical and Ethnobotanical Database (phytochem.nal.usda.gov), Carica papaya entry (underlying source references not retrieved)"
       },
       {
+        "severity": "low",
         "note": "Reviews note that dosage, mechanisms, and safety of medicinal papaya preparations still need proper study.",
         "source_citation": "Khatun, M.A., Akter, T., & Chowdhury, A.R. (2026). Traditional uses, phytoconstituents and pharmacological activities of Carica papaya L.: a comprehensive review. Dhaka University Journal of Pharmaceutical Sciences, 25(1), 81–91."
       }
@@ -824,6 +829,7 @@
     ],
     "cautions": [
       {
+        "severity": "low",
         "note": "Guava fruit is safe in moderation. NMPPDB reports that the seeds contain small amounts of cyanogenic compounds that can release cyanide if chewed excessively, though normal intake is far below toxic levels.",
         "source_citation": "Morton, J.F. (1987). Fruits of Warm Climates. Creative Resource Systems, Inc., as cited via NMPPDB (nmppdb.com.ng)"
       }
@@ -879,6 +885,7 @@
     ],
     "cautions": [
       {
+        "severity": "low",
         "note": "Most of mango's medicinal properties have been studied in lab and animal settings rather than human clinical trials, so dosing and safety for therapeutic (non-culinary) use are not well established.",
         "source_citation": "Shah, K.A., Patel, M.B., Patel, R.J., & Parmar, P.K. (2010). Mangifera Indica (Mango). Pharmacognosy Reviews, 4(7), 42–48."
       }
@@ -894,8 +901,9 @@
     "name_common": "Lemongrass",
     "name_scientific": "Cymbopogon citratus",
     "names_local": {
-      "yoruba": "Kooko-Oba / Kokoroko",
-      "igbo": "Acharaehi"
+      "yoruba": "Kooko-Oba / Ewe Tea",
+      "igbo": "Achara ehi",
+      "hausa": "Tsauri"
     },
     "category": [
       "medicinal",
@@ -948,6 +956,7 @@
     ],
     "cautions": [
       {
+        "severity": "low",
         "note": "Generally safe in food amounts, with low toxicity for the essential oil at tested doses. Undiluted essential oil may cause skin irritation in some people, and it is best avoided in pregnancy due to limited safety data.",
         "source_citation": "Oladeji, O.S., Adelowo, F.E., & Oyelakin, A.O. (2020). Scientific African, 9, e00437."
       }
@@ -963,14 +972,9 @@
     "name_common": "Soursop",
     "name_scientific": "Annona muricata",
     "names_local": {
-      "yoruba": "Abo / Ebo / Apekan",
+      "yoruba": "Ebo / Apekan",
       "igbo": "Ogbaka nti",
-      "other": [
-        {
-          "label": "General Nigerian",
-          "name": "Sharp-sharp"
-        }
-      ]
+      "hausa": "Tuwon biri / Fasadarur"
     },
     "category": [
       "medicinal"
@@ -1013,6 +1017,7 @@
     ],
     "cautions": [
       {
+        "severity": "high",
         "note": "Annonacin, a compound in soursop, has been linked to neurotoxic effects, and high, sustained consumption has been associated with an atypical form of Parkinsonism in some populations (notably the French West Indies). Excessive intake may also cause low blood pressure and low blood sugar.",
         "source_citation": "Caparros-Lefebvre, D., & Elbaz, A. (1999). Possible relation of atypical parkinsonism in the French West Indies with consumption of tropical plants: A case-control study. The Lancet, 354(9175), 281–286."
       }
@@ -1029,7 +1034,7 @@
     "name_scientific": "Solanum aethiopicum",
     "names_local": {
       "yoruba": "Igba",
-      "igbo": "Anara",
+      "igbo": "Anyara / Afufa",
       "hausa": "Gauta"
     },
     "category": [
@@ -1089,8 +1094,7 @@
     "name_common": "Cashew",
     "name_scientific": "Anacardium occidentale",
     "names_local": {
-      "yoruba": "Okpokpo",
-      "igbo": "Akwe olu",
+      "yoruba": "Kasu",
       "hausa": "Kashu / Kanju"
     },
     "category": [
@@ -1134,14 +1138,17 @@
     ],
     "cautions": [
       {
+        "severity": "moderate",
         "note": "The nut shell contains anacardic acid and cardol, caustic compounds (related to those in poison ivy) that can cause contact dermatitis, so raw shells need careful processing before the nut is safe to handle and eat.",
         "source_citation": "Tedong, L. et al. (2007). Acute and subchronic toxicity of Anacardium occidentale Linn (Anacardiaceae) leaves hexane extract in mice. African Journal of Traditional, Complementary and Alternative Medicines, 4(2), 140–147."
       },
       {
+        "severity": "low",
         "note": "In mice, high doses of leaf extract (10–14 g/kg body weight) over a prolonged period caused reduced food intake, weight loss, and changes to liver and kidney tissue.",
         "source_citation": "Tedong, L. et al. (2007). Acute and subchronic toxicity of Anacardium occidentale Linn (Anacardiaceae) leaves hexane extract in mice. African Journal of Traditional, Complementary and Alternative Medicines, 4(2), 140–147."
       },
       {
+        "severity": "high",
         "note": "Cashew nuts are a common food allergen and can cause reactions ranging from mild symptoms to severe anaphylaxis in sensitive individuals.",
         "source_citation": "Wikipedia: Cashew, as cited via NMPPDB (nmppdb.com.ng) — a lower-reliability source; worth confirming with a medical reference"
       }
@@ -1157,8 +1164,9 @@
     "name_common": "Ugwu (fluted pumpkin)",
     "name_scientific": "Telfairia occidentalis",
     "names_local": {
-      "yoruba": "Eweroko",
-      "igbo": "Ugu",
+      "yoruba": "Efo iroko / Sokoyokoto/ Ewe Elegede",
+      "igbo": "Ugwu / Akwukwo ugwu",
+      "hausa": "Daraja / Kabewa",
       "other": [
         {
           "label": "Efik/Ibibio",
@@ -1214,14 +1222,17 @@
     ],
     "cautions": [
       {
+        "severity": "low",
         "note": "No mortality observed in rats even at high acute doses (up to 3,000 mg/kg); however, sub-chronic dosing over 60 days caused a reversible reduction in testicular weight and mild testicular tissue changes, with no significant effects on blood or biochemical markers.",
         "source_citation": "Akindele, A.J., Oladimeji-Salami, J.A., Oyetola, R.A., & Osiagwu, D.D. (2018). Medicines, 5(1), 4."
       },
       {
+        "severity": "low",
         "note": "High doses (over 1,000 mg/kg) over 30 days led to a mild rise (around 10%) in a liver enzyme marker (ALT).",
         "source_citation": "Akindele, A.J. et al. (2018). Medicines, 5(1), 4."
       },
       {
+        "severity": "moderate",
         "note": "Safety during pregnancy or childhood has not been evaluated; wild-harvested plants may carry heavy-metal contamination risk.",
         "source_citation": "Akindele, A.J. et al. (2018). Medicines, 5(1), 4."
       }
@@ -1270,9 +1281,9 @@
     "name_common": "Bitter melon",
     "name_scientific": "Momordica charantia",
     "names_local": {
-      "yoruba": "Ejinrin were",
-      "igbo": "Ejinrin",
-      "hausa": "Garahuni"
+      "yoruba": "Ejinrin were / Ewe Ejinrin",
+      "igbo": "Okwunuolo",
+      "hausa": "Daddasu"
     },
     "category": [
       "medicinal"
@@ -1316,10 +1327,12 @@
     ],
     "cautions": [
       {
+        "severity": "moderate",
         "note": "Can cause hypoglycemia (blood sugar dropping too low), especially when combined with diabetes medication, so caution and medical guidance are advised if using both together. Some people also experience gastrointestinal disturbances.",
         "source_citation": "Çiçek, S.S. (2022). Momordica charantia L.—Diabetes-Related Bioactivities, Quality Control, and Safety Considerations. Frontiers in Pharmacology, 13, 904643."
       },
       {
+        "severity": "high",
         "note": "Listed among plants traditionally used as an abortifacient in some cultures; best avoided medicinally during pregnancy.",
         "source_citation": "USDA Dr. Duke's Phytochemical and Ethnobotanical Database (phytochem.nal.usda.gov), Momordica charantia entry"
       }
@@ -1376,6 +1389,7 @@
     ],
     "cautions": [
       {
+        "severity": "moderate",
         "note": "Culinary use of turmeric is generally considered safe. However, clinical reports describe cases of drug-induced liver injury linked to high-dose turmeric supplements, particularly formulations designed to boost curcumin absorption, typically appearing after weeks to months of use. Caution is advised for people with existing liver disease or those taking high-dose supplements.",
         "source_citation": "Halegoua-DeMarzio, D. et al. (2023). Liver Injury Associated with Turmeric – A Growing Problem: Ten Cases from the Drug-Induced Liver Injury Network (DILIN). American Journal of Medicine, 136(2), 200–206."
       }
@@ -1457,6 +1471,7 @@
     ],
     "cautions": [
       {
+        "severity": "moderate",
         "note": "Safe at typical culinary doses (up to about 4 g/day). Higher doses (over 5 g/day) may cause heartburn or diarrhea. Ginger may strengthen the effect of blood-thinning medication or lower blood sugar too much, so caution is advised alongside such medicines and in pregnancy beyond ordinary food amounts.",
         "source_citation": "Ali, B.H., Blunden, G., Tanira, M.O., & Nemmar, A. (2008). Some phytochemical, pharmacological and toxicological properties of ginger (Zingiber officinale Roscoe): A review of recent research. Food and Chemical Toxicology, 46(2), 409–420."
       }
