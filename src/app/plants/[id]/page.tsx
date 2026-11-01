@@ -39,7 +39,6 @@ export async function generateMetadata(props: PageProps<"/plants/[id]">): Promis
           siteName: "PlantLens",
           title: `${plant.name_common} · ${plant.name_scientific}`,
           description: plant.description,
-          images: plant.photo_url ? [{ url: plant.photo_url, alt: plant.name_common }] : undefined,
         },
       }
     : {};
