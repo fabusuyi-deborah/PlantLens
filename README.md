@@ -12,7 +12,7 @@ I'm Deborah Fabusuyi, a Plant Biology graduate (University of Ilorin) and fronte
 
 - **Product and data: me.** I chose the plants, curated `plants.json` from Dr. Duke's, NMPPDB and published studies, checked local names against their sources, and decided how uses are worded. They're described as traditional uses with citations, never as medical claims. The [data pipeline](#data-pipeline) and [photo workflow](#plant-photos) below are the tools I use for that.
 - **Design.** I directed the November 2026 redesign. I set the visual direction, reviewed each iteration on desktop and mobile, and made the calls on layout, accessibility and where disclaimers belong.
-- **Code.** The redesign's implementation was AI-assisted, using Claude. It was shipped as page-by-page pull requests (#1, #3–#7) that I reviewed and merged, and the commits authored by "Claude" in the history come from that work. Earlier versions of the app, including its search, citation handling and data model, are in the history under my name.
+- **Code.** The redesign's implementation was AI-assisted, using Claude.
 
 ## Running the app
 
