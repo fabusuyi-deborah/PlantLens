@@ -3,11 +3,26 @@
     "id": "scent-leaf",
     "name_common": "Scent leaf",
     "name_scientific": "Ocimum gratissimum",
-    "names_local": {
-      "yoruba": "Efinrin",
-      "igbo": "Nchanwu",
-      "hausa": "Daidoya"
-    },
+    "names_local": [
+      {
+        "language": "Yoruba",
+        "name": "Efinrin"
+      },
+      {
+        "language": "Igbo",
+        "name": "Nchanwu"
+      },
+      {
+        "language": "Hausa",
+        "name": "Daidoya"
+      }
+    ],
+    "regions": [
+      "west",
+      "central",
+      "east",
+      "southern"
+    ],
     "category": [
       "medicinal",
       "culinary"
@@ -51,21 +66,34 @@
     "id": "bitter-leaf",
     "name_common": "Bitter leaf",
     "name_scientific": "Vernonia amygdalina",
-    "names_local": {
-      "yoruba": "Ewuro",
-      "igbo": "Onugbu",
-      "hausa": "Shuwaka",
-      "other": [
-        {
-          "label": "Edo",
-          "name": "Olubu"
-        },
-        {
-          "label": "Efik",
-          "name": "Etidot"
-        }
-      ]
-    },
+    "names_local": [
+      {
+        "language": "Yoruba",
+        "name": "Ewuro"
+      },
+      {
+        "language": "Igbo",
+        "name": "Onugbu"
+      },
+      {
+        "language": "Hausa",
+        "name": "Shuwaka"
+      },
+      {
+        "language": "Edo",
+        "name": "Olubu"
+      },
+      {
+        "language": "Efik",
+        "name": "Etidot"
+      }
+    ],
+    "regions": [
+      "west",
+      "central",
+      "east",
+      "southern"
+    ],
     "category": [
       "leafy_vegetable",
       "medicinal"
@@ -173,11 +201,27 @@
     "id": "moringa",
     "name_common": "Moringa",
     "name_scientific": "Moringa oleifera",
-    "names_local": {
-      "yoruba": "Ewe ile / Ewe igbale",
-      "igbo": "Okwe oyibo",
-      "hausa": "Zogale"
-    },
+    "names_local": [
+      {
+        "language": "Yoruba",
+        "name": "Ewe ile / Ewe igbale"
+      },
+      {
+        "language": "Igbo",
+        "name": "Okwe oyibo"
+      },
+      {
+        "language": "Hausa",
+        "name": "Zogale"
+      }
+    ],
+    "regions": [
+      "west",
+      "central",
+      "east",
+      "southern",
+      "north"
+    ],
     "category": [
       "medicinal",
       "leafy_vegetable"
@@ -250,11 +294,27 @@
     "id": "neem",
     "name_common": "Neem",
     "name_scientific": "Azadirachta indica",
-    "names_local": {
-      "yoruba": "Dongoyaro / Igi-oba / Igi-neem",
-      "igbo": "Ogwu akuma",
-      "hausa": "Dogonyaro"
-    },
+    "names_local": [
+      {
+        "language": "Yoruba",
+        "name": "Dongoyaro / Igi-oba / Igi-neem"
+      },
+      {
+        "language": "Igbo",
+        "name": "Ogwu akuma"
+      },
+      {
+        "language": "Hausa",
+        "name": "Dogonyaro"
+      }
+    ],
+    "regions": [
+      "west",
+      "central",
+      "east",
+      "southern",
+      "north"
+    ],
     "category": [
       "medicinal"
     ],
@@ -332,17 +392,28 @@
     "id": "bitter-kola",
     "name_common": "Bitter kola",
     "name_scientific": "Garcinia kola",
-    "names_local": {
-      "yoruba": "Orogbo",
-      "igbo": "Aki ilu / Aku inu",
-      "hausa": "Namijin Goro",
-      "other": [
-        {
-          "label": "Igala",
-          "name": "Ogholigo"
-        }
-      ]
-    },
+    "names_local": [
+      {
+        "language": "Yoruba",
+        "name": "Orogbo"
+      },
+      {
+        "language": "Igbo",
+        "name": "Aki ilu / Aku inu"
+      },
+      {
+        "language": "Hausa",
+        "name": "Namijin Goro"
+      },
+      {
+        "language": "Igala",
+        "name": "Ogholigo"
+      }
+    ],
+    "regions": [
+      "west",
+      "central"
+    ],
     "category": [
       "medicinal"
     ],
@@ -409,11 +480,24 @@
     "id": "kola-nut",
     "name_common": "Kola nut",
     "name_scientific": "Cola nitida",
-    "names_local": {
-      "yoruba": "Obi",
-      "igbo": "Oji",
-      "hausa": "Goro"
-    },
+    "names_local": [
+      {
+        "language": "Yoruba",
+        "name": "Obi"
+      },
+      {
+        "language": "Igbo",
+        "name": "Oji"
+      },
+      {
+        "language": "Hausa",
+        "name": "Goro"
+      }
+    ],
+    "regions": [
+      "west",
+      "central"
+    ],
     "category": [
       "medicinal",
       "stimulant"
@@ -472,11 +556,25 @@
     "id": "uziza",
     "name_common": "Uziza",
     "name_scientific": "Piper guineense",
-    "names_local": {
-      "yoruba": "Iyere / Ata-iyere",
-      "igbo": "Ozeza",
-      "hausa": "Masooroo"
-    },
+    "names_local": [
+      {
+        "language": "Yoruba",
+        "name": "Iyere / Ata-iyere"
+      },
+      {
+        "language": "Igbo",
+        "name": "Ozeza"
+      },
+      {
+        "language": "Hausa",
+        "name": "Masooroo"
+      }
+    ],
+    "regions": [
+      "west",
+      "central",
+      "east"
+    ],
     "category": [
       "spice",
       "medicinal"
@@ -563,10 +661,23 @@
     "id": "aloe-vera",
     "name_common": "Aloe vera",
     "name_scientific": "Aloe vera",
-    "names_local": {
-      "yoruba": "Eti erin / Asejo Elewa",
-      "igbo": "Akwarara"
-    },
+    "names_local": [
+      {
+        "language": "Yoruba",
+        "name": "Eti erin / Asejo Elewa"
+      },
+      {
+        "language": "Igbo",
+        "name": "Akwarara"
+      }
+    ],
+    "regions": [
+      "west",
+      "central",
+      "east",
+      "southern",
+      "north"
+    ],
     "category": [
       "medicinal"
     ],
@@ -635,10 +746,22 @@
     "id": "roselle-zobo",
     "name_common": "Roselle (Zobo)",
     "name_scientific": "Hibiscus sabdariffa",
-    "names_local": {
-      "yoruba": "Isapa",
-      "hausa": "Yakuwa / Zobo / Zoborodo"
-    },
+    "names_local": [
+      {
+        "language": "Yoruba",
+        "name": "Isapa"
+      },
+      {
+        "language": "Hausa",
+        "name": "Yakuwa / Zobo / Zoborodo"
+      }
+    ],
+    "regions": [
+      "west",
+      "central",
+      "east",
+      "north"
+    ],
     "category": [
       "medicinal",
       "beverage"
@@ -702,11 +825,26 @@
     "id": "pawpaw",
     "name_common": "Pawpaw",
     "name_scientific": "Carica papaya",
-    "names_local": {
-      "yoruba": "Ibepe",
-      "igbo": "Okwuru bekee",
-      "hausa": "Gwanda"
-    },
+    "names_local": [
+      {
+        "language": "Yoruba",
+        "name": "Ibepe"
+      },
+      {
+        "language": "Igbo",
+        "name": "Okwuru bekee"
+      },
+      {
+        "language": "Hausa",
+        "name": "Gwanda"
+      }
+    ],
+    "regions": [
+      "west",
+      "central",
+      "east",
+      "southern"
+    ],
     "category": [
       "medicinal"
     ],
@@ -768,11 +906,26 @@
     "id": "guava",
     "name_common": "Guava",
     "name_scientific": "Psidium guajava",
-    "names_local": {
-      "yoruba": "Gilofa",
-      "igbo": "Ugwaba",
-      "hausa": "Goba"
-    },
+    "names_local": [
+      {
+        "language": "Yoruba",
+        "name": "Gilofa"
+      },
+      {
+        "language": "Igbo",
+        "name": "Ugwaba"
+      },
+      {
+        "language": "Hausa",
+        "name": "Goba"
+      }
+    ],
+    "regions": [
+      "west",
+      "central",
+      "east",
+      "southern"
+    ],
     "category": [
       "medicinal"
     ],
@@ -844,11 +997,27 @@
     "id": "mango",
     "name_common": "Mango",
     "name_scientific": "Mangifera indica",
-    "names_local": {
-      "yoruba": "Mangoro",
-      "igbo": "Mangoro",
-      "hausa": "Mangwaro"
-    },
+    "names_local": [
+      {
+        "language": "Yoruba",
+        "name": "Mangoro"
+      },
+      {
+        "language": "Igbo",
+        "name": "Mangoro"
+      },
+      {
+        "language": "Hausa",
+        "name": "Mangwaro"
+      }
+    ],
+    "regions": [
+      "west",
+      "central",
+      "east",
+      "southern",
+      "north"
+    ],
     "category": [
       "medicinal"
     ],
@@ -900,11 +1069,26 @@
     "id": "lemongrass",
     "name_common": "Lemongrass",
     "name_scientific": "Cymbopogon citratus",
-    "names_local": {
-      "yoruba": "Kooko-Oba / Ewe Tea",
-      "igbo": "Achara ehi",
-      "hausa": "Tsauri"
-    },
+    "names_local": [
+      {
+        "language": "Yoruba",
+        "name": "Kooko-Oba / Ewe Tea"
+      },
+      {
+        "language": "Igbo",
+        "name": "Achara ehi"
+      },
+      {
+        "language": "Hausa",
+        "name": "Tsauri"
+      }
+    ],
+    "regions": [
+      "west",
+      "central",
+      "east",
+      "southern"
+    ],
     "category": [
       "medicinal",
       "beverage"
@@ -971,11 +1155,25 @@
     "id": "soursop",
     "name_common": "Soursop",
     "name_scientific": "Annona muricata",
-    "names_local": {
-      "yoruba": "Ebo / Apekan",
-      "igbo": "Ogbaka nti",
-      "hausa": "Tuwon biri / Fasadarur"
-    },
+    "names_local": [
+      {
+        "language": "Yoruba",
+        "name": "Ebo / Apekan"
+      },
+      {
+        "language": "Igbo",
+        "name": "Ogbaka nti"
+      },
+      {
+        "language": "Hausa",
+        "name": "Tuwon biri / Fasadarur"
+      }
+    ],
+    "regions": [
+      "west",
+      "central",
+      "east"
+    ],
     "category": [
       "medicinal"
     ],
@@ -1032,11 +1230,25 @@
     "id": "garden-egg",
     "name_common": "Garden egg",
     "name_scientific": "Solanum aethiopicum",
-    "names_local": {
-      "yoruba": "Igba",
-      "igbo": "Anyara / Afufa",
-      "hausa": "Gauta"
-    },
+    "names_local": [
+      {
+        "language": "Yoruba",
+        "name": "Igba"
+      },
+      {
+        "language": "Igbo",
+        "name": "Anyara / Afufa"
+      },
+      {
+        "language": "Hausa",
+        "name": "Gauta"
+      }
+    ],
+    "regions": [
+      "west",
+      "central",
+      "east"
+    ],
     "category": [
       "vegetable"
     ],
@@ -1093,10 +1305,22 @@
     "id": "cashew",
     "name_common": "Cashew",
     "name_scientific": "Anacardium occidentale",
-    "names_local": {
-      "yoruba": "Kasu",
-      "hausa": "Kashu / Kanju"
-    },
+    "names_local": [
+      {
+        "language": "Yoruba",
+        "name": "Kasu"
+      },
+      {
+        "language": "Hausa",
+        "name": "Kashu / Kanju"
+      }
+    ],
+    "regions": [
+      "west",
+      "central",
+      "east",
+      "southern"
+    ],
     "category": [
       "medicinal"
     ],
@@ -1163,33 +1387,44 @@
     "id": "ugwu",
     "name_common": "Ugwu (fluted pumpkin)",
     "name_scientific": "Telfairia occidentalis",
-    "names_local": {
-      "yoruba": "Efo iroko / Sokoyokoto / Ewe Elegede",
-      "igbo": "Ugwu / Akwukwo ugwu",
-      "hausa": "Daraja / Kabewa",
-      "other": [
-        {
-          "label": "Efik/Ibibio",
-          "name": "Ikong-ubong"
-        },
-        {
-          "label": "Ibibio",
-          "name": "Ubong"
-        },
-        {
-          "label": "Ikwerre",
-          "name": "Okwukwo-wiri"
-        },
-        {
-          "label": "Etche",
-          "name": "Akwukwor ri"
-        },
-        {
-          "label": "Edo",
-          "name": "Umeke"
-        }
-      ]
-    },
+    "names_local": [
+      {
+        "language": "Yoruba",
+        "name": "Efo iroko / Sokoyokoto / Ewe Elegede"
+      },
+      {
+        "language": "Igbo",
+        "name": "Ugwu / Akwukwo ugwu"
+      },
+      {
+        "language": "Hausa",
+        "name": "Daraja / Kabewa"
+      },
+      {
+        "language": "Efik/Ibibio",
+        "name": "Ikong-ubong"
+      },
+      {
+        "language": "Ibibio",
+        "name": "Ubong"
+      },
+      {
+        "language": "Ikwerre",
+        "name": "Okwukwo-wiri"
+      },
+      {
+        "language": "Etche",
+        "name": "Akwukwor ri"
+      },
+      {
+        "language": "Edo",
+        "name": "Umeke"
+      }
+    ],
+    "regions": [
+      "west",
+      "central"
+    ],
     "category": [
       "leafy_vegetable"
     ],
@@ -1280,11 +1515,26 @@
     "id": "bitter-melon",
     "name_common": "Bitter melon",
     "name_scientific": "Momordica charantia",
-    "names_local": {
-      "yoruba": "Ejinrin were / Ewe Ejinrin",
-      "igbo": "Okwunuolo",
-      "hausa": "Daddasu"
-    },
+    "names_local": [
+      {
+        "language": "Yoruba",
+        "name": "Ejinrin were / Ewe Ejinrin"
+      },
+      {
+        "language": "Igbo",
+        "name": "Okwunuolo"
+      },
+      {
+        "language": "Hausa",
+        "name": "Daddasu"
+      }
+    ],
+    "regions": [
+      "west",
+      "central",
+      "east",
+      "southern"
+    ],
     "category": [
       "medicinal"
     ],
@@ -1347,11 +1597,25 @@
     "id": "turmeric",
     "name_common": "Turmeric",
     "name_scientific": "Curcuma longa",
-    "names_local": {
-      "yoruba": "Ata-ile pupa",
-      "igbo": "Ose Oji",
-      "hausa": "Gangamau / Gangamin Turmi"
-    },
+    "names_local": [
+      {
+        "language": "Yoruba",
+        "name": "Ata-ile pupa"
+      },
+      {
+        "language": "Igbo",
+        "name": "Ose Oji"
+      },
+      {
+        "language": "Hausa",
+        "name": "Gangamau / Gangamin Turmi"
+      }
+    ],
+    "regions": [
+      "west",
+      "central",
+      "east"
+    ],
     "category": [
       "spice",
       "medicinal"
@@ -1404,17 +1668,30 @@
     "id": "ginger",
     "name_common": "Ginger",
     "name_scientific": "Zingiber officinale",
-    "names_local": {
-      "yoruba": "Ata-ile",
-      "igbo": "Jinja",
-      "hausa": "Citta",
-      "other": [
-        {
-          "label": "Efik",
-          "name": "Umuji"
-        }
-      ]
-    },
+    "names_local": [
+      {
+        "language": "Yoruba",
+        "name": "Ata-ile"
+      },
+      {
+        "language": "Igbo",
+        "name": "Jinja"
+      },
+      {
+        "language": "Hausa",
+        "name": "Citta"
+      },
+      {
+        "language": "Efik",
+        "name": "Umuji"
+      }
+    ],
+    "regions": [
+      "west",
+      "central",
+      "east",
+      "southern"
+    ],
     "category": [
       "spice",
       "medicinal"

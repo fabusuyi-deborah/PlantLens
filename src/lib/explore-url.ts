@@ -8,15 +8,22 @@ export const exploreSorts = {
 } as const;
 export type ExploreSort = keyof typeof exploreSorts;
 
-/** Which local name the result cards show. */
-export const nameLanguages = { yoruba: "Yoruba", igbo: "Igbo", hausa: "Hausa" } as const;
-export type NameLanguage = keyof typeof nameLanguages;
+/**
+ * Which language the result cards show local names in, as a key like "yoruba". The options come
+ * from the data (see getNameLanguages); this is the one left out of URLs.
+ */
+export const DEFAULT_NAME_LANGUAGE = "yoruba";
+
+export interface NameLanguageOption {
+  value: string;
+  label: string;
+}
 
 export interface ExploreQuery {
   q?: string;
   category?: PlantCategory | string;
   sort?: ExploreSort;
-  names?: NameLanguage;
+  names?: string;
   page?: number;
 }
 
@@ -26,7 +33,7 @@ export function exploreHref({ q, category, sort, names, page }: ExploreQuery = {
   if (q) params.set("q", q);
   if (category) params.set("category", category);
   if (sort && sort !== "featured") params.set("sort", sort);
-  if (names && names !== "yoruba") params.set("names", names);
+  if (names && names !== DEFAULT_NAME_LANGUAGE) params.set("names", names);
   if (page && page > 1) params.set("page", String(page));
   const search = params.toString();
   return search ? `/explore?${search}` : "/explore";
@@ -34,8 +41,4 @@ export function exploreHref({ q, category, sort, names, page }: ExploreQuery = {
 
 export function isExploreSort(value: string): value is ExploreSort {
   return value in exploreSorts;
-}
-
-export function isNameLanguage(value: string): value is NameLanguage {
-  return value in nameLanguages;
 }

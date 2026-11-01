@@ -74,7 +74,7 @@ export function CommandPalette({
         ...popular.map((plant): Item => ({
           kind: "plant",
           plant,
-          tag: firstName(plant.names_local.yoruba ?? plant.names_local.igbo ?? plant.names_local.hausa),
+          tag: firstName(plant.names_local[0]?.name),
         })),
       ];
 

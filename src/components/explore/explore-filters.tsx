@@ -7,14 +7,13 @@ import { Search, SlidersHorizontal, X } from "lucide-react";
 import { chipStyles } from "@/components/ui/button";
 import { selectStyles } from "@/components/ui/select";
 import {
+  DEFAULT_NAME_LANGUAGE,
   exploreHref,
   exploreSorts,
   isExploreSort,
-  isNameLanguage,
-  nameLanguages,
   type ExploreQuery,
   type ExploreSort,
-  type NameLanguage,
+  type NameLanguageOption,
 } from "@/lib/explore-url";
 
 export interface CategoryOption {
@@ -34,12 +33,14 @@ export function ExploreFilters({
   category,
   sort,
   names,
+  nameOptions,
   categories,
 }: {
   q: string;
   category: string;
   sort: ExploreSort;
-  names: NameLanguage;
+  names: string;
+  nameOptions: NameLanguageOption[];
   categories: CategoryOption[];
 }) {
   const router = useRouter();
@@ -71,7 +72,7 @@ export function ExploreFilters({
 
   useEffect(() => () => window.clearTimeout(debounce.current), []);
 
-  const optionsChanged = sort !== "featured" || names !== "yoruba";
+  const optionsChanged = sort !== "featured" || names !== DEFAULT_NAME_LANGUAGE;
 
   return (
     <form
@@ -174,10 +175,10 @@ export function ExploreFilters({
             id="explore-names"
             name="names"
             value={names}
-            onChange={(event) => isNameLanguage(event.target.value) && go({ names: event.target.value })}
+            onChange={(event) => go({ names: event.target.value })}
             className={`${selectStyles} max-sm:min-h-12 max-sm:text-[0.8125rem]`}
           >
-            {Object.entries(nameLanguages).map(([value, label]) => (
+            {nameOptions.map(({ value, label }) => (
               <option key={value} value={value}>
                 Names in {label}
               </option>

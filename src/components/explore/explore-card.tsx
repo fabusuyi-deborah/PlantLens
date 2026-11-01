@@ -1,9 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CategoryPill } from "@/components/ui/category-pill";
-import type { NameLanguage } from "@/lib/explore-url";
-import { nameLanguages } from "@/lib/explore-url";
-import { firstName } from "@/lib/plant-text";
+import { firstName, localNameIn } from "@/lib/plant-text";
 import type { Plant } from "@/types/plant";
 
 /** Tile colours behind the photo in the phone list, cycling down the page. */
@@ -13,8 +11,19 @@ const tileColors = ["bg-lavender", "bg-orange", "bg-yellow", "bg-pink"];
  * A result on /explore. A photo card from the sm breakpoint up; on phones a compact row with a
  * square photo on a coloured tile beside the name, local name and botanical name.
  */
-export function ExploreCard({ plant, names, index }: { plant: Plant; names: NameLanguage; index: number }) {
-  const local = firstName(plant.names_local[names]);
+export function ExploreCard({
+  plant,
+  names,
+  namesLabel,
+  index,
+}: {
+  plant: Plant;
+  /** Language key, e.g. "yoruba". */
+  names: string;
+  namesLabel: string;
+  index: number;
+}) {
+  const local = firstName(localNameIn(plant, names));
 
   return (
     <Link
@@ -45,7 +54,7 @@ export function ExploreCard({ plant, names, index }: { plant: Plant; names: Name
         {plant.name_common}
       </h2>
       <p className="self-start sm:self-auto text-body-sm leading-[1.35] font-semibold text-ink sm:font-normal sm:text-ink-secondary">
-        {local || <span className="font-normal text-ink-muted">No {nameLanguages[names]} name yet</span>}
+        {local || <span className="font-normal text-ink-muted">No {namesLabel} name yet</span>}
         <span className="hidden sm:inline" aria-hidden>
           {" · "}
         </span>

@@ -7,18 +7,15 @@ export type PlantCategory =
   | "beverage"
   | "stimulant";
 
-export interface OtherLocalName {
-  /** Language, people or region, e.g. "Edo" or "Akan (Ghana)". */
-  label: string;
+export interface LocalName {
+  /** Language or people, e.g. "Yoruba", "Swahili" or "Akan (Ghana)". */
+  language: string;
+  /** One name, or alternatives separated by " / ". */
   name: string;
 }
 
-export interface LocalNames {
-  yoruba?: string;
-  igbo?: string;
-  hausa?: string;
-  other?: OtherLocalName[];
-}
+/** Parts of Africa where a plant grows wild or is commonly cultivated. */
+export type AfricanRegion = "west" | "central" | "east" | "southern" | "north";
 
 export interface TraditionalUse {
   /** Optional short heading, e.g. "Fever & Malaria Treatment". */
@@ -49,7 +46,9 @@ export interface Plant {
   id: string;
   name_common: string;
   name_scientific: string;
-  names_local: LocalNames;
+  /** Local names, most widely spoken languages first. */
+  names_local: LocalName[];
+  regions: AfricanRegion[];
   category: PlantCategory[];
   description: string;
   /** Optional botanical family, e.g. "Asteraceae". */
