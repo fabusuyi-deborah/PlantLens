@@ -44,26 +44,27 @@ export function MobileMenu({ links }: { links: NavLink[] }) {
         aria-expanded={open}
         aria-controls="mobile-menu"
         aria-label={open ? "Close menu" : "Open menu"}
-        className="flex size-8 items-center justify-center rounded-full text-ink-secondary transition-colors hover:bg-surface hover:text-ink"
+        className={`flex size-11 items-center justify-center rounded-full border-[1.5px] border-green transition-colors ${
+          open ? "bg-green text-paper" : "bg-paper text-green"
+        }`}
       >
         {open ? <X className="size-5" aria-hidden /> : <Menu className="size-5" aria-hidden />}
       </button>
       {open && (
         <ul
           id="mobile-menu"
-          className="absolute inset-x-0 top-full border-b border-border bg-bg px-4 py-2 shadow-[0_8px_16px_rgba(10,37,64,0.06)]"
+          className="absolute inset-x-4 top-full mt-1 max-h-[calc(100vh-6rem)] animate-fade-up overflow-auto rounded-panel bg-green p-2 shadow-[0_20px_40px_-20px_rgba(0,0,0,0.5)]"
         >
           {links.map((link) => {
-            const active = pathname === link.href || pathname.startsWith(`${link.href}/`);
+            const active =
+              link.href === "/" ? pathname === "/" : pathname === link.href || pathname.startsWith(`${link.href}/`);
             return (
               <li key={link.href}>
                 <Link
                   href={link.href}
                   onClick={() => setOpenedOn(null)}
                   aria-current={active ? "page" : undefined}
-                  className={`block rounded-sm px-3 py-3 text-body-lg transition-colors hover:bg-surface hover:text-ink ${
-                    active ? "font-medium text-ink" : "text-ink-secondary"
-                  }`}
+                  className="flex min-h-13 items-center rounded-[14px] px-4 font-display text-xl font-medium text-paper transition-colors hover:bg-paper/12 aria-[current=page]:bg-paper/12"
                 >
                   {link.label}
                 </Link>
