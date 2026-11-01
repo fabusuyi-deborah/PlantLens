@@ -1,56 +1,53 @@
 import Link from "next/link";
-import { ArrowRight, Lightbulb, SearchX } from "lucide-react";
-import { buttonStyles } from "@/components/ui/button";
+import { BrokenLeaf } from "@/components/ui/broken-leaf";
+import { buttonStyles, chipStyles } from "@/components/ui/button";
 import { exploreHref } from "@/lib/explore-url";
 
-const chip =
-  "rounded-full border border-border bg-bg px-3 py-1 text-body-sm text-ink-secondary transition-colors hover:border-ink-muted hover:text-ink";
+const suggestions = ["Bitter leaf", "Moringa", "Ewuro", "Zogale", "Ginger"];
 
-function SuggestionChips({ names }: { names: string[] }) {
-  return names.map((name) => (
-    <Link key={name} href={exploreHref({ q: name })} className={chip}>
-      {name}
-    </Link>
-  ));
-}
-
-export function NoResults({ query, suggestions }: { query: string; suggestions: string[] }) {
+export function NoResults({ query, inCategory }: { query: string; inCategory: boolean }) {
   return (
-    <div className="flex flex-col items-center py-16 text-center">
-      <span className="flex size-18 items-center justify-center rounded-full bg-surface">
-        <SearchX className="size-7 text-ink-tertiary" aria-hidden />
-      </span>
-      <h2 className="mt-6 text-xl font-semibold text-ink">No plants found</h2>
-      <p className="mt-4 max-w-[420px] text-[15px] leading-relaxed text-ink-secondary">
-        We couldn&apos;t find any plants matching &quot;{query}&quot;. Try a different spelling or
-        browse by category.
+    <div className="flex flex-col items-center gap-3 px-5 py-14 text-center">
+      <BrokenLeaf size={120} className="mb-1" />
+      <h2 className="font-display text-[1.75rem] font-medium text-green">No plants found</h2>
+      <p className="max-w-[30em] text-ink-secondary">
+        We couldn&apos;t find any plants matching “{query}”{inCategory && " in this category"}. Try a
+        different spelling or browse by category.
       </p>
-      <p className="mt-6 text-body-sm font-medium text-ink-muted">Try searching for:</p>
-      <div className="mt-3 flex flex-wrap justify-center gap-2">
-        <SuggestionChips names={suggestions} />
+      <p className="mt-2 text-overline text-ink-secondary uppercase">Try searching for</p>
+      <div className="flex flex-wrap justify-center gap-1.5">
+        {suggestions.map((name) => (
+          <Link key={name} href={exploreHref({ q: name })} className={chipStyles}>
+            {name}
+          </Link>
+        ))}
       </div>
-      <Link href={exploreHref()} className={`${buttonStyles()} mt-8`}>
-        Browse all plants <ArrowRight className="size-4" aria-hidden />
+      <Link href={exploreHref()} className={`${buttonStyles()} mt-2.5`}>
+        Browse all plants
       </Link>
     </div>
   );
 }
 
-export function SearchHint({ suggestions }: { suggestions: string[] }) {
+export function SearchHint() {
   return (
-    <aside className="flex flex-col gap-4 rounded-md border border-border bg-bg-secondary p-6 md:flex-row md:items-center md:justify-between">
-      <div className="flex gap-4">
-        <Lightbulb className="mt-0.5 size-5 shrink-0 text-warm" aria-hidden />
-        <div>
-          <h2 className="text-[15px] font-semibold text-ink">Looking for something else?</h2>
-          <p className="mt-0.5 text-body text-ink-secondary">
-            Try searching by local name (e.g. &quot;Ewúro&quot;), scientific name, or browse
-            categories above.
-          </p>
-        </div>
+    <aside className="mt-14 flex flex-wrap items-center justify-between gap-4 rounded-panel bg-pink px-6 py-5.5">
+      <div>
+        <h2 className="font-display text-xl font-medium text-green">Looking for something else?</h2>
+        <p className="mt-1">
+          Try searching by local name (e.g. “Ewúro”), scientific name, or browse the categories above.
+        </p>
       </div>
-      <div className="flex flex-wrap gap-2">
-        <SuggestionChips names={suggestions} />
+      <div className="flex flex-wrap gap-1.5">
+        {suggestions.map((name) => (
+          <Link
+            key={name}
+            href={exploreHref({ q: name })}
+            className="inline-flex min-h-10 items-center rounded-full bg-paper px-4 text-[0.8125rem] font-bold text-green transition-colors hover:bg-yellow hover:text-ink"
+          >
+            {name}
+          </Link>
+        ))}
       </div>
     </aside>
   );

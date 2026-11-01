@@ -1,20 +1,16 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-import {
-  ArrowUpRight,
-  BookOpen,
-  ChevronDown,
-  Database,
-  type LucideIcon,
-} from "lucide-react";
+import { ChevronDown } from "lucide-react";
+import { OpenOnHash } from "@/components/open-on-hash";
+import { PageHeader } from "@/components/page-header";
 import { PhotoCredit } from "@/components/plant-photo";
 import { citesDuke, citesNmppdb, getPlantCitations } from "@/lib/citations";
 import { getAllPlants } from "@/lib/plants";
 
 export const metadata: Metadata = {
   title: "Data Sources · PlantLens",
-  description:
-    "The databases and published literature behind every PlantLens entry.",
+  description: "The databases and published literature behind every PlantLens entry, and photo credits.",
 };
 
 const steps = [
@@ -42,179 +38,142 @@ export default function SourcesPage() {
   const citations = new Set(plants.flatMap(getPlantCitations));
   const countPlantsCiting = (test: (citation: string) => boolean) =>
     plants.filter((plant) => getPlantCitations(plant).some(test)).length;
-
-  const databases = [
-    {
-      name: "NMPPDB",
-      fullName: "Nigerian Medicinal Plants and Phytochemicals Database",
-      body: "Nigeria's own medicinal plant database, with local names, species records and references to Nigerian ethnobotanical studies.",
-      href: "https://nmppdb.com.ng",
-      host: "nmppdb.com.ng",
-      plantCount: countPlantsCiting(citesNmppdb),
-    },
-    {
-      name: "Dr. Duke's",
-      fullName: "Phytochemical and Ethnobotanical Databases (USDA)",
-      body: "James A. Duke's long-running USDA database of plant chemicals, their biological activities and recorded traditional uses. Released under CC0.",
-      href: "https://phytochem.nal.usda.gov",
-      host: "phytochem.nal.usda.gov",
-      plantCount: countPlantsCiting(citesDuke),
-    },
-  ];
-  const literatureCount = [...citations].filter(
-    (citation) => !citesNmppdb(citation) && !citesDuke(citation),
-  ).length;
+  const literatureCount = [...citations].filter((c) => !citesNmppdb(c) && !citesDuke(c)).length;
 
   return (
-    <main className="mx-auto max-w-[1344px] px-4 pt-8 pb-10 md:px-8">
-      <header className="text-center">
-        <span className="inline-flex items-center gap-1.5 rounded-full bg-accent-light px-3 py-1 text-overline text-accent-dark">
-          <Database className="size-3" aria-hidden />
-          Data Sources
-        </span>
-        <h1 className="mx-auto mt-3 text-[2rem] leading-tight font-bold tracking-[-0.8px] text-ink sm:text-page-title">
-          Our Data Sources
-        </h1>
-        <p className="mx-auto mt-2 max-w-2xl text-body-lg text-ink-secondary">
-          PlantLens brings together database records and published
-          ethnobotanical research.
-        </p>
-      </header>
+    <main>
+      <PageHeader
+        title="Our data sources"
+        subtitle="PlantLens brings together database records and published ethnobotanical research."
+      />
 
-      <section className="mt-7">
-        <SectionHeading>Primary Databases</SectionHeading>
-        <div className="mt-3 grid gap-3">
-          {databases.map((db) => (
-            <SourceCard
-              key={db.name}
-              icon={Database}
-              title={db.name}
-              kicker={db.fullName}
-              body={db.body}
-              stat={`Cited on ${db.plantCount} of ${plants.length} plants`}
-              link={{ href: db.href, label: db.host }}
-            />
-          ))}
+      <div className="mx-auto max-w-300 px-4 pt-2 pb-18 md:px-8">
+        <SubHeading>Primary databases</SubHeading>
+        <div className="grid gap-4.5 md:grid-cols-2">
+          <SourceCard
+            title="NMPPDB"
+            kicker="Nigerian Medicinal Plants and Phytochemicals Database"
+            body="Nigeria's own medicinal plant database, with local names, species records and references to Nigerian ethnobotanical studies."
+            stat={`Cited on ${countPlantsCiting(citesNmppdb)} of ${plants.length} plants`}
+            href="https://nmppdb.com.ng"
+            color="bg-pink"
+          />
+          <SourceCard
+            title="Dr. Duke's"
+            kicker="Phytochemical and Ethnobotanical Databases (USDA)"
+            body="James A. Duke's long-running USDA database of plant chemicals, their biological activities and recorded traditional uses. Released under CC0."
+            stat={`Cited on ${countPlantsCiting(citesDuke)} of ${plants.length} plants`}
+            href="https://phytochem.nal.usda.gov"
+            color="bg-lavender"
+          />
         </div>
-      </section>
 
-      <section className="mt-7">
-        <SectionHeading>Supplementary &amp; Literature Sources</SectionHeading>
+        <SubHeading className="mt-11">Supplementary &amp; literature sources</SubHeading>
         <SourceCard
-          className="mt-3"
-          icon={BookOpen}
-          title="Published Ethnobotanical Literature"
+          title="Published ethnobotanical literature"
           kicker="Peer-reviewed journals and published research"
           body="Published studies provide evidence for traditional uses and phytochemical findings that are not covered by the databases."
           stat={`${literatureCount} references cited`}
+          color="bg-yellow"
         />
-      </section>
 
-      <section className="mt-7">
-        <SectionHeading>How We Handle Data</SectionHeading>
-        <ol className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <SubHeading className="mt-11">How we handle data</SubHeading>
+        <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((step, i) => (
-            <li
-              key={step.title}
-              className="rounded-md border border-border bg-bg-secondary p-4"
-            >
-              <span className="text-overline text-accent">Step {i + 1}</span>
-              <h3 className="mt-1 text-subheading text-ink">{step.title}</h3>
-              <p className="mt-1 text-body-sm text-ink-secondary">
-                {step.body}
-              </p>
+            <li key={step.title} className="flex flex-col gap-2 rounded-[20px] border border-line bg-paper p-5.5">
+              <span className="font-display text-[0.9375rem] font-semibold text-purple">Step {i + 1}</span>
+              <h3 className="font-display text-xl font-medium text-green">{step.title}</h3>
+              <p className="text-[0.9375rem] text-ink-secondary">{step.body}</p>
             </li>
           ))}
         </ol>
-      </section>
-      {photographed.length > 0 && (
-        <details id="photo-credits" className="group mt-7 rounded-md border border-border px-4">
-          <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-3 text-body font-medium text-ink marker:hidden">
-            <span>Photo credits ({photographed.length} plants)</span>
-            <ChevronDown
-              className="size-4 shrink-0 text-ink-secondary transition-transform group-open:rotate-180"
-              aria-hidden
-            />
-          </summary>
-          <p className="border-t border-border pt-3 text-body-sm text-ink-secondary">
-            Plant photos come from Wikimedia Commons and iNaturalist, used under
-            their Creative Commons or public domain licenses.
-          </p>
-          <ul className="grid gap-x-8 py-2 sm:grid-cols-2 lg:grid-cols-3">
-            {photographed.map((plant) => (
-              <li key={plant.id} className="border-b border-border-light py-2">
-                <Link
-                  href={`/plants/${plant.id}`}
-                  className="text-body-sm font-medium text-ink transition-colors hover:text-accent"
-                >
-                  {plant.name_common}
-                </Link>
-                <PhotoCredit credit={plant.photo_credit} />
-              </li>
-            ))}
-          </ul>
-        </details>
-      )}
+
+        {photographed.length > 0 && (
+          <details id="photo-credits" className="group mt-11 scroll-mt-24 rounded-[20px] border border-line bg-paper px-5.5">
+            <summary className="flex min-h-16 cursor-pointer list-none items-center justify-between gap-3 font-display text-[1.375rem] text-green [&::-webkit-details-marker]:hidden">
+              <span>
+                Photo credits{" "}
+                <span className="font-sans text-[0.9375rem] text-ink-secondary">({photographed.length} plants)</span>
+              </span>
+              <ChevronDown className="size-6 shrink-0 transition-transform duration-250 group-open:rotate-180" aria-hidden />
+            </summary>
+            <p className="mb-2 text-ink-secondary">
+              Plant photos come from Wikimedia Commons and iNaturalist, used under their Creative Commons or
+              public domain licences.
+            </p>
+            <ul className="grid gap-x-7 pb-4.5 sm:grid-cols-2 lg:grid-cols-3">
+              {photographed.map((plant) => (
+                <li key={plant.id} className="flex min-w-0 flex-col gap-0.5 border-t border-line py-3 break-words">
+                  <Link
+                    href={`/plants/${plant.id}`}
+                    className="inline-flex items-center gap-2.5 text-[0.9375rem] font-semibold transition-colors hover:text-purple"
+                  >
+                    {plant.photo_url && (
+                      <Image src={plant.photo_url} alt="" width={34} height={34} className="size-8.5 rounded-lg object-cover" />
+                    )}
+                    {plant.name_common}
+                  </Link>
+                  <PhotoCredit credit={plant.photo_credit} />
+                </li>
+              ))}
+            </ul>
+          </details>
+        )}
+        <OpenOnHash id="photo-credits" />
+      </div>
     </main>
   );
 }
 
+function SubHeading({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+  return (
+    <h2 className={`mb-4 flex items-center gap-2.5 font-display text-[1.375rem] font-medium text-green ${className}`}>
+      <span className="size-2.5 rounded-full bg-yellow" aria-hidden />
+      {children}
+    </h2>
+  );
+}
+
 function SourceCard({
-  icon: Icon,
   title,
   kicker,
   body,
   stat,
-  link,
-  className = "",
+  href,
+  color,
 }: {
-  icon: LucideIcon;
   title: string;
   kicker: string;
   body: string;
   stat: string;
-  link?: { href: string; label: string };
-  className?: string;
+  href?: string;
+  color: string;
 }) {
   return (
-    <article className={`rounded-md border border-border p-3.5 ${className}`}>
-      <div className="flex items-start gap-3">
-        <span className="flex size-8 shrink-0 items-center justify-center rounded-sm bg-accent-light">
-          <Icon className="size-4 text-accent" aria-hidden />
-        </span>
-        <div className="min-w-0 flex-1">
-          <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
-            <div>
-              <h3 className="text-subheading text-ink">{title}</h3>
-              <p className="text-body-sm text-ink-tertiary">{kicker}</p>
-            </div>
-            <p className="text-body-sm font-medium text-ink-secondary">
-              {stat}
-            </p>
+    <article className="flex gap-4 rounded-[20px] border border-line bg-paper p-4.5 sm:p-6">
+      <span className={`mt-2 size-3.5 shrink-0 rounded-full ${color}`} aria-hidden />
+      <div className="flex min-w-0 flex-col gap-1.5">
+        <div className="flex flex-wrap items-baseline justify-between gap-x-3.5 gap-y-1.5">
+          <div>
+            <h3 className="font-display text-[1.375rem] font-medium text-green">{title}</h3>
+            <p className="mt-0.5 text-body-sm text-ink-secondary">{kicker}</p>
           </div>
-          <p className="mt-2 text-body-sm text-ink-secondary">{body}</p>
-          {link && (
-            <a
-              href={link.href}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-2 inline-flex items-center gap-1 text-body-sm font-medium text-accent transition-colors hover:text-accent-dark"
-            >
-              {link.label}
-              <ArrowUpRight className="size-3.5" aria-hidden />
-            </a>
-          )}
+          <span className={`inline-flex min-h-5.5 items-center rounded-full px-2.5 text-[0.65625rem] font-bold tracking-[0.08em] uppercase ${color}`}>
+            {stat}
+          </span>
         </div>
+        <p className="mt-1">{body}</p>
+        {href && (
+          <a
+            href={href}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-1.5 self-start border-b-2 border-yellow pb-0.5 text-caption font-bold tracking-[0.14em] text-green uppercase"
+          >
+            {href.replace("https://", "")} ↗
+          </a>
+        )}
       </div>
     </article>
-  );
-}
-
-function SectionHeading({ children }: { children: React.ReactNode }) {
-  return (
-    <h2 className="flex items-center gap-2 text-subheading text-ink">
-      <span className="size-1.5 rounded-full bg-accent" aria-hidden />
-      {children}
-    </h2>
   );
 }

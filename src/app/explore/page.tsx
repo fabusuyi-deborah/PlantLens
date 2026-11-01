@@ -1,25 +1,22 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { X } from "lucide-react";
-import { CategoryTabs, QuickFilters } from "@/components/explore/category-tabs";
+import { ExploreCard } from "@/components/explore/explore-card";
+import { ExploreFilters, type CategoryOption } from "@/components/explore/explore-filters";
 import { Pagination } from "@/components/explore/pagination";
 import { NoResults, SearchHint } from "@/components/explore/search-feedback";
-import { PlantCard } from "@/components/plant-card";
-import { buttonStyles } from "@/components/ui/button";
-import { SearchInput } from "@/components/ui/search-input";
 import { categoryMeta } from "@/lib/categories";
-import { exploreHref } from "@/lib/explore-url";
-import { getAllPlants, getCategoryCounts, getPlantsByIds } from "@/lib/plants";
+import { exploreHref, isExploreSort, isNameLanguage, type ExploreSort } from "@/lib/explore-url";
+import { getAllPlants, getCategoryCounts } from "@/lib/plants";
+import { plural } from "@/lib/plant-text";
 import { searchPlants } from "@/lib/search";
-import type { PlantCategory } from "@/types/plant";
+import type { Plant, PlantCategory } from "@/types/plant";
 
 export const metadata: Metadata = {
-  title: "Explore Plants · PlantLens",
+  title: "All Plants · PlantLens",
   description: "Browse and search PlantLens's curated collection of Nigerian plants.",
 };
 
-const PAGE_SIZE = 8;
-const suggestionIds = ["bitter-leaf", "moringa", "scent-leaf", "neem", "aloe-vera"];
+const PAGE_SIZE = 9;
 
 function firstParam(value: string | string[] | undefined): string {
   return (Array.isArray(value) ? value[0] : value)?.trim() ?? "";
@@ -29,94 +26,99 @@ function isCategory(value: string): value is PlantCategory {
   return value in categoryMeta;
 }
 
+/** Sorts a copy of the list. "Featured" keeps search relevance, or the curated order when browsing. */
+function sortPlants(plants: Plant[], sort: ExploreSort): Plant[] {
+  const order = new Map(getAllPlants().map((plant, i) => [plant.id, i]));
+  const byOrder = (a: Plant, b: Plant) => (order.get(a.id) ?? 0) - (order.get(b.id) ?? 0);
+  const list = [...plants];
+  if (sort === "az") list.sort((a, b) => a.name_common.localeCompare(b.name_common));
+  if (sort === "compounds")
+    list.sort((a, b) => (b.phytochemicals?.length ?? 0) - (a.phytochemicals?.length ?? 0) || byOrder(a, b));
+  if (sort === "uses")
+    list.sort((a, b) => b.traditional_uses.length - a.traditional_uses.length || byOrder(a, b));
+  return list;
+}
+
 export default async function ExplorePage(props: PageProps<"/explore">) {
   const searchParams = await props.searchParams;
   const q = firstParam(searchParams.q);
   const categoryParam = firstParam(searchParams.category);
   const category = isCategory(categoryParam) ? categoryParam : undefined;
+  const sortParam = firstParam(searchParams.sort);
+  const sort = isExploreSort(sortParam) ? sortParam : "featured";
+  const namesParam = firstParam(searchParams.names);
+  const names = isNameLanguage(namesParam) ? namesParam : "yoruba";
 
-  const categories = getCategoryCounts().map((entry) => entry.category);
-  const inCategory = getAllPlants().filter((plant) => !category || plant.category.includes(category));
-  const results = searchPlants(inCategory, q);
+  const allPlants = getAllPlants();
+  const matching = searchPlants(allPlants, q);
+  const results = sortPlants(
+    matching.filter((plant) => !category || plant.category.includes(category)),
+    sort,
+  );
+
+  // Chip counts reflect the current search, so people can see where their matches are.
+  const categoryOptions: CategoryOption[] = [
+    { value: "", label: "All", count: matching.length },
+    ...getCategoryCounts().map(({ category: value }) => ({
+      value,
+      label: categoryMeta[value].pluralLabel,
+      count: matching.filter((plant) => plant.category.includes(value)).length,
+    })),
+  ];
 
   const pageCount = Math.max(1, Math.ceil(results.length / PAGE_SIZE));
   const page = Math.min(Math.max(1, Number(firstParam(searchParams.page)) || 1), pageCount);
-  const pageResults = results.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
-
-  const suggestions = getPlantsByIds(suggestionIds);
-  const resultIds = new Set(results.map((plant) => plant.id));
-  const otherSuggestions = suggestions.filter((plant) => !resultIds.has(plant.id)).slice(0, 3);
-
-  const isSearching = q !== "";
-  const hasResults = results.length > 0;
+  const first = (page - 1) * PAGE_SIZE;
+  const pageResults = results.slice(first, first + PAGE_SIZE);
+  const filtered = q !== "" || category !== undefined;
+  const query = { q, category, sort, names };
 
   return (
-    <main className="mx-auto max-w-336 px-4 pt-10 pb-16 md:px-8">
-      <header className="flex flex-wrap items-end justify-between gap-4">
-        <div>
-          <h1 className="text-[2rem] leading-tight font-bold tracking-[-0.8px] text-ink sm:text-page-title">
-            {isSearching ? (
-              <>
-                Results for <span className="text-accent">&quot;{q}&quot;</span>
-              </>
-            ) : (
-              "Explore Plants"
-            )}
-          </h1>
-          <p className="mt-1 text-[15px] text-ink-secondary">
-            {isSearching
-              ? `${results.length} ${results.length === 1 ? "plant matches" : "plants match"} your search`
-              : "Browse our curated collection of Nigerian plants"}
-          </p>
-        </div>
-        {isSearching ? (
-          <Link href={exploreHref({ category })} className={buttonStyles({ variant: "secondary", size: "sm" })}>
-            <X className="size-4" aria-hidden /> Clear search
-          </Link>
-        ) : (
-          <p className="text-[15px] text-ink-tertiary">
-            Showing {results.length} {results.length === 1 ? "plant" : "plants"}
-          </p>
-        )}
+    <main className="mx-auto max-w-300 px-4 pt-12 pb-18 md:px-8">
+      <header className="mb-9 flex flex-col items-center gap-1.5 text-center">
+        <h1 className="font-display text-[clamp(1.75rem,3.6vw,2.625rem)] leading-[1.08] font-medium tracking-[-0.02em] text-green">
+          All Plants
+        </h1>
+        <p className="text-body text-ink-secondary">
+          {allPlants.length} Nigerian plants with local names, documented uses and the compounds behind
+          them.
+        </p>
       </header>
 
-      <div className="mt-6 flex flex-col gap-3 lg:flex-row">
-        <SearchInput
-          size="md"
-          defaultValue={q}
-          category={category}
-          clearHref={exploreHref({ category })}
-          className="flex-1"
-        />
-        {hasResults && <QuickFilters categories={categories.slice(0, 2)} active={category} q={q} />}
-      </div>
+      <ExploreFilters q={q} category={category ?? ""} sort={sort} names={names} categories={categoryOptions} />
 
-      <div className="mt-6">
-        <CategoryTabs categories={categories} active={category} q={q} />
-      </div>
-
-      {hasResults ? (
-        <>
-          <ul className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {pageResults.map((plant) => (
-              <li key={plant.id}>
-                <PlantCard plant={plant} />
-              </li>
-            ))}
-          </ul>
-          <div className="mt-6 flex flex-col gap-6">
-            <Pagination page={page} pageCount={pageCount} query={{ q, category }} />
-            {isSearching && otherSuggestions.length > 0 && (
-              <SearchHint suggestions={otherSuggestions.map((plant) => plant.name_common)} />
-            )}
-          </div>
-        </>
-      ) : (
-        <NoResults
-          query={q || (category ? categoryMeta[category].pluralLabel : "")}
-          suggestions={suggestions.map((plant) => plant.name_common)}
-        />
-      )}
+      <section aria-label="Results">
+        {results.length === 0 ? (
+          <NoResults query={q} inCategory={category !== undefined} />
+        ) : (
+          <>
+            <ul className="grid gap-3.5 sm:grid-cols-2 sm:gap-x-5.5 sm:gap-y-8 lg:grid-cols-3">
+              {pageResults.map((plant, i) => (
+                <li key={plant.id}>
+                  <ExploreCard plant={plant} names={names} index={i} />
+                </li>
+              ))}
+            </ul>
+            <Pagination page={page} pageCount={pageCount} query={query} />
+            <p aria-live="polite" className="mt-5 text-center text-body-sm text-ink-secondary">
+              Showing {first + 1}–{first + pageResults.length} of {plural(results.length, "plant")}
+              {filtered && (
+                <>
+                  {" · "}
+                  <Link
+                    href={exploreHref({ sort, names })}
+                    scroll={false}
+                    className="font-semibold text-purple underline underline-offset-2"
+                  >
+                    Clear filters
+                  </Link>
+                </>
+              )}
+            </p>
+            <SearchHint />
+          </>
+        )}
+      </section>
     </main>
   );
 }

@@ -1,17 +1,19 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { Fragment, useEffect, useMemo, useState } from "react";
 import { createPortal } from "react-dom";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { ArrowRight, History, Leaf, Search } from "lucide-react";
-import { CategoryPill } from "@/components/ui/category-pill";
+import { History, Search, X } from "lucide-react";
+import { roundButtonStyles } from "@/components/ui/button";
 import { exploreHref } from "@/lib/explore-url";
-import { searchPlants, type SearchablePlant } from "@/lib/search";
+import { firstName } from "@/lib/plant-text";
+import { describeMatch, searchPlants, type SearchablePlant } from "@/lib/search";
 
 const RECENT_KEY = "plantlens:recent-searches";
 const MAX_RESULTS = 6;
 const MAX_RECENT = 3;
+const POPULAR_IDS = ["bitter-leaf", "moringa", "scent-leaf", "neem"];
 
 // Recent searches are a per-browser convenience, so storage failures are ignored.
 function readRecent(): string[] {
@@ -30,10 +32,15 @@ function saveRecent(term: string) {
   } catch {}
 }
 
-type Item = { kind: "plant"; plant: SearchablePlant } | { kind: "recent"; term: string };
+/** A row in the list: a plant (with the label shown on its tag) or a recent search term. */
+type Item = { kind: "plant"; plant: SearchablePlant; tag: string } | { kind: "recent"; term: string };
 
 const optionId = (index: number) => `command-palette-option-${index}`;
 
+/**
+ * The ⌘K search dialog. With a query it lists matching plants and why each matched; empty, it
+ * shows recent searches and popular plants. Arrow keys move, Enter opens, Escape closes.
+ */
 export function CommandPalette({
   plants,
   onClose,
@@ -51,10 +58,25 @@ export function CommandPalette({
     () => (trimmed ? searchPlants(plants, trimmed).slice(0, MAX_RESULTS) : []),
     [plants, trimmed],
   );
-  const items: Item[] = [
-    ...results.map((plant) => ({ kind: "plant" as const, plant })),
-    ...recent.map((term) => ({ kind: "recent" as const, term })),
-  ];
+  const popular = useMemo(
+    () =>
+      POPULAR_IDS.map((id) => plants.find((plant) => plant.id === id)).filter(
+        (plant): plant is SearchablePlant => plant !== undefined,
+      ),
+    [plants],
+  );
+
+  const recentItems: Item[] = recent.map((term) => ({ kind: "recent", term }));
+  const items: Item[] = trimmed
+    ? results.map((plant) => ({ kind: "plant", plant, tag: describeMatch(plant, trimmed) }))
+    : [
+        ...recentItems,
+        ...popular.map((plant): Item => ({
+          kind: "plant",
+          plant,
+          tag: firstName(plant.names_local.yoruba ?? plant.names_local.igbo ?? plant.names_local.hausa),
+        })),
+      ];
 
   useEffect(() => {
     const { overflow } = document.body.style;
@@ -79,7 +101,7 @@ export function CommandPalette({
       return;
     }
     if (item?.kind === "plant") {
-      saveRecent(item.plant.name_common);
+      if (trimmed) saveRecent(trimmed);
       router.push(`/plants/${item.plant.id}`);
     } else if (trimmed) {
       saveRecent(trimmed);
@@ -102,8 +124,8 @@ export function CommandPalette({
       setActiveIndex((index) => (index - 1 + items.length) % items.length);
     } else if (event.key === "Enter") {
       event.preventDefault();
-      // With no matching plant, Enter searches the full explore page.
-      select(results.length > 0 ? items[activeIndex] : undefined);
+      // With a query but no matching plant, Enter searches the full explore page.
+      select(trimmed && results.length === 0 ? undefined : items[activeIndex]);
     }
   }
 
@@ -114,122 +136,142 @@ export function CommandPalette({
     onMouseMove: () => setActiveIndex(index),
     onClick: () => select(items[index]),
   });
-  const activeStyle = (index: number) =>
-    index === activeIndex ? "bg-accent-light shadow-[inset_3px_0_0_var(--color-accent)]" : "";
+  const rowStyle = (index: number) =>
+    `cursor-pointer border-b border-line last:border-0 transition-colors ${
+      index === activeIndex ? "bg-[#f1eafd]" : ""
+    }`;
 
-  // Portal to <body>: the navbar's backdrop-blur would otherwise trap this fixed overlay.
+  // Portal to <body> so no ancestor's stacking context or transform can trap the fixed overlay.
   return createPortal(
     <div
-      className="fixed inset-0 z-50 flex items-start justify-center bg-ink/30 px-4 pt-[12vh] backdrop-blur-[2px]"
+      className="fixed inset-0 z-50 flex items-start justify-center bg-ink/55 px-4 pt-[calc(10vh+env(safe-area-inset-top,0px))] pb-4"
       onMouseDown={(event) => event.target === event.currentTarget && onClose()}
     >
       <div
         role="dialog"
         aria-modal="true"
         aria-label="Search plants"
-        className="w-full max-w-[600px] overflow-hidden rounded-lg border border-border bg-bg shadow-[0_24px_64px_rgba(10,37,64,0.18)]"
+        className="w-full max-w-155 animate-fade-up rounded-3xl bg-purple p-5 text-paper shadow-[0_30px_60px_-30px_rgba(0,0,0,0.6)]"
       >
-        <div className="flex h-15 items-center gap-3 border-b border-border px-5">
-          <Search className="size-5 shrink-0 text-ink-tertiary" aria-hidden />
+        <div className="mb-3 flex items-center justify-between">
+          <span className="text-overline uppercase">Search any name, any language</span>
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="Close search"
+            className={`${roundButtonStyles} size-10.5 hover:text-ink`}
+          >
+            <X className="size-4" strokeWidth={2.6} aria-hidden />
+          </button>
+        </div>
+
+        <div className="flex min-h-14.5 items-center gap-2.5 rounded-full bg-paper px-5 text-ink transition-shadow focus-within:shadow-[0_0_0_4px_rgba(255,255,255,0.35)]">
+          <Search className="size-5 shrink-0 text-green" aria-hidden />
           <input
             autoFocus
+            type="search"
             role="combobox"
+            aria-label="Search plants"
             aria-expanded={items.length > 0}
             aria-controls="command-palette-list"
             aria-activedescendant={items.length > 0 ? optionId(activeIndex) : undefined}
             aria-autocomplete="list"
+            autoComplete="off"
             value={query}
             onChange={(event) => updateQuery(event.target.value)}
             onKeyDown={onKeyDown}
-            placeholder="Search plants..."
-            className="w-full bg-transparent text-[17px] text-ink caret-accent outline-none placeholder:text-ink-muted"
+            placeholder="ewuro, oji, zogale…"
+            className="min-w-0 flex-1 bg-transparent text-[1.0625rem] caret-purple outline-none placeholder:text-ink-muted focus-visible:outline-none"
           />
-          <kbd className="rounded-sm bg-surface px-1.5 py-0.5 font-sans text-overline text-ink-tertiary">
-            ESC
-          </kbd>
         </div>
 
-        <ul id="command-palette-list" role="listbox" className="max-h-[min(60vh,440px)] overflow-y-auto">
-          {trimmed && (
-            <>
-              <SectionLabel>Results</SectionLabel>
-              {results.length === 0 && (
-                <li role="presentation" className="px-5 py-4 text-body text-ink-tertiary">
-                  No plants match &quot;{trimmed}&quot;. Press Enter to search everything.
-                </li>
-              )}
-            </>
-          )}
-          {results.map((plant, index) => (
-            <li
-              key={plant.id}
-              {...optionProps(index)}
-              className={`flex cursor-pointer items-center gap-3 px-5 py-3 ${activeStyle(index)}`}
-            >
-              <span className="relative flex size-10 shrink-0 items-center justify-center overflow-hidden rounded-sm bg-surface">
-                {plant.photo_url ? (
-                  <Image src={plant.photo_url} alt="" fill sizes="40px" className="object-cover" />
-                ) : (
-                  <Leaf className="size-4 text-ink-muted/50" aria-hidden />
-                )}
-              </span>
-              <span className="min-w-0 flex-1">
-                <span className="block truncate text-[15px] font-semibold text-ink">
-                  {plant.name_common}
-                </span>
-                <span className="block truncate text-body-sm text-ink-tertiary italic">
-                  {plant.name_scientific}
-                </span>
-              </span>
-              <CategoryPill category={plant.category[0]} />
-              <ArrowRight
-                className={`size-4 shrink-0 ${index === activeIndex ? "text-accent" : "text-ink-muted"}`}
-                aria-hidden
-              />
-            </li>
-          ))}
-
-          {recent.length > 0 && <SectionLabel>Recent searches</SectionLabel>}
-          {recent.map((term, i) => {
-            const index = results.length + i;
-            return (
-              <li
-                key={term}
-                {...optionProps(index)}
-                className={`flex cursor-pointer items-center gap-3 px-5 py-2.5 text-[15px] text-ink-secondary ${activeStyle(index)}`}
-              >
-                <History className="size-4 text-ink-muted" aria-hidden />
-                {term}
+        <div className="mt-3.5 max-h-[52vh] overflow-y-auto rounded-[18px] bg-paper text-ink">
+          <ul id="command-palette-list" role="listbox" aria-label="Search results">
+            {trimmed && results.length === 0 && (
+              <li role="presentation" className="px-4.5 py-4 text-ink-secondary">
+                No plant called “{trimmed}” yet. Press Enter to search everything.
               </li>
-            );
-          })}
-        </ul>
-
-        <div className="flex gap-5 border-t border-border bg-bg-secondary px-5 py-2.5 text-body-sm text-ink-muted">
-          <Hint keys="↑↓" label="Navigate" />
-          <Hint keys="↵" label="Open" />
-          <Hint keys="esc" label="Close" />
+            )}
+            {!trimmed && recent.length > 0 && <SectionLabel>Recent searches</SectionLabel>}
+            {items.map((item, index) => {
+              if (item.kind === "recent") {
+                return (
+                  <li
+                    key={`recent-${item.term}`}
+                    {...optionProps(index)}
+                    className={`flex items-center gap-3.5 px-3.5 py-2.5 ${rowStyle(index)}`}
+                  >
+                    <History className="size-4 shrink-0 text-ink-secondary" aria-hidden />
+                    <span className="font-display text-base font-medium">{item.term}</span>
+                  </li>
+                );
+              }
+              const { plant, tag } = item;
+              return (
+                <Fragment key={plant.id}>
+                  {!trimmed && index === recentItems.length && <SectionLabel>Popular</SectionLabel>}
+                  <PlantRow plant={plant} tag={tag} className={rowStyle(index)} {...optionProps(index)} />
+                </Fragment>
+              );
+            })}
+          </ul>
         </div>
+
+        <p className="mt-3 hidden flex-wrap gap-x-4 gap-y-1.5 text-xs opacity-85 sm:flex">
+          <Hint keys={["↑", "↓"]} label="to move" />
+          <Hint keys={["Enter"]} label="to open" />
+          <Hint keys={["Esc"]} label="to close" />
+        </p>
       </div>
     </div>,
     document.body,
   );
 }
 
+function PlantRow({
+  plant,
+  tag,
+  className,
+  ...rest
+}: {
+  plant: SearchablePlant;
+  tag: string;
+  className: string;
+} & React.LiHTMLAttributes<HTMLLIElement>) {
+  return (
+    <li {...rest} className={`grid grid-cols-[52px_minmax(0,1fr)_auto] items-center gap-3.5 px-3.5 py-2.5 ${className}`}>
+      <span className="relative size-13 overflow-hidden rounded-xl bg-line">
+        {plant.photo_url && <Image src={plant.photo_url} alt="" fill sizes="52px" className="object-cover" />}
+      </span>
+      <span className="min-w-0">
+        <span className="block truncate font-display text-[1.0625rem] font-medium">{plant.name_common}</span>
+        <span className="block truncate text-body-sm text-ink-secondary italic">{plant.name_scientific}</span>
+      </span>
+      {tag && (
+        <span className="hidden rounded-full bg-pink px-2.5 py-1 text-[0.65625rem] font-bold tracking-[0.08em] uppercase sm:inline">
+          {tag}
+        </span>
+      )}
+    </li>
+  );
+}
+
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <li role="presentation" className="bg-bg-secondary px-5 py-2.5 text-overline text-ink-tertiary uppercase">
+    <li role="presentation" className="px-3.5 pt-3 pb-1 text-overline text-ink-secondary uppercase">
       {children}
     </li>
   );
 }
 
-function Hint({ keys, label }: { keys: string; label: string }) {
+function Hint({ keys, label }: { keys: string[]; label: string }) {
   return (
-    <span className="flex items-center gap-1.5">
-      <kbd className="rounded-sm border border-border bg-bg px-1.5 font-sans text-overline text-ink-tertiary">
-        {keys}
-      </kbd>
+    <span>
+      {keys.map((key) => (
+        <kbd key={key} className="mr-0.75 rounded-[5px] bg-paper/18 px-1.5 py-px font-sans text-[0.6875rem] font-semibold">
+          {key}
+        </kbd>
+      ))}{" "}
       {label}
     </span>
   );
