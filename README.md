@@ -266,7 +266,6 @@ python fetch_name_candidates.py apply
 Still to do:
 
 - Verify the remaining flagged local names against NMPPDB.
-- Wire up the corrections form (`site.correctionsFormUrl`) so visitors can report a wrong name.
 - Cautions for scent leaf and garden egg.
 - `family` and `parts_used` for every plant.
 - Fix the stray `�` characters left in a few citations by the `latin-1` read of Duke's CSVs.

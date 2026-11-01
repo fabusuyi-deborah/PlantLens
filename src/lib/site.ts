@@ -7,7 +7,7 @@ export const site = {
    * Google Form where readers suggest corrections. While empty, the "Tell us here" and
    * "Report a correction" links stay hidden.
    */
-  correctionsFormUrl: "",
+  correctionsFormUrl: "https://forms.gle/wVRW6DcG3CCoerfq7",
   curator: {
     name: "Deborah Fabusuyi",
     github: "https://github.com/fabusuyi-deborah",
