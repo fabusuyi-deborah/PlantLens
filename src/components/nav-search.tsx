@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { Search } from "lucide-react";
 import { CommandPalette } from "@/components/command-palette";
+import { OPEN_SEARCH_EVENT } from "@/components/open-search-button";
 import type { SearchablePlant } from "@/lib/search";
 
 const subscribeNoop = () => () => {};
@@ -25,8 +26,13 @@ export function NavSearch({ plants }: { plants: SearchablePlant[] }) {
         setOpen((current) => !current);
       }
     }
+    const onOpenRequest = () => setOpen(true);
     window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
+    window.addEventListener(OPEN_SEARCH_EVENT, onOpenRequest);
+    return () => {
+      window.removeEventListener("keydown", onKeyDown);
+      window.removeEventListener(OPEN_SEARCH_EVENT, onOpenRequest);
+    };
   }, []);
 
   const close = useCallback(() => {

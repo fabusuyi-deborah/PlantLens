@@ -1,39 +1,4 @@
-import Image from "next/image";
-import { Leaf } from "lucide-react";
-import type { PhotoCredit as PhotoCreditData, Plant } from "@/types/plant";
-
-/** A plant's photo, or a leaf placeholder until `photo_url` is curated. Fills its parent. */
-export function PlantPhoto({
-  plant,
-  sizes,
-  priority = false,
-  iconClassName = "size-10",
-}: {
-  plant: Pick<Plant, "name_common" | "photo_url">;
-  sizes: string;
-  priority?: boolean;
-  iconClassName?: string;
-}) {
-  if (plant.photo_url) {
-    return (
-      <Image
-        src={plant.photo_url}
-        alt={plant.name_common}
-        fill
-        sizes={sizes}
-        // `priority` is deprecated in Next 16; eager loading with high fetch priority replaces it.
-        loading={priority ? "eager" : "lazy"}
-        fetchPriority={priority ? "high" : "auto"}
-        className="object-cover"
-      />
-    );
-  }
-  return (
-    <div className="flex h-full items-center justify-center bg-accent-light">
-      <Leaf className={`text-accent/40 ${iconClassName}`} aria-hidden />
-    </div>
-  );
-}
+import type { PhotoCredit as PhotoCreditData } from "@/types/plant";
 
 /** Attribution line for a plant's photo, as CC BY / CC BY-SA require. Renders nothing without a credit. */
 export function PhotoCredit({ credit, className = "" }: { credit?: PhotoCreditData; className?: string }) {
