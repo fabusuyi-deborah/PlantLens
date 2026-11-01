@@ -54,7 +54,7 @@ export function HomeSearch({
             onChange={(event) => setQuery(event.target.value)}
             placeholder={placeholder}
             aria-controls={resultsId}
-            className="min-w-0 flex-1 bg-transparent text-[1.0625rem] caret-purple outline-none placeholder:text-ink-muted"
+            className="min-w-0 flex-1 bg-transparent text-[1.0625rem] caret-purple outline-none focus-visible:outline-none placeholder:text-ink-muted"
           />
           {query && (
             <button
