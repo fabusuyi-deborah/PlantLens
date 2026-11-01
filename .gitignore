@@ -54,3 +54,6 @@ __pycache__/
 
 # local name candidates (regenerate with fetch_name_candidates.py candidates)
 /name_candidates.csv
+
+# African use candidates (regenerate with duke_use_candidates.py candidates)
+/use_candidates.csv
