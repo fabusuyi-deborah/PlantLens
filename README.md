@@ -1,8 +1,18 @@
 # PlantLens
 
-PlantLens is a search app for plants commonly found in Nigerian homes, gardens and markets. For each plant it shows the local names (Yoruba, Igbo, Hausa and more), traditional uses, phytochemicals and cautions, and every claim carries a source citation.
+**Live site: <https://plant-lens-beta.vercel.app>**
+
+PlantLens is a search app for plants commonly found in Nigerian homes, gardens and markets. Search by the name you know, whether that's English, botanical, Yoruba, Igbo or Hausa. For each plant it shows its local names, traditional uses, phytochemicals and cautions, and every claim carries a source citation.
 
 It is built on a hand-curated dataset of 20 plants, `plants.json`, served as static data with no backend. The Python scripts in this repo pull raw data from **Dr. Duke's Phytochemical and Ethnobotanical Databases** (USDA) to help curate that dataset, and fetch openly licensed plant photos from Wikimedia Commons and iNaturalist.
+
+## How it was built
+
+I'm Deborah Fabusuyi, a Plant Biology graduate (University of Ilorin) and frontend engineer. PlantLens is where those two meet.
+
+- **Product and data: me.** I chose the plants, curated `plants.json` from Dr. Duke's, NMPPDB and published studies, checked local names against their sources, and decided how uses are worded. They're described as traditional uses with citations, never as medical claims. The [data pipeline](#data-pipeline) and [photo workflow](#plant-photos) below are the tools I use for that.
+- **Design.** I directed the November 2026 redesign. I set the visual direction, reviewed each iteration on desktop and mobile, and made the calls on layout, accessibility and where disclaimers belong.
+- **Code.** The redesign's implementation was AI-assisted, using Claude. It was shipped as page-by-page pull requests (#1, #3–#7) that I reviewed and merged, and the commits authored by "Claude" in the history come from that work. Earlier versions of the app, including its search, citation handling and data model, are in the history under my name.
 
 ## Running the app
 
@@ -21,25 +31,39 @@ Built with Next.js 16 (App Router), React 19, TypeScript and Tailwind CSS 4. Nex
 
 | Route | What it shows |
 |---|---|
-| `/` | Hero search, dataset stats, featured plants, categories |
-| `/explore` | Search and filter by category, paginated (`?q=`, `?category=`, `?page=`) |
-| `/plants/[id]` | A plant's profile: photo, names, uses, phytochemicals, cautions, sources. Statically generated for every plant. |
+| `/` | Search-first intro, rotating featured plants, curated sections (richest in compounds, spices & drinks, leafy vegetables, medicinal fruit trees), category row and ticker |
+| `/explore` | Search, category, sort and name language, all kept in the URL so results can be shared (`?q=`, `?category=`, `?sort=`, `?names=`, `?page=`) |
+| `/plants/[id]` | A plant's profile: photo, "Say it in" local names, uses filterable by region, compound tiles, cautions by severity, and numbered sources with hover and click-to-reveal citations. Statically generated for every plant. |
 | `/categories` | Every category with a description, plant count and a preview of its plants |
-| `/sources` | The databases and literature behind the data, how it's curated, and photo credits |
-| `/about` | What PlantLens is for, what's in it, and the medical disclaimer |
+| `/sources` | The databases and literature behind the data, how it's curated, and photo credits (`/sources#photo-credits` opens them) |
+| `/about` | Why PlantLens exists, the curator, what powers it, and the medical disclaimer |
+| 404 | A broken-leaf "page not found", with a plant-specific message for unknown `/plants/...` links |
+
+The header search (click it or press ⌘K / Ctrl K) works from any page and remembers recent searches.
+
+### Design
+
+- **Fonts:** Unbounded for headings and Plus Jakarta Sans for body text, self-hosted from `public/fonts` (SIL OFL). Both render Yoruba, Igbo and Hausa diacritics.
+- **Tokens:** colours, radii, type scale and animations are defined as Tailwind theme tokens in `src/app/globals.css`.
+- **Motion:** every carousel and ticker can be paused, and motion is reduced when the visitor's system asks for it.
+- **Link previews:** each plant page shares its own photo when the link is posted on WhatsApp, X or LinkedIn.
 
 ## Project layout
 
 | Path | What it is |
 |---|---|
 | `plants.json` | **The curated dataset.** Hand-edited: this is the file the app uses. |
-| `src/app/` | Routes (see [Pages](#pages)). |
-| `src/components/` | UI components. `explore/` and `plant-detail/` hold page-specific pieces; `ui/` holds shared primitives. |
-| `src/lib/plants.ts` | Loads `plants.json` and derives counts, stats and related plants. |
-| `src/lib/categories.ts` | Label, description, icon and colours for each category. |
-| `src/lib/citations.ts` | Citation helpers: short labels and which databases a plant draws on. |
-| `src/lib/search.ts` | Accent-insensitive search across common, scientific and local names and categories. |
+| `src/app/` | Routes (see [Pages](#pages)), `globals.css` (design tokens, fonts) and `not-found.tsx`. |
+| `src/components/` | UI components. `home/`, `explore/`, `plant-detail/` and `not-found/` hold page-specific pieces; `ui/` holds shared primitives (buttons, wave bands, section headings, the broken leaf). |
+| `src/lib/plants.ts` | Loads `plants.json` and derives counts and stats. |
+| `src/lib/plant-profile.ts` | Builds a plant page's data: numbered citations, regions for each use, cautions by severity, suggested plants. |
+| `src/lib/search.ts` | Accent-insensitive search across common, scientific and local names and categories, plus "matched on" labels. |
+| `src/lib/explore-url.ts` | Builds and validates `/explore` URLs (search, category, sort, names, page). |
+| `src/lib/categories.ts` | Label, description and icon for each category. |
+| `src/lib/citations.ts` | Collects a plant's citations and which databases it draws on. |
+| `src/lib/site.ts` | Site URL, repo link, curator links and the corrections form URL. |
 | `src/types/plant.ts` | TypeScript types for the dataset. |
+| `public/fonts/` | Self-hosted Unbounded and Plus Jakarta Sans, with their licences. |
 | `extract_duke_data.py` | Data step 1: pulls every raw Duke's row (chemicals + traditional uses) for each plant in `plants.json`. |
 | `summarize_duke_extract.py` | Data step 2: collapses the raw rows into ranked, readable summaries. |
 | `duke_extract.json` | Generated by step 1. Raw rows per plant. |
@@ -191,6 +215,8 @@ Credits show under the photo on each plant page and in the Photo credits section
 
 Still to do:
 
+- Verify the remaining flagged local names against NMPPDB.
+- Wire up the corrections form (`site.correctionsFormUrl`) so visitors can report a wrong name.
 - Cautions for scent leaf and garden egg.
 - `family` and `parts_used` for every plant.
 - Fix the stray `�` characters left in a few citations by the `latin-1` read of Duke's CSVs.
