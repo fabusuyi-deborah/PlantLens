@@ -93,8 +93,11 @@ Each item in the array looks like this. Fields marked *optional* can be left out
     { "language": "Hausa", "name": "Daidoya" },
     { "language": "Swahili", "name": "…", "source_citation": "Kokwaro (2009)…" } // optional citation
   ],
-  "regions": ["west", "central", "east", "southern"], // where in Africa it grows wild or is commonly
-                                              //   cultivated: west, central, east, southern, north
+  "regions": ["west", "central", "east", "southern"], // see "Regions" below
+  "regions_source": {                         // optional: the plant's POWO page
+    "citation": "Plants of the World Online, Royal Botanic Gardens, Kew: Ocimum gratissimum L.",
+    "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:452969-1"
+  },
   "category": ["medicinal", "culinary"],      // one or more of: medicinal, culinary, spice, beverage,
                                               //   leafy_vegetable, vegetable, stimulant
   "description": "Plain-language overview…",
@@ -133,6 +136,16 @@ Each item in the array looks like this. Fields marked *optional* can be left out
 ```
 
 The types live in [`src/types/plant.ts`](src/types/plant.ts). A new category also needs an entry in [`src/lib/categories.ts`](src/lib/categories.ts). New languages need no code change: a language appears in the explore page's "Names in" picker once at least three plants have a name in it.
+
+**Regions:** a plant gets a region when its [Plants of the World Online](https://powo.science.kew.org) page lists at least one country there as native or introduced (naturalised). Places where it's only cultivated don't count, so a widely grown crop can show fewer regions than you'd expect. Countries are grouped as:
+
+- **West:** Benin to Senegal, plus Cape Verde, Mauritania and Niger
+- **Central:** Angola, Cameroon, Central African Republic, Chad, both Congos, Equatorial Guinea, Gabon, São Tomé (POWO's "Gulf of Guinea Is.")
+- **East:** Kenya, Tanzania, Uganda, Rwanda, Burundi, Ethiopia, Eritrea, Somalia, Djibouti, Madagascar, Comoros, Mauritius, Seychelles, and POWO's combined "Sudan-South Sudan"
+- **Southern:** South Africa, Namibia, Botswana, Eswatini, Lesotho, Zimbabwe, Mozambique, Zambia, Malawi
+- **North:** Morocco, Algeria, Tunisia, Libya, Egypt, and "Sudan" when POWO lists it on its own
+
+Island territories (Réunion, Canary Is., St Helena and similar) don't count.
 
 **Rule:** every `traditional_uses`, `cautions` and `phytochemicals` entry must have a `source_citation`. Keep wording descriptive ("traditionally used for…", "associated with…"), not medical claims. The app groups citations by source: include "NMPPDB" or "Duke" in the citation text when the data came from those databases.
 

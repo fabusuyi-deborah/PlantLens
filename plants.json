@@ -39,6 +39,10 @@
       "east",
       "southern"
     ],
+    "regions_source": {
+      "citation": "Plants of the World Online, Royal Botanic Gardens, Kew: Ocimum gratissimum L.",
+      "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:452969-1"
+    },
     "category": [
       "medicinal",
       "culinary"
@@ -122,6 +126,10 @@
       "east",
       "southern"
     ],
+    "regions_source": {
+      "citation": "Plants of the World Online, Royal Botanic Gardens, Kew: Gymnanthemum amygdalinum (Delile) Sch.Bip.",
+      "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:210886-1"
+    },
     "category": [
       "leafy_vegetable",
       "medicinal"
@@ -251,9 +259,12 @@
       "west",
       "central",
       "east",
-      "southern",
       "north"
     ],
+    "regions_source": {
+      "citation": "Plants of the World Online, Royal Botanic Gardens, Kew: Moringa oleifera Lam.",
+      "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:584736-1"
+    },
     "category": [
       "medicinal",
       "leafy_vegetable"
@@ -351,10 +362,12 @@
     "regions": [
       "west",
       "central",
-      "east",
-      "southern",
-      "north"
+      "east"
     ],
+    "regions_source": {
+      "citation": "Plants of the World Online, Royal Botanic Gardens, Kew: Azadirachta indica A.Juss.",
+      "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1213180-2"
+    },
     "category": [
       "medicinal"
     ],
@@ -466,6 +479,10 @@
       "west",
       "central"
     ],
+    "regions_source": {
+      "citation": "Plants of the World Online, Royal Botanic Gardens, Kew: Garcinia kola Heckel",
+      "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:428024-1"
+    },
     "category": [
       "medicinal"
     ],
@@ -564,8 +581,13 @@
     ],
     "regions": [
       "west",
-      "central"
+      "central",
+      "east"
     ],
+    "regions_source": {
+      "citation": "Plants of the World Online, Royal Botanic Gardens, Kew: Cola nitida (Vent.) Schott & Endl.",
+      "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:822755-1"
+    },
     "category": [
       "medicinal",
       "stimulant"
@@ -645,8 +667,13 @@
     "regions": [
       "west",
       "central",
-      "east"
+      "east",
+      "southern"
     ],
+    "regions_source": {
+      "citation": "Plants of the World Online, Royal Botanic Gardens, Kew: Piper guineense Schumach. & Thonn.",
+      "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:681598-1"
+    },
     "category": [
       "spice",
       "medicinal"
@@ -753,11 +780,13 @@
     ],
     "regions": [
       "west",
-      "central",
       "east",
-      "southern",
       "north"
     ],
+    "regions_source": {
+      "citation": "Plants of the World Online, Royal Botanic Gardens, Kew: Aloe vera (L.) Burm.f.",
+      "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:530017-1"
+    },
     "category": [
       "medicinal"
     ],
@@ -848,8 +877,13 @@
       "west",
       "central",
       "east",
+      "southern",
       "north"
     ],
+    "regions_source": {
+      "citation": "Plants of the World Online, Royal Botanic Gardens, Kew: Hibiscus sabdariffa L.",
+      "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:326388-2"
+    },
     "category": [
       "medicinal",
       "beverage"
@@ -942,9 +976,12 @@
     "regions": [
       "west",
       "central",
-      "east",
-      "southern"
+      "east"
     ],
+    "regions_source": {
+      "citation": "Plants of the World Online, Royal Botanic Gardens, Kew: Carica papaya L.",
+      "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30011248-2"
+    },
     "category": [
       "medicinal"
     ],
@@ -1034,6 +1071,10 @@
       "east",
       "southern"
     ],
+    "regions_source": {
+      "citation": "Plants of the World Online, Royal Botanic Gardens, Kew: Psidium guajava L.",
+      "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:600841-1"
+    },
     "category": [
       "medicinal"
     ],
@@ -1138,6 +1179,10 @@
       "southern",
       "north"
     ],
+    "regions_source": {
+      "citation": "Plants of the World Online, Royal Botanic Gardens, Kew: Mangifera indica L.",
+      "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:69913-1"
+    },
     "category": [
       "medicinal"
     ],
@@ -1219,8 +1264,12 @@
       "west",
       "central",
       "east",
-      "southern"
+      "north"
     ],
+    "regions_source": {
+      "citation": "Plants of the World Online, Royal Botanic Gardens, Kew: Cymbopogon citratus (DC.) Stapf",
+      "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:396896-1"
+    },
     "category": [
       "medicinal",
       "beverage"
@@ -1318,6 +1367,10 @@
       "central",
       "east"
     ],
+    "regions_source": {
+      "citation": "Plants of the World Online, Royal Botanic Gardens, Kew: Annona muricata L.",
+      "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:14308-2"
+    },
     "category": [
       "medicinal"
     ],
@@ -1399,8 +1452,14 @@
     "regions": [
       "west",
       "central",
-      "east"
+      "east",
+      "southern",
+      "north"
     ],
+    "regions_source": {
+      "citation": "Plants of the World Online, Royal Botanic Gardens, Kew: Solanum aethiopicum L.",
+      "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:818158-1"
+    },
     "category": [
       "vegetable"
     ],
@@ -1481,6 +1540,10 @@
       "east",
       "southern"
     ],
+    "regions_source": {
+      "citation": "Plants of the World Online, Royal Botanic Gardens, Kew: Anacardium occidentale L.",
+      "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:319068-2"
+    },
     "category": [
       "medicinal"
     ],
@@ -1587,8 +1650,13 @@
     ],
     "regions": [
       "west",
-      "central"
+      "central",
+      "east"
     ],
+    "regions_source": {
+      "citation": "Plants of the World Online, Royal Botanic Gardens, Kew: Telfairia occidentalis Hook.f.",
+      "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:294054-1"
+    },
     "category": [
       "leafy_vegetable"
     ],
@@ -1711,6 +1779,10 @@
       "east",
       "southern"
     ],
+    "regions_source": {
+      "citation": "Plants of the World Online, Royal Botanic Gardens, Kew: Momordica charantia L.",
+      "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:293413-1"
+    },
     "category": [
       "medicinal"
     ],
@@ -1805,9 +1877,12 @@
     ],
     "regions": [
       "west",
-      "central",
       "east"
     ],
+    "regions_source": {
+      "citation": "Plants of the World Online, Royal Botanic Gardens, Kew: Curcuma longa L.",
+      "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:796451-1"
+    },
     "category": [
       "spice",
       "medicinal"

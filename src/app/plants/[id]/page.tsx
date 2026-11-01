@@ -159,7 +159,20 @@ export default async function PlantPage(props: PageProps<"/plants/[id]">) {
           {plant.regions.length > 0 && (
             <div className="flex items-baseline gap-2">
               <dt className="text-overline text-ink-secondary uppercase">Found in</dt>
-              <dd className="font-semibold">{formatRegions(plant.regions)}</dd>
+              <dd className="font-semibold">
+                {formatRegions(plant.regions)}
+                {plant.regions_source && (
+                  <a
+                    href={plant.regions_source.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    title={plant.regions_source.citation}
+                    className="ml-1.5 text-body-sm font-normal text-purple underline underline-offset-2"
+                  >
+                    POWO
+                  </a>
+                )}
+              </dd>
             </div>
           )}
           <div className="flex items-baseline gap-2">
