@@ -19,8 +19,8 @@ const steps = [
     body: "A script matches each plant to Dr. Duke's database by genus and species, then extracts every recorded phytochemical and traditional use.",
   },
   {
-    title: "Cross-check with NMPPDB",
-    body: "Local Yoruba, Igbo and Hausa names and Nigerian uses are checked against NMPPDB's species records and the studies they cite.",
+    title: "Cross-check names and range",
+    body: "Yoruba, Igbo and Hausa names and Nigerian uses are checked against NMPPDB. Where each plant grows in Africa comes from Kew's Plants of the World Online.",
   },
   {
     title: "Curate by hand",
@@ -38,6 +38,7 @@ export default function SourcesPage() {
   const citations = new Set(plants.flatMap(getPlantCitations));
   const countPlantsCiting = (test: (citation: string) => boolean) =>
     plants.filter((plant) => getPlantCitations(plant).some(test)).length;
+  const withRegionsSource = plants.filter((plant) => plant.regions_source).length;
   const literatureCount = [...citations].filter((c) => !citesNmppdb(c) && !citesDuke(c)).length;
 
   return (
@@ -69,13 +70,23 @@ export default function SourcesPage() {
         </div>
 
         <SubHeading className="mt-11">Supplementary &amp; literature sources</SubHeading>
-        <SourceCard
-          title="Published ethnobotanical literature"
-          kicker="Peer-reviewed journals and published research"
-          body="Published studies provide evidence for traditional uses and phytochemical findings that are not covered by the databases."
-          stat={`${literatureCount} references cited`}
-          color="bg-yellow"
-        />
+        <div className="grid gap-4.5 md:grid-cols-2">
+          <SourceCard
+            title="Published ethnobotanical literature"
+            kicker="Peer-reviewed journals and published research"
+            body="Published studies provide evidence for traditional uses and phytochemical findings that are not covered by the databases."
+            stat={`${literatureCount} references cited`}
+            color="bg-yellow"
+          />
+          <SourceCard
+            title="Plants of the World Online"
+            kicker="Royal Botanic Gardens, Kew"
+            body="Kew's record of where each species grows, native or naturalised. It decides which parts of Africa a plant is listed in."
+            stat={`Regions for ${withRegionsSource} of ${plants.length} plants`}
+            href="https://powo.science.kew.org"
+            color="bg-mint"
+          />
+        </div>
 
         <SubHeading className="mt-11">How we handle data</SubHeading>
         <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
