@@ -11,17 +11,30 @@ export function plantBlurb(plant: Pick<Plant, "description">): string {
   return `${sentence}.`;
 }
 
-/** First Yoruba, Igbo and Hausa names, in that order, skipping any that are missing. */
-export function mainLocalNames(plant: Pick<Plant, "names_local">) {
-  const { yoruba, igbo, hausa } = plant.names_local;
-  return (
-    [
-      ["YO", yoruba],
-      ["IG", igbo],
-      ["HA", hausa],
-    ] as const
-  )
-    .map(([code, names]) => ({ code, name: firstName(names) }))
+/** URL-safe key for a language: "Akan (Ghana)" → "akan-ghana". */
+export function languageKey(language: string): string {
+  return language
+    .normalize("NFD")
+    .replace(/\p{Diacritic}/gu, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
+/** The plant's names in one language (by key), or "" if it has none. */
+export function localNameIn(plant: Pick<Plant, "names_local">, key: string): string {
+  return plant.names_local.find((entry) => languageKey(entry.language) === key)?.name ?? "";
+}
+
+/** The plant's first few local names, each with a two-letter code: "YO · Ewuro". */
+export function mainLocalNames(plant: Pick<Plant, "names_local">, limit = 3) {
+  return plant.names_local
+    .slice(0, limit)
+    .map((entry) => ({
+      code: entry.language.slice(0, 2).toUpperCase(),
+      language: entry.language,
+      name: firstName(entry.name),
+    }))
     .filter((entry) => entry.name);
 }
 

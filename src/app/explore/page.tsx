@@ -5,15 +5,15 @@ import { ExploreFilters, type CategoryOption } from "@/components/explore/explor
 import { Pagination } from "@/components/explore/pagination";
 import { NoResults, SearchHint } from "@/components/explore/search-feedback";
 import { categoryMeta } from "@/lib/categories";
-import { exploreHref, isExploreSort, isNameLanguage, type ExploreSort } from "@/lib/explore-url";
-import { getAllPlants, getCategoryCounts } from "@/lib/plants";
+import { DEFAULT_NAME_LANGUAGE, exploreHref, isExploreSort, type ExploreSort } from "@/lib/explore-url";
+import { getAllPlants, getCategoryCounts, getNameLanguages } from "@/lib/plants";
 import { plural } from "@/lib/plant-text";
 import { searchPlants } from "@/lib/search";
 import type { Plant, PlantCategory } from "@/types/plant";
 
 export const metadata: Metadata = {
   title: "All Plants · PlantLens",
-  description: "Browse and search PlantLens's curated collection of Nigerian plants.",
+  description: "Browse and search PlantLens's curated collection of African plants.",
 };
 
 const PAGE_SIZE = 9;
@@ -47,7 +47,11 @@ export default async function ExplorePage(props: PageProps<"/explore">) {
   const sortParam = firstParam(searchParams.sort);
   const sort = isExploreSort(sortParam) ? sortParam : "featured";
   const namesParam = firstParam(searchParams.names);
-  const names = isNameLanguage(namesParam) ? namesParam : "yoruba";
+  const nameOptions = getNameLanguages();
+  const names = nameOptions.some((option) => option.value === namesParam)
+    ? namesParam
+    : DEFAULT_NAME_LANGUAGE;
+  const namesLabel = nameOptions.find((option) => option.value === names)?.label ?? names;
 
   const allPlants = getAllPlants();
   const matching = searchPlants(allPlants, q);
@@ -80,12 +84,19 @@ export default async function ExplorePage(props: PageProps<"/explore">) {
           All Plants
         </h1>
         <p className="text-body text-ink-secondary">
-          {allPlants.length} Nigerian plants with local names, documented uses and the compounds behind
+          {allPlants.length} African plants with local names, documented uses and the compounds behind
           them.
         </p>
       </header>
 
-      <ExploreFilters q={q} category={category ?? ""} sort={sort} names={names} categories={categoryOptions} />
+      <ExploreFilters
+        q={q}
+        category={category ?? ""}
+        sort={sort}
+        names={names}
+        nameOptions={nameOptions}
+        categories={categoryOptions}
+      />
 
       <section aria-label="Results">
         {results.length === 0 ? (
@@ -95,7 +106,7 @@ export default async function ExplorePage(props: PageProps<"/explore">) {
             <ul className="grid gap-3.5 sm:grid-cols-2 sm:gap-x-5.5 sm:gap-y-8 lg:grid-cols-3">
               {pageResults.map((plant, i) => (
                 <li key={plant.id}>
-                  <ExploreCard plant={plant} names={names} index={i} />
+                  <ExploreCard plant={plant} names={names} namesLabel={namesLabel} index={i} />
                 </li>
               ))}
             </ul>

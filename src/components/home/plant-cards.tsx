@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CategoryPill } from "@/components/ui/category-pill";
-import { firstName, plantBlurb, plural } from "@/lib/plant-text";
+import { mainLocalNames, plantBlurb, plural } from "@/lib/plant-text";
 import type { Plant } from "@/types/plant";
 
 /**
@@ -54,8 +54,7 @@ export function PhotoCard({
   compact?: boolean;
   sizes: string;
 }) {
-  const { yoruba, igbo, hausa } = plant.names_local;
-  const local = [yoruba, igbo, hausa].map(firstName).filter(Boolean).join(" · ");
+  const local = mainLocalNames(plant).map((entry) => entry.name).join(" · ");
   const photoShape =
     size === "fill"
       ? "aspect-4/3 sm:aspect-16/10 lg:aspect-auto lg:min-h-80 lg:flex-1"

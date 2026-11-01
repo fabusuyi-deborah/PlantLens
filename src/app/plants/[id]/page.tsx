@@ -19,6 +19,7 @@ import { WaveBand } from "@/components/ui/wave-band";
 import { categoryMeta } from "@/lib/categories";
 import { getDataSources } from "@/lib/citations";
 import { getPlantProfile, getSuggestedPlants } from "@/lib/plant-profile";
+import { formatRegions } from "@/lib/regions";
 import { getAllPlants, getPlantById } from "@/lib/plants";
 import { site } from "@/lib/site";
 
@@ -155,6 +156,12 @@ export default async function PlantPage(props: PageProps<"/plants/[id]">) {
             </dt>
             <dd className="font-semibold">{plant.category.map((c) => categoryMeta[c].label).join(", ")}</dd>
           </div>
+          {plant.regions.length > 0 && (
+            <div className="flex items-baseline gap-2">
+              <dt className="text-overline text-ink-secondary uppercase">Found in</dt>
+              <dd className="font-semibold">{formatRegions(plant.regions)}</dd>
+            </div>
+          )}
           <div className="flex items-baseline gap-2">
             <dt className="text-overline text-ink-secondary uppercase">Data sources</dt>
             <dd className="font-semibold">{getDataSources(refs)}</dd>

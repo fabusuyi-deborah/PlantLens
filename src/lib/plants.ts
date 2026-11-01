@@ -1,4 +1,5 @@
 import data from "../../plants.json";
+import { languageKey } from "@/lib/plant-text";
 import type { Plant, PlantCategory } from "@/types/plant";
 
 const plants = data as Plant[];
@@ -47,8 +48,9 @@ export function getDatasetStats() {
     ]) {
       citations.add(item.source_citation);
     }
-    for (const language of ["yoruba", "igbo", "hausa"] as const) {
-      if (plant.names_local[language]) languages.add(language);
+    for (const entry of plant.names_local) {
+      // "Efik/Ibibio" counts as both Efik and Ibibio.
+      for (const language of entry.language.split("/")) languages.add(language.trim().toLowerCase());
     }
   }
 
@@ -58,4 +60,23 @@ export function getDatasetStats() {
     languages: languages.size,
     citations: citations.size,
   };
+}
+
+/** A language needs names for this many plants before /explore offers it as a card language. */
+const MIN_PLANTS_PER_NAME_LANGUAGE = 3;
+
+/** Languages /explore can show card names in, most plants first. */
+export function getNameLanguages(): { value: string; label: string; count: number }[] {
+  const counts = new Map<string, { label: string; count: number }>();
+  for (const plant of plants) {
+    for (const entry of plant.names_local) {
+      const key = languageKey(entry.language);
+      const current = counts.get(key) ?? { label: entry.language, count: 0 };
+      counts.set(key, { ...current, count: current.count + 1 });
+    }
+  }
+  return [...counts]
+    .map(([value, { label, count }]) => ({ value, label, count }))
+    .filter((option) => option.count >= MIN_PLANTS_PER_NAME_LANGUAGE)
+    .sort((a, b) => b.count - a.count);
 }

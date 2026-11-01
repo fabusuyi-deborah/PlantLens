@@ -18,12 +18,10 @@ function normalize(text: string): string {
 }
 
 function searchFields(plant: SearchablePlant): string[] {
-  const { yoruba, igbo, hausa, other = [] } = plant.names_local;
   return [
     plant.name_common,
     plant.name_scientific,
-    ...[yoruba, igbo, hausa].filter((name): name is string => Boolean(name)),
-    ...other.map((entry) => entry.name),
+    ...plant.names_local.map((entry) => entry.name),
     ...plant.category.map((category) => categoryMeta[category].label),
   ].map(normalize);
 }
@@ -35,14 +33,10 @@ function searchFields(plant: SearchablePlant): string[] {
 export function describeMatch(plant: SearchablePlant, query: string): string {
   const normalizedQuery = normalize(query);
   const firstWord = normalizedQuery.split(/\s+/)[0] ?? "";
-  const { yoruba, igbo, hausa, other = [] } = plant.names_local;
   const fields: [string, string | undefined][] = [
     ["English", plant.name_common],
     ["Botanical", plant.name_scientific],
-    ["Yoruba", yoruba],
-    ["Igbo", igbo],
-    ["Hausa", hausa],
-    ...other.map((entry): [string, string] => [entry.label, entry.name]),
+    ...plant.names_local.map((entry): [string, string] => [entry.language, entry.name]),
     ...plant.category.map((category): [string, string] => ["Category", categoryMeta[category].label]),
   ];
   const present = fields.filter((field): field is [string, string] => Boolean(field[1]));

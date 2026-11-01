@@ -16,7 +16,7 @@ export interface HeroSlide {
   categories: PlantCategory[];
   photo?: string;
   blurb: string;
-  localNames: { code: string; name: string }[];
+  localNames: { code: string; language: string; name: string }[];
 }
 
 /**
@@ -72,9 +72,10 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
         <p className="mt-2.5 text-lg italic opacity-85">{slide.scientific}</p>
         {slide.localNames.length > 0 && (
           <ul className="mt-4 flex flex-wrap gap-1.5" aria-label="Local names">
-            {slide.localNames.map(({ code, name }) => (
+            {slide.localNames.map(({ code, language, name }) => (
               <li
-                key={code}
+                key={language}
+                title={language}
                 className="inline-flex min-h-8 items-center gap-1.5 rounded-full bg-paper/12 px-3 text-body-sm font-semibold"
               >
                 <span className="text-[0.65625rem] tracking-widest opacity-70">{code}</span>

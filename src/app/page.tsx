@@ -89,10 +89,10 @@ export default function Home() {
           id="intro-title"
           className="max-w-[15ch] font-display text-[clamp(2.375rem,6vw,4.75rem)] leading-[1.02] font-medium tracking-[-0.035em] text-green"
         >
-          Discover Nigeria&apos;s plants, by every name.
+          Discover Africa&apos;s plants, by every name.
         </h1>
         <p className="max-w-[36em] text-body text-ink-secondary sm:text-lg">
-          Search local names, traditional uses and real phytochemical data for Nigerian plants. Every
+          Search local names, traditional uses and real phytochemical data for African plants, starting with Nigeria. Every
           claim is cited.
         </p>
         <div className="w-full max-w-155">
@@ -210,8 +210,8 @@ export default function Home() {
               Find a plant by the name you grew up with.
             </h2>
             <p className="mt-4 mb-5.5 max-w-[30em] opacity-90">
-              Ewuro, onugbu or shuwaka? Type a Yoruba, Igbo or Hausa name, the English name or the
-              botanical one. PlantLens finds the plant either way.
+              Ewuro, onugbu or shuwaka? Type a name in Yoruba, Igbo, Hausa or another local language, the
+              English name or the botanical one. PlantLens finds the plant either way.
             </p>
             <HomeSearch
               plants={searchable}

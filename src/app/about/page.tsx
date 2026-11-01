@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 const pillars = [
   {
     title: "Preserve traditional knowledge",
-    body: "Document the ethnobotanical knowledge shared across Nigeria's diverse communities.",
+    body: "Document the ethnobotanical knowledge shared across Africa's diverse communities.",
     color: "bg-pink",
   },
   {
@@ -32,7 +32,7 @@ const pillars = [
   },
   {
     title: "Community-driven",
-    body: "Bring together botanical research and knowledge rooted in communities across Nigeria.",
+    body: "Bring together botanical research and knowledge rooted in communities across Africa.",
     color: "bg-mint",
   },
 ];
@@ -59,8 +59,8 @@ export default function AboutPage() {
   return (
     <main>
       <PageHeader
-        title="Making Nigerian plant knowledge accessible to everyone"
-        subtitle="PlantLens curates phytochemical data, local names and traditional uses for Nigerian plants, backed by scientific research and open databases."
+        title="Making African plant knowledge accessible to everyone"
+        subtitle="PlantLens curates phytochemical data, local names and traditional uses for African plants, starting with Nigeria, backed by scientific research and open databases."
       />
 
       <WaveBand tone="green" className="my-3" aria-labelledby="why-title">
@@ -134,7 +134,7 @@ export default function AboutPage() {
             </p>
             <p className="max-w-[40em]">
               PlantLens is curated, not original research. Deborah gathers what databases and published
-              studies already say about Nigerian plants, checks local names against their sources,
+              studies already say about African plants, checks local names against their sources,
               rewrites it in plain language, and credits every claim back to the researchers who did the
               work.
             </p>
@@ -166,7 +166,7 @@ export default function AboutPage() {
           {[
             [stats.plants, "curated plants", "bg-pink"],
             [stats.compounds, "phytochemicals", "bg-lavender"],
-            [stats.languages, "Nigerian languages", "bg-yellow"],
+            [stats.languages, "local languages", "bg-yellow"],
             [stats.citations, "research citations", "bg-mint"],
           ].map(([value, label, color]) => (
             <div key={label} className={`flex flex-col-reverse rounded-[18px] p-4.5 text-center ${color}`}>

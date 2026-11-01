@@ -63,7 +63,7 @@ export function Footer() {
           <div className="col-span-3 flex flex-col gap-2.5 border-b border-line pb-5 md:col-span-1 md:border-0 md:pb-0">
             <Logo size="lg" className="self-start" />
             <p className="max-w-[22em] text-body text-ink-secondary">
-              Nigeria&apos;s plant knowledge, backed by science.
+              Africa&apos;s plant knowledge, backed by science.
             </p>
           </div>
           {columns.map((column) => (

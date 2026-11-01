@@ -70,13 +70,7 @@ export function getPlantProfile(plant: Plant) {
     }))
     .sort((a, b) => severityOrder[a.severity] - severityOrder[b.severity]);
 
-  const { yoruba, igbo, hausa, other = [] } = plant.names_local;
-  const names = [
-    { language: "Yoruba", name: yoruba },
-    { language: "Igbo", name: igbo },
-    { language: "Hausa", name: hausa },
-    ...other.map((entry) => ({ language: entry.label, name: entry.name })),
-  ].filter((entry): entry is { language: string; name: string } => Boolean(entry.name));
+  const names = plant.names_local.filter((entry) => entry.name);
 
   return { uses, compounds, cautions, names, refs };
 }

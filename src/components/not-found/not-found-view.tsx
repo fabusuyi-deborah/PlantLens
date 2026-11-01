@@ -23,8 +23,7 @@ export function NotFoundView({ title, body }: { title: string; body: string }) {
         {title}
       </h1>
       <p className="max-w-[36em] text-lg text-ink-secondary">
-        {body} Try searching by any name, English, botanical, Yoruba, Igbo or Hausa, or head back to the
-        plants.
+        {body} Try searching by any name, English, botanical or local, or head back to the plants.
       </p>
       <div className="mt-1.5 flex w-full max-w-80 flex-col gap-2.5 sm:w-auto sm:max-w-none sm:flex-row sm:flex-wrap sm:justify-center">
         <Link href="/explore" className={buttonStyles()}>
