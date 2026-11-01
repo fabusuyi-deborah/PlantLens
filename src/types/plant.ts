@@ -51,6 +51,8 @@ export interface Plant {
   /** Local names, most widely spoken languages first. */
   names_local: LocalName[];
   regions: AfricanRegion[];
+  /** Where the regions come from: the plant's Plants of the World Online page. */
+  regions_source?: { citation: string; url: string };
   category: PlantCategory[];
   description: string;
   /** Optional botanical family, e.g. "Asteraceae". */
