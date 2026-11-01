@@ -29,6 +29,34 @@ function searchFields(plant: SearchablePlant): string[] {
 }
 
 /**
+ * Why a plant matched, for result rows: "Yoruba · Ewuro" when a local name matched, otherwise
+ * "English", "Botanical" or "Category".
+ */
+export function describeMatch(plant: SearchablePlant, query: string): string {
+  const normalizedQuery = normalize(query);
+  const firstWord = normalizedQuery.split(/\s+/)[0] ?? "";
+  const { yoruba, igbo, hausa, other = [] } = plant.names_local;
+  const fields: [string, string | undefined][] = [
+    ["English", plant.name_common],
+    ["Botanical", plant.name_scientific],
+    ["Yoruba", yoruba],
+    ["Igbo", igbo],
+    ["Hausa", hausa],
+    ...other.map((entry): [string, string] => [entry.label, entry.name]),
+    ...plant.category.map((category): [string, string] => ["Category", categoryMeta[category].label]),
+  ];
+  const present = fields.filter((field): field is [string, string] => Boolean(field[1]));
+  const hit =
+    present.find(([, value]) => normalize(value).includes(normalizedQuery)) ??
+    present.find(([, value]) => normalize(value).includes(firstWord));
+  if (!hit) return "";
+  const [label, value] = hit;
+  if (label === "English" || label === "Botanical" || label === "Category") return label;
+  const part = value.split("/").find((name) => normalize(name).includes(firstWord)) ?? value;
+  return `${label} · ${part.trim()}`;
+}
+
+/**
  * Matches plants whose names (common, scientific, local) or categories contain every word
  * of the query. Best matches on the common name come first.
  */

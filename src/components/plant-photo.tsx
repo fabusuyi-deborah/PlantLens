@@ -21,7 +21,9 @@ export function PlantPhoto({
         alt={plant.name_common}
         fill
         sizes={sizes}
-        priority={priority}
+        // `priority` is deprecated in Next 16; eager loading with high fetch priority replaces it.
+        loading={priority ? "eager" : "lazy"}
+        fetchPriority={priority ? "high" : "auto"}
         className="object-cover"
       />
     );

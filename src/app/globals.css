@@ -194,6 +194,17 @@
   /* Motion */
   --animate-fade-up: fade-up 0.5s ease both;
   --animate-ticker: ticker 60s linear infinite;
+  --animate-leaf-sway: leaf-sway 3s ease-in-out infinite;
+
+  @keyframes leaf-sway {
+    0%,
+    100% {
+      transform: rotate(-8deg);
+    }
+    50% {
+      transform: rotate(8deg);
+    }
+  }
 
   @keyframes fade-up {
     from {
