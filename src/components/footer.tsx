@@ -1,87 +1,94 @@
 import Link from "next/link";
-import { Mail } from "lucide-react";
+import { Disclaimer } from "@/components/disclaimer";
+import { FooterCta } from "@/components/footer-cta";
 import { Logo } from "@/components/logo";
-import { TwitterIcon } from "@/components/ui/brand-icons";
+import { WaveBand } from "@/components/ui/wave-band";
+import { getAllPlants } from "@/lib/plants";
+import { site } from "@/lib/site";
 
-// TODO: replace "#" with the real writing series, social and email links.
-const columns = [
+type FooterLinkItem = { label: string; href: string };
+
+const columns: { title: string; links: FooterLinkItem[] }[] = [
   {
-    title: "Product",
+    title: "Explore",
     links: [
-      { label: "Explore", href: "/explore" },
+      { label: "All plants", href: "/explore" },
       { label: "Categories", href: "/categories" },
-      { label: "Search", href: "/explore" },
+      { label: "About", href: "/about" },
     ],
   },
   {
-    title: "Resources",
+    title: "Popular",
     links: [
-      { label: "Data Sources", href: "/sources" },
+      { label: "Bitter leaf", href: "/plants/bitter-leaf" },
+      { label: "Moringa", href: "/plants/moringa" },
+      { label: "Scent leaf", href: "/plants/scent-leaf" },
+    ],
+  },
+  {
+    title: "Sources",
+    links: [
+      { label: "Data sources", href: "/sources" },
+      { label: "Photo credits", href: "/sources#photo-credits" },
       { label: "NMPPDB", href: "https://nmppdb.com.ng" },
       { label: "Dr. Duke's DB", href: "https://phytochem.nal.usda.gov" },
-      { label: "Photo Credits", href: "/sources#photo-credits" },
+      ...(site.correctionsFormUrl
+        ? [{ label: "Report a correction", href: site.correctionsFormUrl }]
+        : []),
     ],
   },
-  {
-    title: "Project",
-    links: [
-      { label: "About", href: "/about" },
-      { label: "Writing Series", href: "#" },
-    ],
-  },
-];
-
-const socials = [
-  { label: "Twitter", href: "#", icon: TwitterIcon },
-  { label: "Email", href: "#", icon: Mail },
 ];
 
 export function Footer() {
-  return (
-    <footer className="bg-ink text-ink-muted">
-      <div className="mx-auto max-w-336 px-4 pt-12 pb-8 md:px-8">
-        <div className="flex flex-col justify-between gap-10 md:flex-row">
-          <div>
-            <Logo inverted />
-            <p className="mt-3 text-body">Nigeria&apos;s plant knowledge, backed by science.</p>
-          </div>
-          <div className="grid grid-cols-2 gap-10 sm:grid-cols-3 sm:gap-16">
-            {columns.map((column) => (
-              <div key={column.title}>
-                <h3 className="text-body font-semibold text-white">{column.title}</h3>
-                <ul className="mt-3 space-y-2">
-                  {column.links.map((link) => (
-                    <li key={link.label}>
-                      <FooterLink href={link.href}>{link.label}</FooterLink>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
+  const plantCount = getAllPlants().length;
 
-        <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-body-sm">
-            © 2026 PlantLens. Data sourced under CC0 and with NMPPDB attribution.
+  return (
+    <footer className="mt-8">
+      <WaveBand tone="green" bottom={false}>
+        <div className="mx-auto flex max-w-300 flex-col items-center gap-3.5 px-4 pt-14 pb-16 text-center md:px-8">
+          <h2 className="font-display text-[clamp(1.75rem,3.6vw,2.625rem)] leading-tight font-medium">
+            More plants are on the way.
+          </h2>
+          <p className="max-w-[30em] text-body opacity-90">
+            PlantLens is growing beyond its first {plantCount} plants. Follow the build and the data
+            as it lands.
           </p>
-          <ul className="flex gap-4">
-            {socials.map(({ label, href, icon: Icon }) => (
-              <li key={label}>
-                <a href={href} aria-label={label} className="transition-colors hover:text-white">
-                  <Icon className="size-4" />
-                </a>
-              </li>
-            ))}
-          </ul>
+          <FooterCta />
         </div>
+      </WaveBand>
+      <Disclaimer />
+
+      <div className="mx-auto max-w-300 px-4 pt-11 pb-7 md:px-8">
+        <div className="grid grid-cols-3 gap-x-3.5 gap-y-6 md:grid-cols-[1.6fr_repeat(3,1fr)] md:gap-7">
+          <div className="col-span-3 flex flex-col gap-2.5 border-b border-line pb-5 md:col-span-1 md:border-0 md:pb-0">
+            <Logo size="lg" className="self-start" />
+            <p className="max-w-[22em] text-body text-ink-secondary">
+              Nigeria&apos;s plant knowledge, backed by science.
+            </p>
+          </div>
+          {columns.map((column) => (
+            <nav key={column.title} aria-label={column.title} className="flex flex-col gap-2.5">
+              <h3 className="text-overline text-ink-secondary uppercase">{column.title}</h3>
+              <ul className="flex flex-col gap-2.5">
+                {column.links.map((link) => (
+                  <li key={link.label}>
+                    <FooterLink href={link.href}>{link.label}</FooterLink>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          ))}
+        </div>
+        <p className="mt-9 border-t border-line pt-4 text-caption font-normal tracking-normal text-ink-secondary">
+          © 2026 PlantLens. Data sourced under CC0 and with NMPPDB attribution.
+        </p>
       </div>
     </footer>
   );
 }
 
 function FooterLink({ href, children }: { href: string; children: React.ReactNode }) {
-  const className = "text-body transition-colors hover:text-white";
+  const className = "text-body-sm text-ink transition-colors hover:text-purple";
   if (href.startsWith("http")) {
     return (
       <a href={href} target="_blank" rel="noreferrer" className={className}>

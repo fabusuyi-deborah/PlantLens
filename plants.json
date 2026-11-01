@@ -251,7 +251,7 @@
     "name_common": "Neem",
     "name_scientific": "Azadirachta indica",
     "names_local": {
-      "yoruba": "Dongoyaro/ igi-oba / igi-neem",
+      "yoruba": "Dongoyaro / Igi-oba / Igi-neem",
       "igbo": "Ogwu akuma",
       "hausa": "Dogonyaro"
     },
@@ -637,7 +637,7 @@
     "name_scientific": "Hibiscus sabdariffa",
     "names_local": {
       "yoruba": "Isapa",
-      "hausa": "Zoborodo / Zobo/ Yakuwa"
+      "hausa": "Yakuwa / Zobo / Zoborodo"
     },
     "category": [
       "medicinal",
@@ -1164,7 +1164,7 @@
     "name_common": "Ugwu (fluted pumpkin)",
     "name_scientific": "Telfairia occidentalis",
     "names_local": {
-      "yoruba": "Efo iroko / Sokoyokoto/ Ewe Elegede",
+      "yoruba": "Efo iroko / Sokoyokoto / Ewe Elegede",
       "igbo": "Ugwu / Akwukwo ugwu",
       "hausa": "Daraja / Kabewa",
       "other": [

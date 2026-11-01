@@ -41,12 +41,12 @@ export function NavSearch({ plants }: { plants: SearchablePlant[] }) {
         type="button"
         onClick={() => setOpen(true)}
         aria-haspopup="dialog"
-        className="flex items-center gap-2 rounded-full border border-border px-3 py-1.5 text-body-sm text-ink-muted transition-colors hover:border-ink-muted"
+        className="group flex min-h-11 items-center gap-2 rounded-full border-[1.5px] border-green bg-paper pr-1.5 pl-4 text-caption text-green uppercase transition-colors hover:bg-green hover:text-paper"
       >
-        <Search className="size-3.5" aria-hidden />
-        <span className="hidden sm:inline">Search plants...</span>
-        <span className="sr-only sm:hidden">Search plants</span>
-        <kbd className="hidden rounded-sm bg-surface px-1.5 py-0.5 font-sans text-overline text-ink-tertiary sm:inline">
+        <Search className="size-4" strokeWidth={2.4} aria-hidden />
+        <span>Search</span>
+        <span className="sr-only"> plants</span>
+        <kbd className="hidden min-h-7 items-center rounded-full border border-line bg-cream px-2 font-sans text-[0.6875rem] tracking-normal text-green sm:inline-flex group-hover:bg-paper">
           {isMac ? "⌘K" : "Ctrl K"}
         </kbd>
       </button>
