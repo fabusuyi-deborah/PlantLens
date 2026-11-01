@@ -15,6 +15,22 @@
       {
         "language": "Hausa",
         "name": "Daidoya"
+      },
+      {
+        "language": "Swahili",
+        "name": "Kivumbasi"
+      },
+      {
+        "language": "Akan (Twi)",
+        "name": "Nunum"
+      },
+      {
+        "language": "Fula",
+        "name": "Kunfere"
+      },
+      {
+        "language": "Zulu",
+        "name": "Umbijazane"
       }
     ],
     "regions": [
@@ -86,6 +102,18 @@
       {
         "language": "Efik",
         "name": "Etidot"
+      },
+      {
+        "language": "Swahili",
+        "name": "Mtukutu"
+      },
+      {
+        "language": "Akan (Twi)",
+        "name": "Awonwono"
+      },
+      {
+        "language": "Fula",
+        "name": "Kossa fina"
       }
     ],
     "regions": [
@@ -213,6 +241,10 @@
       {
         "language": "Hausa",
         "name": "Zogale"
+      },
+      {
+        "language": "Swahili",
+        "name": "Mlonge"
       }
     ],
     "regions": [
@@ -306,6 +338,14 @@
       {
         "language": "Hausa",
         "name": "Dogonyaro"
+      },
+      {
+        "language": "Swahili",
+        "name": "Mwarobaini"
+      },
+      {
+        "language": "Fula",
+        "name": "Ganyi"
       }
     ],
     "regions": [
@@ -408,6 +448,18 @@
       {
         "language": "Igala",
         "name": "Ogholigo"
+      },
+      {
+        "language": "Swahili",
+        "name": "Mkola"
+      },
+      {
+        "language": "Akan (Twi)",
+        "name": "Tweapea"
+      },
+      {
+        "language": "Fula",
+        "name": "Goro-badi"
       }
     ],
     "regions": [
@@ -492,6 +544,22 @@
       {
         "language": "Hausa",
         "name": "Goro"
+      },
+      {
+        "language": "Swahili",
+        "name": "Mukezu"
+      },
+      {
+        "language": "Akan (Twi)",
+        "name": "Bese"
+      },
+      {
+        "language": "Fula",
+        "name": "Goro"
+      },
+      {
+        "language": "Zulu",
+        "name": "Ikola"
       }
     ],
     "regions": [
@@ -568,6 +636,10 @@
       {
         "language": "Hausa",
         "name": "Masooroo"
+      },
+      {
+        "language": "Akan (Twi)",
+        "name": "Soro wisa"
       }
     ],
     "regions": [
@@ -669,6 +741,14 @@
       {
         "language": "Igbo",
         "name": "Akwarara"
+      },
+      {
+        "language": "Swahili",
+        "name": "Mshubiri"
+      },
+      {
+        "language": "Akan (Twi)",
+        "name": "Sere-berebe"
       }
     ],
     "regions": [
@@ -754,6 +834,14 @@
       {
         "language": "Hausa",
         "name": "Yakuwa / Zobo / Zoborodo"
+      },
+      {
+        "language": "Swahili",
+        "name": "Choya"
+      },
+      {
+        "language": "Akan (Twi)",
+        "name": "Sobolo"
       }
     ],
     "regions": [
@@ -837,6 +925,18 @@
       {
         "language": "Hausa",
         "name": "Gwanda"
+      },
+      {
+        "language": "Swahili",
+        "name": "Papai"
+      },
+      {
+        "language": "Akan (Twi)",
+        "name": "Bofre"
+      },
+      {
+        "language": "Zulu",
+        "name": "Uphopho"
       }
     ],
     "regions": [
@@ -918,6 +1018,14 @@
       {
         "language": "Hausa",
         "name": "Goba"
+      },
+      {
+        "language": "Swahili",
+        "name": "Pera"
+      },
+      {
+        "language": "Akan (Twi)",
+        "name": "Oguaa"
       }
     ],
     "regions": [
@@ -1009,6 +1117,18 @@
       {
         "language": "Hausa",
         "name": "Mangwaro"
+      },
+      {
+        "language": "Swahili",
+        "name": "Embe"
+      },
+      {
+        "language": "Akan (Twi)",
+        "name": "Amango"
+      },
+      {
+        "language": "Zulu",
+        "name": "Umango"
       }
     ],
     "regions": [
@@ -1081,6 +1201,18 @@
       {
         "language": "Hausa",
         "name": "Tsauri"
+      },
+      {
+        "language": "Swahili",
+        "name": "Mchaichai"
+      },
+      {
+        "language": "Akan (Twi)",
+        "name": "Ti-ahaban"
+      },
+      {
+        "language": "Zulu",
+        "name": "Isiqunga"
       }
     ],
     "regions": [
@@ -1167,6 +1299,18 @@
       {
         "language": "Hausa",
         "name": "Tuwon biri / Fasadarur"
+      },
+      {
+        "language": "Swahili",
+        "name": "Stafeli"
+      },
+      {
+        "language": "Akan (Twi)",
+        "name": "Aluguntugui"
+      },
+      {
+        "language": "Zulu",
+        "name": "Kalipefu"
       }
     ],
     "regions": [
@@ -1242,6 +1386,14 @@
       {
         "language": "Hausa",
         "name": "Gauta"
+      },
+      {
+        "language": "Swahili",
+        "name": "Ngogwe"
+      },
+      {
+        "language": "Akan (Twi)",
+        "name": "Nyaadewa"
       }
     ],
     "regions": [
@@ -1313,6 +1465,14 @@
       {
         "language": "Hausa",
         "name": "Kashu / Kanju"
+      },
+      {
+        "language": "Swahili",
+        "name": "Mkorosho"
+      },
+      {
+        "language": "Akan (Twi)",
+        "name": "Atia"
       }
     ],
     "regions": [
@@ -1419,6 +1579,10 @@
       {
         "language": "Edo",
         "name": "Umeke"
+      },
+      {
+        "language": "Akan (Twi)",
+        "name": "Krobonko"
       }
     ],
     "regions": [
@@ -1527,6 +1691,18 @@
       {
         "language": "Hausa",
         "name": "Daddasu"
+      },
+      {
+        "language": "Swahili",
+        "name": "Tikiti chungu"
+      },
+      {
+        "language": "Akan (Twi)",
+        "name": "Nyanya"
+      },
+      {
+        "language": "Zulu",
+        "name": "Intshungu"
       }
     ],
     "regions": [
@@ -1609,6 +1785,22 @@
       {
         "language": "Hausa",
         "name": "Gangamau / Gangamin Turmi"
+      },
+      {
+        "language": "Swahili",
+        "name": "Manjano"
+      },
+      {
+        "language": "Akan (Twi)",
+        "name": "Nkabe ase"
+      },
+      {
+        "language": "Fula",
+        "name": "Kurkur"
+      },
+      {
+        "language": "Zulu",
+        "name": "I-turmeric"
       }
     ],
     "regions": [
@@ -1684,6 +1876,22 @@
       {
         "language": "Efik",
         "name": "Umuji"
+      },
+      {
+        "language": "Swahili",
+        "name": "Tangawizi"
+      },
+      {
+        "language": "Akan (Twi)",
+        "name": "Akekaduro"
+      },
+      {
+        "language": "Fula",
+        "name": "Kakadufu"
+      },
+      {
+        "language": "Zulu",
+        "name": "Ujinja"
       }
     ],
     "regions": [
