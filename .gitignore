@@ -51,3 +51,6 @@ __pycache__/
 # photo picking working files (regenerate with fetch_plant_photos.py candidates)
 /photo_candidates.json
 /photo_review.html
+
+# local name candidates (regenerate with fetch_name_candidates.py candidates)
+/name_candidates.csv

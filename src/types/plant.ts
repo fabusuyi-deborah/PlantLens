@@ -12,6 +12,8 @@ export interface LocalName {
   language: string;
   /** One name, or alternatives separated by " / ". */
   name: string;
+  /** Where the name was confirmed. Optional for the original Yoruba, Igbo and Hausa names. */
+  source_citation?: string;
 }
 
 /** Parts of Africa where a plant grows wild or is commonly cultivated. */
