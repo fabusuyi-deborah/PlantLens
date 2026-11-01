@@ -62,7 +62,7 @@ export const categoryMeta: Record<PlantCategory, CategoryMeta> = {
   spice: {
     label: "Spice",
     pluralLabel: "Spices",
-    description: "Seeds, roots and rhizomes that add heat and depth to Nigerian cooking.",
+    description: "Seeds, roots and rhizomes that add heat and depth to African cooking.",
     icon: Flame,
     text: "text-accent-secondary",
     bg: "bg-accent-secondary-light",

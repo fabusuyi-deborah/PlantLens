@@ -11,7 +11,7 @@ import type { PlantCategory } from "@/types/plant";
 
 export const metadata: Metadata = {
   title: "Categories · PlantLens",
-  description: "Browse Nigerian plants by their primary use: medicinal, leafy vegetables, spices, drinks and more.",
+  description: "Browse African plants by their primary use: medicinal, leafy vegetables, spices, drinks and more.",
 };
 
 /** The plant whose photo stands for each category. */
@@ -34,7 +34,7 @@ export default function CategoriesPage() {
     <main>
       <PageHeader
         title="Browse by category"
-        subtitle={`Browse ${plants.length} Nigerian plants by their primary use and classification. Most plants sit in more than one.`}
+        subtitle={`Browse ${plants.length} African plants by their primary use and classification. Most plants sit in more than one.`}
       />
       <ul className="mx-auto grid max-w-300 gap-x-5.5 gap-y-9 px-4 pt-2 pb-18 sm:grid-cols-2 md:px-8 lg:grid-cols-3">
         {getCategoryCounts().map(({ category, count }, i) => {

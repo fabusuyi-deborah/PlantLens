@@ -2,7 +2,7 @@
 
 **Live site: <https://plant-lens-beta.vercel.app>**
 
-PlantLens is a search app for plants commonly found in Nigerian homes, gardens and markets. Search by the name you know, whether that's English, botanical, Yoruba, Igbo or Hausa. For each plant it shows its local names, traditional uses, phytochemicals and cautions, and every claim carries a source citation.
+PlantLens is a search app for African plants, starting with the ones commonly found in Nigerian homes, gardens and markets. Search by the name you know, whether that's English, botanical or a local name in Yoruba, Igbo, Hausa or another language. For each plant it shows its local names, traditional uses, phytochemicals and cautions, and every claim carries a source citation.
 
 It is built on a hand-curated dataset of 20 plants, `plants.json`, served as static data with no backend. The Python scripts in this repo pull raw data from **Dr. Duke's Phytochemical and Ethnobotanical Databases** (USDA) to help curate that dataset, and fetch openly licensed plant photos from Wikimedia Commons and iNaturalist.
 
@@ -86,10 +86,13 @@ Each item in the array looks like this. Fields marked *optional* can be left out
   "id": "scent-leaf",                         // kebab-case, unique; used in the URL
   "name_common": "Scent leaf",
   "name_scientific": "Ocimum gratissimum",    // Genus species: used to match Duke's data
-  "names_local": {
-    "yoruba": "Efinrin", "igbo": "Nchanwu", "hausa": "Daidoya",
-    "other": [{ "label": "Edo", "name": "…" }] // optional: other languages or regions
-  },
+  "names_local": [                            // most widely spoken languages first; the first three
+    { "language": "Yoruba", "name": "Efinrin" },//   show on cards. Separate alternatives with " / "
+    { "language": "Igbo", "name": "Nchanwu" },
+    { "language": "Hausa", "name": "Daidoya" }
+  ],
+  "regions": ["west", "central", "east", "southern"], // where in Africa it grows wild or is commonly
+                                              //   cultivated: west, central, east, southern, north
   "category": ["medicinal", "culinary"],      // one or more of: medicinal, culinary, spice, beverage,
                                               //   leafy_vegetable, vegetable, stimulant
   "description": "Plain-language overview…",
@@ -127,7 +130,7 @@ Each item in the array looks like this. Fields marked *optional* can be left out
 }
 ```
 
-The types live in [`src/types/plant.ts`](src/types/plant.ts). A new category also needs an entry in [`src/lib/categories.ts`](src/lib/categories.ts).
+The types live in [`src/types/plant.ts`](src/types/plant.ts). A new category also needs an entry in [`src/lib/categories.ts`](src/lib/categories.ts). New languages need no code change: a language appears in the explore page's "Names in" picker once at least three plants have a name in it.
 
 **Rule:** every `traditional_uses`, `cautions` and `phytochemicals` entry must have a `source_citation`. Keep wording descriptive ("traditionally used for…", "associated with…"), not medical claims. The app groups citations by source: include "NMPPDB" or "Duke" in the citation text when the data came from those databases.
 
