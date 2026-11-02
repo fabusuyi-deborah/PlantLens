@@ -30,9 +30,8 @@
       },
       {
         "language": "Fula",
-        "name": "Kunfere",
-        "source_citation": "Wikidata, Fula label for Ocimum gratissimum",
-        "verified": false
+        "name": "Kunféré",
+        "source_citation": "Burkill (1985), The useful plants of west tropical Africa, Vol. 3 (Fula-Pulaar, Senegal), via JSTOR Global Plants"
       },
       {
         "language": "Zulu",
@@ -310,9 +309,8 @@
       },
       {
         "language": "Swahili",
-        "name": "Mlonge",
-        "source_citation": "Wikidata, Swahili label for Moringa oleifera",
-        "verified": false
+        "name": "Mlonge / Mronge / Mzunze",
+        "source_citation": "Bosch (2004), PROTA4U (Plant Resources of Tropical Africa): Moringa oleifera"
       }
     ],
     "regions": [
@@ -416,9 +414,8 @@
       },
       {
         "language": "Swahili",
-        "name": "Mwarobaini",
-        "source_citation": "Wikidata, Swahili label for Azadirachta indica",
-        "verified": false
+        "name": "Mwarubaini / Mkilifi",
+        "source_citation": "Orwa et al. (2009), Agroforestree Database 4.0, World Agroforestry: Azadirachta indica"
       },
       {
         "language": "Fula",
@@ -651,8 +648,7 @@
       {
         "language": "Fula",
         "name": "Goro",
-        "source_citation": "Wikidata, Fula label for Cola nitida",
-        "verified": false
+        "source_citation": "Orwa et al. (2009), Agroforestree Database 4.0, World Agroforestry: Cola nitida"
       },
       {
         "language": "Zulu",
@@ -1070,9 +1066,8 @@
       },
       {
         "language": "Swahili",
-        "name": "Papai",
-        "source_citation": "Wikidata, Swahili label for Carica papaya",
-        "verified": false
+        "name": "Mpapai",
+        "source_citation": "Orwa et al. (2009), Agroforestree Database 4.0, World Agroforestry: Carica papaya"
       },
       {
         "language": "Akan (Twi)",
@@ -1180,9 +1175,8 @@
       },
       {
         "language": "Swahili",
-        "name": "Pera",
-        "source_citation": "Wikidata, Swahili label for Psidium guajava",
-        "verified": false
+        "name": "Mpera",
+        "source_citation": "Orwa et al. (2009), Agroforestree Database 4.0, World Agroforestry: Psidium guajava"
       },
       {
         "language": "Akan (Twi)",
@@ -1291,9 +1285,8 @@
       },
       {
         "language": "Swahili",
-        "name": "Embe",
-        "source_citation": "Wikidata, Swahili label for Mangifera indica",
-        "verified": false
+        "name": "Mwembe / Muembe",
+        "source_citation": "Orwa et al. (2009), Agroforestree Database 4.0, World Agroforestry: Mangifera indica"
       },
       {
         "language": "Akan (Twi)",
@@ -1493,9 +1486,8 @@
       },
       {
         "language": "Swahili",
-        "name": "Stafeli",
-        "source_citation": "Wikidata, Swahili label for Annona muricata",
-        "verified": false
+        "name": "Mstafeli",
+        "source_citation": "Orwa et al. (2009), Agroforestree Database 4.0, World Agroforestry: Annona muricata"
       },
       {
         "language": "Akan (Twi)",
@@ -1590,9 +1582,8 @@
       },
       {
         "language": "Swahili",
-        "name": "Ngogwe",
-        "source_citation": "Wikidata, Swahili label for Solanum aethiopicum",
-        "verified": false
+        "name": "Ngogwe / Nyanya chungu",
+        "source_citation": "Lester & Seck (2004), PROTA4U (Plant Resources of Tropical Africa): Solanum aethiopicum"
       },
       {
         "language": "Akan (Twi)",
@@ -1679,9 +1670,8 @@
       },
       {
         "language": "Swahili",
-        "name": "Mkorosho",
-        "source_citation": "Wikidata, Swahili label for Anacardium occidentale",
-        "verified": false
+        "name": "Mkorosho / Mkanju / Mbibo",
+        "source_citation": "Orwa et al. (2009), Agroforestree Database 4.0, World Agroforestry: Anacardium occidentale"
       },
       {
         "language": "Akan (Twi)",
@@ -2036,9 +2026,8 @@
       },
       {
         "language": "Swahili",
-        "name": "Manjano",
-        "source_citation": "Wikidata, Swahili label for Curcuma longa",
-        "verified": false
+        "name": "Mmanjano",
+        "source_citation": "Jansen (2005), PROTA4U (Plant Resources of Tropical Africa): Curcuma longa"
       },
       {
         "language": "Akan (Twi)",
