@@ -1,7 +1,8 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
+import { roundButtonStyles } from "@/components/ui/button";
 import { selectStyles } from "@/components/ui/select";
 import { groupByRegion, languageRegion } from "@/lib/languages";
 import { plural } from "@/lib/plant-text";
@@ -55,6 +56,10 @@ export function LocalNames({ names }: { names: LocalName[] }) {
   const current = names.find((entry) => entry.language === stored) ?? names[0];
   const { main, alternates } = splitName(current.name);
   const groups = groupByRegion(names);
+  // Arrows step through languages in the same order as the dropdown (region by region), wrapping.
+  const ordered = groups.flatMap((group) => group.entries);
+  const position = ordered.findIndex((entry) => entry.language === current.language);
+  const step = (by: 1 | -1) => store(ordered[(position + by + ordered.length) % ordered.length].language);
   const regionCount = groups.length;
 
   return (
@@ -71,22 +76,49 @@ export function LocalNames({ names }: { names: LocalName[] }) {
           <label htmlFor="name-language" className="mt-4 mb-1.5 block text-overline text-ink uppercase">
             Say it in
           </label>
-          <select
-            id="name-language"
-            value={current.language}
-            onChange={(event) => store(event.target.value)}
-            className={`${selectStyles} w-full max-w-80 border-ink/20`}
-          >
-            {groups.map(({ region, entries }) => (
-              <optgroup key={region} label={region}>
-                {entries.map((entry) => (
-                  <option key={entry.language} value={entry.language}>
-                    {entry.language}
-                  </option>
-                ))}
-              </optgroup>
-            ))}
-          </select>
+          <div className="flex max-w-96 items-center gap-2">
+            {ordered.length > 1 && (
+              <button
+                type="button"
+                onClick={() => step(-1)}
+                aria-label="Previous language"
+                className={`${roundButtonStyles} size-12 border-ink/20 bg-paper text-ink hover:border-ink hover:bg-ink hover:text-paper`}
+              >
+                <ChevronLeft className="size-5" aria-hidden />
+              </button>
+            )}
+            <select
+              id="name-language"
+              value={current.language}
+              onChange={(event) => store(event.target.value)}
+              className={`${selectStyles} w-full flex-1 border-ink/20`}
+            >
+              {groups.map(({ region, entries }) => (
+                <optgroup key={region} label={region}>
+                  {entries.map((entry) => (
+                    <option key={entry.language} value={entry.language}>
+                      {entry.language}
+                    </option>
+                  ))}
+                </optgroup>
+              ))}
+            </select>
+            {ordered.length > 1 && (
+              <button
+                type="button"
+                onClick={() => step(1)}
+                aria-label="Next language"
+                className={`${roundButtonStyles} size-12 border-ink/20 bg-paper text-ink hover:border-ink hover:bg-ink hover:text-paper`}
+              >
+                <ChevronRight className="size-5" aria-hidden />
+              </button>
+            )}
+          </div>
+          {ordered.length > 1 && (
+            <p className="mt-1.5 text-caption font-normal tracking-normal text-ink-secondary">
+              {position + 1} of {ordered.length}
+            </p>
+          )}
         </div>
 
         <div key={current.language} aria-live="polite" className="min-w-0 animate-fade-up">
