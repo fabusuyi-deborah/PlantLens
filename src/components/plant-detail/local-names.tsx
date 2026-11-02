@@ -1,9 +1,8 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
+import { useId, useState, useSyncExternalStore } from "react";
 import { ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
 import { roundButtonStyles } from "@/components/ui/button";
-import { selectStyles } from "@/components/ui/select";
 import { groupByRegion, languageRegion } from "@/lib/languages";
 import { plural } from "@/lib/plant-text";
 
@@ -47,20 +46,24 @@ function splitName(name: string) {
 
 /**
  * A plant's local names in a panel that stays the same size however many languages there are:
- * one name shown large, a language picker grouped by region, and an "all names" list that's
- * closed by default. The picked language is remembered, so a Hausa reader sees Hausa names
- * on every plant.
+ * one name shown large, ‹ › arrows to step through the languages, and a full list (closed by
+ * default) where any row switches the card. The chosen language is remembered, so a Hausa
+ * reader sees Hausa names on every plant.
  */
 export function LocalNames({ names }: { names: LocalName[] }) {
   const stored = useSyncExternalStore(subscribe, readStored, () => null);
+  const [listOpen, setListOpen] = useState(false);
+  const listId = useId();
   const current = names.find((entry) => entry.language === stored) ?? names[0];
   const { main, alternates } = splitName(current.name);
   const groups = groupByRegion(names);
-  // Arrows step through languages in the same order as the dropdown (region by region), wrapping.
+  // Arrows step through languages in the list's order (region by region), wrapping round.
   const ordered = groups.flatMap((group) => group.entries);
   const position = ordered.findIndex((entry) => entry.language === current.language);
   const step = (by: 1 | -1) => store(ordered[(position + by + ordered.length) % ordered.length].language);
   const regionCount = groups.length;
+  const several = ordered.length > 1;
+  const arrow = `${roundButtonStyles} size-12 border-ink/20 bg-paper text-ink hover:border-ink hover:bg-ink hover:text-paper`;
 
   return (
     <div className="rounded-3xl bg-pink p-5 sm:p-8">
@@ -73,52 +76,34 @@ export function LocalNames({ names }: { names: LocalName[] }) {
             Known in {plural(names.length, "language")}
             {regionCount > 1 && ` across ${plural(regionCount, "region")}`}
           </p>
-          <label htmlFor="name-language" className="mt-4 mb-1.5 block text-overline text-ink uppercase">
-            Say it in
-          </label>
+          <p className="mt-4 mb-1.5 text-overline text-ink uppercase">Say it in</p>
           <div className="flex max-w-96 items-center gap-2">
-            {ordered.length > 1 && (
-              <button
-                type="button"
-                onClick={() => step(-1)}
-                aria-label="Previous language"
-                className={`${roundButtonStyles} size-12 border-ink/20 bg-paper text-ink hover:border-ink hover:bg-ink hover:text-paper`}
-              >
+            {several && (
+              <button type="button" onClick={() => step(-1)} aria-label="Previous language" className={arrow}>
                 <ChevronLeft className="size-5" aria-hidden />
               </button>
             )}
-            <select
-              id="name-language"
-              value={current.language}
-              onChange={(event) => store(event.target.value)}
-              className={`${selectStyles} w-full flex-1 border-ink/20`}
+            <button
+              type="button"
+              onClick={() => several && setListOpen((open) => !open)}
+              aria-expanded={several ? listOpen : undefined}
+              aria-controls={several ? listId : undefined}
+              aria-label={several ? `${current.language}, ${position + 1} of ${ordered.length}. Show all languages` : undefined}
+              className="flex min-h-12 min-w-0 flex-1 flex-col items-center justify-center rounded-full bg-paper px-4 py-1.5 text-center transition-colors hover:bg-paper/80"
             >
-              {groups.map(({ region, entries }) => (
-                <optgroup key={region} label={region}>
-                  {entries.map((entry) => (
-                    <option key={entry.language} value={entry.language}>
-                      {entry.language}
-                    </option>
-                  ))}
-                </optgroup>
-              ))}
-            </select>
-            {ordered.length > 1 && (
-              <button
-                type="button"
-                onClick={() => step(1)}
-                aria-label="Next language"
-                className={`${roundButtonStyles} size-12 border-ink/20 bg-paper text-ink hover:border-ink hover:bg-ink hover:text-paper`}
-              >
+              <span className="truncate font-semibold text-ink">{current.language}</span>
+              {several && (
+                <span className="text-[0.6875rem] text-ink-secondary">
+                  {position + 1} of {ordered.length}
+                </span>
+              )}
+            </button>
+            {several && (
+              <button type="button" onClick={() => step(1)} aria-label="Next language" className={arrow}>
                 <ChevronRight className="size-5" aria-hidden />
               </button>
             )}
           </div>
-          {ordered.length > 1 && (
-            <p className="mt-1.5 text-caption font-normal tracking-normal text-ink-secondary">
-              {position + 1} of {ordered.length}
-            </p>
-          )}
         </div>
 
         <div key={current.language} aria-live="polite" className="min-w-0 animate-fade-up">
@@ -134,28 +119,48 @@ export function LocalNames({ names }: { names: LocalName[] }) {
         </div>
       </div>
 
-      {names.length > 1 && (
-        <details className="group mt-6 border-t border-ink/15 pt-4">
-          <summary className="inline-flex cursor-pointer list-none items-center gap-1.5 text-[0.8125rem] font-bold text-ink [&::-webkit-details-marker]:hidden">
-            See all {names.length} names
-            <ChevronDown className="size-4 transition-transform group-open:rotate-180" aria-hidden />
-          </summary>
-          <div className="mt-3 columns-1 gap-8 sm:columns-2 lg:columns-3">
+      {several && (
+        <div className="mt-6 border-t border-ink/15 pt-4">
+          <button
+            type="button"
+            onClick={() => setListOpen((open) => !open)}
+            aria-expanded={listOpen}
+            aria-controls={listId}
+            className="inline-flex items-center gap-1.5 text-[0.8125rem] font-bold text-ink"
+          >
+            {listOpen ? "Hide names" : `See all ${names.length} names`}
+            <ChevronDown className={`size-4 transition-transform ${listOpen ? "rotate-180" : ""}`} aria-hidden />
+          </button>
+          <div id={listId} hidden={!listOpen} className="mt-3 columns-1 gap-8 sm:columns-2 lg:columns-3">
             {groups.map(({ region, entries }) => (
               <section key={region} aria-label={region} className="mb-3">
                 <h3 className="mb-1 break-after-avoid text-overline text-ink-secondary uppercase">{region}</h3>
-                <dl>
-                  {entries.map((entry) => (
-                    <div key={entry.language} className="flex break-inside-avoid items-baseline gap-2 border-b border-ink/10 py-1.5 text-body-sm">
-                      <dt className="w-24 shrink-0 text-ink-secondary">{entry.language}</dt>
-                      <dd className="min-w-0 font-semibold break-words">{entry.name.split("/").map((p) => p.trim()).join(", ")}</dd>
-                    </div>
-                  ))}
-                </dl>
+                <ul>
+                  {entries.map((entry) => {
+                    const active = entry.language === current.language;
+                    return (
+                      <li key={entry.language} className="break-inside-avoid border-b border-ink/10">
+                        <button
+                          type="button"
+                          onClick={() => store(entry.language)}
+                          aria-pressed={active}
+                          className={`flex w-full items-baseline gap-2 rounded-lg px-2 py-1.5 text-left text-body-sm transition-colors hover:bg-paper/60 ${
+                            active ? "bg-paper" : ""
+                          }`}
+                        >
+                          <span className="w-24 shrink-0 text-ink-secondary">{entry.language}</span>
+                          <span className="min-w-0 font-semibold break-words">
+                            {entry.name.split("/").map((part) => part.trim()).join(", ")}
+                          </span>
+                        </button>
+                      </li>
+                    );
+                  })}
+                </ul>
               </section>
             ))}
           </div>
-        </details>
+        </div>
       )}
     </div>
   );
