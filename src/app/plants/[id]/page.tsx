@@ -143,13 +143,8 @@ export default async function PlantPage(props: PageProps<"/plants/[id]">) {
         </div>
       </WaveBand>
 
-      <section aria-label="At a glance" className="mx-auto max-w-300 px-4 pt-18 pb-8 md:px-8">
-        <div className="grid grid-cols-3 gap-3">
-          <Fact value={compounds.length} label="compounds" color="bg-lavender" />
-          <Fact value={uses.length} label="uses cited" color="bg-pink" />
-          <Fact value={cautions.length} label="cautions" color="bg-yellow" />
-        </div>
-        <dl className="mt-4 flex flex-wrap gap-x-8 gap-y-2">
+      <section aria-label="At a glance" className="mx-auto max-w-300 px-4 pt-14 pb-4 md:px-8">
+        <dl className="flex flex-wrap gap-x-8 gap-y-2">
           <div className="flex items-baseline gap-2">
             <dt className="text-overline text-ink-secondary uppercase">
               {plant.category.length > 1 ? "Categories" : "Category"}
@@ -274,14 +269,5 @@ export default async function PlantPage(props: PageProps<"/plants/[id]">) {
         </ul>
       </section>
     </main>
-  );
-}
-
-function Fact({ value, label, color }: { value: number; label: string; color: string }) {
-  return (
-    <div className={`rounded-[18px] px-2 py-4.5 text-center sm:px-4.5 ${color}`}>
-      <b className="block font-display text-[2.5rem] leading-none font-semibold">{value}</b>
-      <small className="block text-[0.625rem] font-bold tracking-[0.06em] uppercase sm:text-caption sm:tracking-widest">{label}</small>
-    </div>
   );
 }

@@ -159,7 +159,7 @@ export function CommandPalette({
             type="button"
             onClick={onClose}
             aria-label="Close search"
-            className={`${roundButtonStyles} size-10.5 hover:text-ink`}
+            className={`${roundButtonStyles} size-10.5 hover:bg-paper hover:text-ink`}
           >
             <X className="size-4" strokeWidth={2.6} aria-hidden />
           </button>

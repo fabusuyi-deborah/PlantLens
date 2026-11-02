@@ -2,7 +2,6 @@
 
 import { useId, useState, useSyncExternalStore } from "react";
 import { ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
-import { roundButtonStyles } from "@/components/ui/button";
 import { groupByRegion, languageRegion } from "@/lib/languages";
 import { plural } from "@/lib/plant-text";
 
@@ -55,7 +54,6 @@ export function LocalNames({ names }: { names: LocalName[] }) {
   const [listOpen, setListOpen] = useState(false);
   const listId = useId();
   const current = names.find((entry) => entry.language === stored) ?? names[0];
-  const { main, alternates } = splitName(current.name);
   const groups = groupByRegion(names);
   // Arrows step through languages in the list's order (region by region), wrapping round.
   const ordered = groups.flatMap((group) => group.entries);
@@ -63,7 +61,8 @@ export function LocalNames({ names }: { names: LocalName[] }) {
   const step = (by: 1 | -1) => store(ordered[(position + by + ordered.length) % ordered.length].language);
   const regionCount = groups.length;
   const several = ordered.length > 1;
-  const arrow = `${roundButtonStyles} size-12 border-ink/20 bg-paper text-ink hover:border-ink hover:bg-ink hover:text-paper`;
+  const arrow =
+    "inline-flex size-12 shrink-0 items-center justify-center rounded-full border-[1.5px] border-ink/20 bg-paper text-ink transition-colors hover:border-ink hover:bg-ink hover:text-paper";
 
   return (
     <div className="rounded-3xl bg-pink p-5 sm:p-8">
@@ -101,16 +100,32 @@ export function LocalNames({ names }: { names: LocalName[] }) {
           </div>
         </div>
 
-        <div key={current.language} aria-live="polite" className="min-w-0 animate-fade-up">
-          <p className="text-overline text-ink-secondary uppercase">
-            {current.language} · {languageRegion(current.language)}
-          </p>
-          <p className="mt-1 font-display text-[clamp(2.5rem,6vw,5rem)] leading-none font-semibold tracking-[-0.03em] break-words text-green">
-            {main}
-          </p>
-          {alternates.length > 0 && (
-            <p className="mt-2 text-body text-ink-secondary">also {alternates.join(", ")}</p>
-          )}
+        {/*
+          Every name is laid in the same grid cell and only the current one is visible, so the
+          card is always as tall as this plant's longest name and doesn't jump when switching.
+        */}
+        <div className="grid min-w-0" aria-live="polite">
+          {ordered.map((entry) => {
+            const isCurrent = entry.language === current.language;
+            const parts = splitName(entry.name);
+            return (
+              <div
+                key={entry.language}
+                aria-hidden={!isCurrent}
+                className={`min-w-0 [grid-area:1/1] ${isCurrent ? "animate-fade-up" : "invisible"}`}
+              >
+                <p className="text-overline text-ink-secondary uppercase">
+                  {entry.language} · {languageRegion(entry.language)}
+                </p>
+                <p className="mt-1 font-display text-[clamp(2.5rem,6vw,5rem)] leading-none font-semibold tracking-[-0.03em] break-words text-green">
+                  {parts.main}
+                </p>
+                {parts.alternates.length > 0 && (
+                  <p className="mt-2 text-body text-ink-secondary">also {parts.alternates.join(", ")}</p>
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
 

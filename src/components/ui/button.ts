@@ -30,4 +30,7 @@ export const chipStyles =
 
 /** Round icon button (carousel arrows, pause, close). */
 export const roundButtonStyles =
-  "inline-flex size-11 shrink-0 items-center justify-center rounded-full border-[1.5px] border-current transition-colors hover:bg-paper hover:text-green";
+  "inline-flex size-11 shrink-0 items-center justify-center rounded-full border-[1.5px] border-current transition-colors";
+
+/** Hover for a round button on a green or purple band: fills white. Add it alongside roundButtonStyles. */
+export const roundButtonOnDarkHover = "hover:bg-paper hover:text-green";
