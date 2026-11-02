@@ -189,7 +189,7 @@ export default function Home() {
             <p className="text-[1.0625rem] text-ink-secondary">
               Every use, compound and caution on PlantLens cites its source: NMPPDB (Nigeria&apos;s own
               medicinal plant database), Dr. Duke&apos;s USDA databases, or a peer-reviewed study. Local
-              names are cross-checked against NMPPDB&apos;s species records.
+              names are checked against NMPPDB for Nigerian languages and against regional references for the rest.
             </p>
             <CiteReveal
               claim="Bitter leaf is widely used in Nigeria for managing type 2 diabetes."
@@ -210,7 +210,7 @@ export default function Home() {
               Find a plant by the name you grew up with.
             </h2>
             <p className="mt-4 mb-5.5 max-w-[30em] opacity-90">
-              Ewuro, onugbu or shuwaka? Type a name in Yoruba, Igbo, Hausa or another local language, the
+              Ewuro, onugbu or mlonge? Type a name in Yoruba, Igbo, Hausa, Swahili or another local language, the
               English name or the botanical one. PlantLens finds the plant either way.
             </p>
             <HomeSearch
@@ -218,7 +218,7 @@ export default function Home() {
               onDark
               label="Plant name in any language"
               placeholder="Try zogale, ewuro or oji"
-              tryTerms={["ewuro", "zogale", "oji", "efinrin", "Curcuma"]}
+              tryTerms={["ewuro", "zogale", "mlonge", "oji", "Curcuma"]}
             />
           </div>
           <PhotoCarousel

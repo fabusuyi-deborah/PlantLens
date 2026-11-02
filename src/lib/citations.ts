@@ -3,7 +3,10 @@ import type { Plant } from "@/types/plant";
 /** Every distinct citation on a plant, in the order they first appear. */
 export function getPlantCitations(plant: Plant): string[] {
   const items = [...plant.traditional_uses, ...(plant.phytochemicals ?? []), ...plant.cautions];
-  return [...new Set(items.map((item) => item.source_citation))];
+  const nameCitations = plant.names_local
+    .map((entry) => entry.source_citation)
+    .filter((citation): citation is string => Boolean(citation));
+  return [...new Set([...items.map((item) => item.source_citation), ...nameCitations])];
 }
 
 export const citesNmppdb = (citation: string) => citation.includes("NMPPDB");

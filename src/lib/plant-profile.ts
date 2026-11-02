@@ -29,6 +29,13 @@ export interface ProfileCompound {
   text: string;
   ref: number;
 }
+export interface ProfileName {
+  language: string;
+  name: string;
+  /** Where the name was confirmed, and its number in the Sources list, when recorded. */
+  source?: string;
+  ref?: number;
+}
 export interface ProfileCaution {
   key: string;
   severity: CautionSeverity;
@@ -38,7 +45,7 @@ export interface ProfileCaution {
 
 /**
  * Everything the plant page shows, with each citation numbered in order of first appearance
- * (uses, then compounds, then cautions) so the numbers match the Sources list.
+ * (uses, then compounds, then cautions, then local names) so the numbers match the Sources list.
  */
 export function getPlantProfile(plant: Plant) {
   const refs: string[] = [];
@@ -71,7 +78,15 @@ export function getPlantProfile(plant: Plant) {
     }))
     .sort((a, b) => severityOrder[a.severity] - severityOrder[b.severity]);
 
-  const names = plant.names_local.filter((entry) => entry.name);
+  // Name citations come last so the uses, compounds and cautions keep their numbers.
+  const names: ProfileName[] = plant.names_local
+    .filter((entry) => entry.name)
+    .map((entry) => ({
+      language: entry.language,
+      name: entry.name,
+      source: entry.source_citation,
+      ref: entry.source_citation ? refOf(entry.source_citation) : undefined,
+    }));
 
   return { uses, compounds, cautions, names, refs };
 }

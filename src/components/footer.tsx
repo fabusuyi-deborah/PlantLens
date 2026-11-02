@@ -80,7 +80,7 @@ export function Footer() {
           ))}
         </div>
         <p className="mt-9 border-t border-line pt-4 text-caption font-normal tracking-normal text-ink-secondary">
-          © 2026 PlantLens. Data sourced under CC0 and with NMPPDB attribution.
+          © 2026 PlantLens. Data from Dr. Duke&apos;s (CC0), NMPPDB and Kew&apos;s Plants of the World Online, credited throughout.
         </p>
       </div>
     </footer>

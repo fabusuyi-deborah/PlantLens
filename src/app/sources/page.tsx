@@ -20,7 +20,7 @@ const steps = [
   },
   {
     title: "Cross-check names and range",
-    body: "Yoruba, Igbo and Hausa names and Nigerian uses are checked against NMPPDB. Where each plant grows in Africa comes from Kew's Plants of the World Online.",
+    body: "Yoruba, Igbo and Hausa names and Nigerian uses are checked against NMPPDB. Names in other African languages are found on Wikidata, then confirmed and cited from regional references. Where each plant grows comes from Kew's Plants of the World Online.",
   },
   {
     title: "Curate by hand",
@@ -39,6 +39,8 @@ export default function SourcesPage() {
   const countPlantsCiting = (test: (citation: string) => boolean) =>
     plants.filter((plant) => getPlantCitations(plant).some(test)).length;
   const withRegionsSource = plants.filter((plant) => plant.regions_source).length;
+  const nameLanguages = new Set(plants.flatMap((plant) => plant.names_local.map((entry) => entry.language)));
+  const nameCount = plants.reduce((total, plant) => total + plant.names_local.length, 0);
   const literatureCount = [...citations].filter((c) => !citesNmppdb(c) && !citesDuke(c)).length;
 
   return (
@@ -85,6 +87,13 @@ export default function SourcesPage() {
             stat={`Regions for ${withRegionsSource} of ${plants.length} plants`}
             href="https://powo.science.kew.org"
             color="bg-mint"
+          />
+          <SourceCard
+            title="Local names"
+            kicker="NMPPDB, Wikidata and regional plant references"
+            body="Nigerian names come from NMPPDB. Names in Swahili, Akan, Fula, Zulu and other languages are found on Wikidata and confirmed in references such as PROTA4U, Burkill's Useful Plants of West Tropical Africa, Kokwaro's Medicinal Plants of East Africa and SANBI's PlantZAfrica, then cited on each plant."
+            stat={`${nameCount} names in ${nameLanguages.size} languages`}
+            color="bg-lavender"
           />
         </div>
 

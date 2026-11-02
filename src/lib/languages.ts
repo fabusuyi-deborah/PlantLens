@@ -15,6 +15,7 @@ const languageRegions: Record<string, string> = {
   Etche: "West Africa",
   "Akan (Twi)": "West Africa",
   Fula: "West Africa",
+  Wolof: "West Africa",
   Swahili: "East Africa",
   Zulu: "Southern Africa",
 };

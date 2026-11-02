@@ -5,7 +5,7 @@ import { ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
 import { groupByRegion, languageRegion } from "@/lib/languages";
 import { plural } from "@/lib/plant-text";
 
-type LocalName = { language: string; name: string };
+type LocalName = { language: string; name: string; source?: string; ref?: number };
 
 // The reader's chosen language, remembered across plants in this browser.
 const STORAGE_KEY = "plantlens:name-language";
@@ -122,6 +122,14 @@ export function LocalNames({ names }: { names: LocalName[] }) {
                 </p>
                 {parts.alternates.length > 0 && (
                   <p className="mt-2 text-body text-ink-secondary">also {parts.alternates.join(", ")}</p>
+                )}
+                {entry.source && (
+                  <p className="mt-2 text-caption font-normal tracking-normal text-ink-secondary">
+                    <a href="#sources" className="underline underline-offset-2 hover:text-purple">
+                      Source {entry.ref}
+                    </a>
+                    : {entry.source}
+                  </p>
                 )}
               </div>
             );
