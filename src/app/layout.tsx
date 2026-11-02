@@ -11,13 +11,12 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: "PlantLens",
   description,
-  // Link previews (WhatsApp, X, LinkedIn…). Plant pages swap in their own photo.
+  // Link previews (WhatsApp, X, LinkedIn…). The images come from opengraph-image.tsx files.
   openGraph: {
     siteName: "PlantLens",
     type: "website",
     title: "PlantLens · Discover Africa's plants, by every name",
     description,
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Bitter leaf" }],
   },
   twitter: { card: "summary_large_image" },
 };
