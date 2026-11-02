@@ -37,7 +37,7 @@ export function ExploreCard({
           {plant.photo_url && (
             <Image
               src={plant.photo_url}
-              alt={plant.name_common}
+              alt=""
               fill
               sizes="(min-width: 1024px) 380px, (min-width: 640px) 50vw, 118px"
               className="object-cover transition-transform duration-600 ease-out group-hover:scale-105"

@@ -197,7 +197,7 @@ export function ExploreFilters({
             aria-current={option.value === category ? "page" : undefined}
             className={`${chipStyles} flex-auto justify-center text-[0.8125rem]`}
           >
-            {option.label} <span className="text-[0.6875rem] opacity-70">{option.count}</span>
+            {option.label} <span className="text-[0.6875rem]">{option.count}</span>
           </Link>
         ))}
       </nav>
