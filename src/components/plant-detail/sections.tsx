@@ -1,115 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown, Search } from "lucide-react";
 import { chipStyles } from "@/components/ui/button";
 import { selectStyles } from "@/components/ui/select";
-import { groupByRegion, languageRegion } from "@/lib/languages";
-import { plural } from "@/lib/plant-text";
 import type { ProfileCaution, ProfileCompound, ProfileUse } from "@/lib/plant-profile";
 import { CitedText, useOpenCitation } from "./citations";
 import { SeverityPill } from "./severity";
-
-/**
- * Above COLLAPSE_AT names the panel shows the first VISIBLE and a "Show all" button (hiding only one
- * or two isn't worth a click); above FILTER_AT it also gets a filter box.
- */
-const VISIBLE = 8;
-const COLLAPSE_AT = 10;
-const FILTER_AT = 12;
-
-/**
- * Every local name for the plant at once, grouped by region, so readers can scan for their own
- * language instead of clicking through them. Alternatives ("Aki ilu / Aku inu") sit under the
- * main name. Long lists collapse, and very long ones get a filter.
- */
-export function LocalNames({ names }: { names: { language: string; name: string }[] }) {
-  const [expanded, setExpanded] = useState(false);
-  const [filter, setFilter] = useState("");
-  const normalized = filter.trim().toLowerCase();
-  const matching = normalized
-    ? names.filter((entry) => `${entry.language} ${entry.name}`.toLowerCase().includes(normalized))
-    : names;
-  const collapsible = names.length > COLLAPSE_AT && !normalized;
-  const shown = collapsible && !expanded ? matching.slice(0, VISIBLE) : matching;
-  const groups = groupByRegion(shown);
-  const languageCount = new Set(names.map((entry) => entry.language)).size;
-  const regionCount = new Set(names.map((entry) => languageRegion(entry.language))).size;
-
-  return (
-    <div className="rounded-3xl bg-pink p-5 sm:p-8">
-      <div className="flex flex-wrap items-end justify-between gap-3">
-        <div>
-          <h2 className="font-display text-[clamp(1.5rem,2.6vw,2rem)] leading-tight font-medium text-green">
-            Local names
-          </h2>
-          <p className="mt-1 text-body-sm text-ink-secondary">
-            In {plural(languageCount, "language")}
-            {regionCount > 1 && ` across ${plural(regionCount, "region")}`}
-          </p>
-        </div>
-        {names.length > FILTER_AT && (
-          <label className="flex min-h-11 w-full items-center gap-2 rounded-full bg-paper px-4 sm:w-64">
-            <Search className="size-4 shrink-0 text-ink-secondary" aria-hidden />
-            <span className="sr-only">Find a language</span>
-            <input
-              type="search"
-              value={filter}
-              onChange={(event) => setFilter(event.target.value)}
-              placeholder="Find a language…"
-              className="min-w-0 flex-1 bg-transparent text-body-sm outline-none focus-visible:outline-none"
-            />
-          </label>
-        )}
-      </div>
-
-      <div className="mt-5 flex flex-col gap-5">
-        {groups.map(({ region, entries }) => (
-          <section key={region} aria-label={region}>
-            <h3 className="mb-2 text-overline text-ink uppercase">{region}</h3>
-            <dl className="grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-4">
-              {entries.map(({ language, name }) => {
-                const [main, ...alternates] = name.split("/").map((part) => part.trim()).filter(Boolean);
-                return (
-                  <div key={language} className="flex min-w-0 flex-col gap-0.5 rounded-2xl bg-paper/70 px-3 py-3 sm:px-4">
-                    <dt className="text-[0.6875rem] font-bold tracking-[0.1em] text-ink-secondary uppercase">
-                      {language}
-                    </dt>
-                    <dd className="min-w-0">
-                      <span className="block font-display text-lg leading-tight font-medium break-words text-green sm:text-2xl">
-                        {main}
-                      </span>
-                      {alternates.length > 0 && (
-                        <span className="mt-0.5 block text-body-sm break-words text-ink-secondary">
-                          also {alternates.join(", ")}
-                        </span>
-                      )}
-                    </dd>
-                  </div>
-                );
-              })}
-            </dl>
-          </section>
-        ))}
-        {normalized && matching.length === 0 && (
-          <p className="text-ink-secondary">No language matching “{filter.trim()}” for this plant yet.</p>
-        )}
-      </div>
-
-      {collapsible && (
-        <button
-          type="button"
-          onClick={() => setExpanded((open) => !open)}
-          aria-expanded={expanded}
-          className="mt-5 inline-flex min-h-10 items-center gap-1.5 rounded-full border-[1.5px] border-ink px-4 text-[0.8125rem] font-bold text-ink transition-colors hover:bg-ink hover:text-paper"
-        >
-          {expanded ? "Show fewer" : `Show all ${names.length} names`}
-          <ChevronDown className={`size-4 transition-transform ${expanded ? "rotate-180" : ""}`} aria-hidden />
-        </button>
-      )}
-    </div>
-  );
-}
 
 const regionTag = (region: string) =>
   region === "Nigeria" ? "bg-pink" : region === "General" ? "bg-yellow" : "bg-lavender";

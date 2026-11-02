@@ -5,10 +5,10 @@ import { notFound } from "next/navigation";
 import { ArrowUpRight, PencilLine, ShieldAlert } from "lucide-react";
 import { PhotoCard } from "@/components/home/plant-cards";
 import { CitationProvider } from "@/components/plant-detail/citations";
+import { LocalNames } from "@/components/plant-detail/local-names";
 import {
   CautionList,
   CompoundGrid,
-  LocalNames,
   SourceList,
   UsesList,
 } from "@/components/plant-detail/sections";
