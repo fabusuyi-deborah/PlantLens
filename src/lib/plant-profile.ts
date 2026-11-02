@@ -4,7 +4,8 @@ import type { CautionSeverity, Plant } from "@/types/plant";
 /** Places a use can say it was recorded in, checked in this order. Anything else is "General". */
 const REGIONS = [
   "Nigeria", "Ghana", "Cameroon", "Togo", "Uganda", "South Africa", "Ethiopia", "Sierra Leone",
-  "Angola", "Upper Volta", "Senegal", "Benin", "Ivory Coast", "Kenya", "Tanzania", "Congo", "Gabon",
+  "Angola", "Burkina Faso", "Upper Volta", "Senegal", "Benin", "Côte d'Ivoire", "Ivory Coast", "Egypt",
+  "Madagascar", "Mauritius", "Mozambique", "Sudan", "Kenya", "Tanzania", "Congo", "Gabon",
   "Liberia", "Guinea", "Mali", "Niger", "India", "Brazil", "West Africa", "East Africa",
   "Central Africa", "Caribbean", "Asia",
 ];
