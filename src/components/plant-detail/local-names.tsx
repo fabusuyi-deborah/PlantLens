@@ -88,15 +88,10 @@ export function LocalNames({ names }: { names: LocalName[] }) {
               onClick={() => several && setListOpen((open) => !open)}
               aria-expanded={several ? listOpen : undefined}
               aria-controls={several ? listId : undefined}
-              aria-label={several ? `${current.language}, ${position + 1} of ${ordered.length}. Show all languages` : undefined}
-              className="flex min-h-12 min-w-0 flex-1 flex-col items-center justify-center rounded-full bg-paper px-4 py-1.5 text-center transition-colors hover:bg-paper/80"
+              aria-label={several ? `${current.language}. Show all languages` : undefined}
+              className="flex min-h-12 min-w-0 flex-1 items-center justify-center rounded-full bg-paper px-4 text-center transition-colors hover:bg-paper/80"
             >
               <span className="truncate font-semibold text-ink">{current.language}</span>
-              {several && (
-                <span className="text-[0.6875rem] text-ink-secondary">
-                  {position + 1} of {ordered.length}
-                </span>
-              )}
             </button>
             {several && (
               <button type="button" onClick={() => step(1)} aria-label="Next language" className={arrow}>
