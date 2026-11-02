@@ -186,14 +186,14 @@ export default function AboutPage() {
             </li>
           ))}
         </ol>
-        <aside className="mt-5.5 flex gap-3 rounded-[18px] bg-warm-light px-5 py-4.5 text-[#6b4a00]">
+        <div role="note" className="mt-5.5 flex gap-3 rounded-[18px] bg-warm-light px-5 py-4.5 text-[#6b4a00]">
           <TriangleAlert className="mt-0.5 size-5 shrink-0 text-warm" aria-hidden />
           <p>
             PlantLens is not medical advice. It documents traditional uses and research findings, not
             what you should take. Consult a healthcare professional before using any plant as treatment,
             especially during pregnancy, breastfeeding, or while taking medication.
           </p>
-        </aside>
+        </div>
       </section>
     </main>
   );

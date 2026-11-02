@@ -164,7 +164,7 @@ function PlantImage({ plant, sizes, className = "" }: { plant: Plant; sizes: str
   return (
     <Image
       src={plant.photo_url}
-      alt={plant.name_common}
+      alt=""
       fill
       sizes={sizes}
       className={`object-cover ${className}`}

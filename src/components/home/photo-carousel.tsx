@@ -41,7 +41,7 @@ export function PhotoCarousel({ photos }: { photos: { src: string; alt: string }
           className="absolute bottom-2.5 left-3 z-10 bg-ink/55"
         />
       )}
-      <div className="absolute inset-x-0 bottom-3.5 z-[5] flex justify-center gap-1.5" role="group" aria-label="Choose photo">
+      <div className="absolute inset-x-0 bottom-2 z-[5] flex justify-center" role="group" aria-label="Choose photo">
         {photos.map((photo, n) => (
           <button
             key={photo.src}
@@ -49,8 +49,11 @@ export function PhotoCarousel({ photos }: { photos: { src: string; alt: string }
             onClick={() => setIndex(n)}
             aria-label={photo.alt}
             aria-current={n === index ? "true" : undefined}
-            className="h-2.5 w-2.5 rounded-full border-2 border-paper shadow-[0_0_0_1px_rgba(11,61,39,0.35)] transition-[width,background-color] duration-300 aria-[current=true]:w-6.5 aria-[current=true]:bg-paper"
-          />
+            // A 24px-tall tap target around the small visible dot.
+            className="group/dot flex h-6 min-w-6 items-center justify-center px-0.5"
+          >
+            <span className="h-2.5 w-2.5 rounded-full border-2 border-paper shadow-[0_0_0_1px_rgba(11,61,39,0.35)] transition-[width,background-color] duration-300 group-aria-[current=true]/dot:w-6.5 group-aria-[current=true]/dot:bg-paper" />
+          </button>
         ))}
       </div>
     </div>

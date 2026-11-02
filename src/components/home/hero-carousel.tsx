@@ -78,7 +78,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
                 title={language}
                 className="inline-flex min-h-8 items-center gap-1.5 rounded-full bg-paper/12 px-3 text-body-sm font-semibold"
               >
-                <span className="text-[0.65625rem] tracking-widest opacity-70">{code}</span>
+                <span className="text-[0.65625rem] tracking-widest opacity-90">{code}</span>
                 {name}
               </li>
             ))}
@@ -103,7 +103,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
           >
             <ArrowLeft className="size-4.5" aria-hidden />
           </button>
-          <div className="flex gap-1.5" role="group" aria-label="Choose a featured plant">
+          <div className="flex" role="group" aria-label="Choose a featured plant">
             {slides.map((s, n) => (
               <button
                 key={s.id}
@@ -111,8 +111,11 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
                 onClick={() => setIndex(n)}
                 aria-label={s.name}
                 aria-current={n === index ? "true" : undefined}
-                className="size-2.5 rounded-full border-[1.5px] border-paper transition-colors aria-[current=true]:border-yellow aria-[current=true]:bg-yellow"
-              />
+                // A 24px tap target around the small visible dot.
+                className="group/dot flex size-6 items-center justify-center"
+              >
+                <span className="size-2.5 rounded-full border-[1.5px] border-paper transition-colors group-aria-[current=true]/dot:border-yellow group-aria-[current=true]/dot:bg-yellow" />
+              </button>
             ))}
           </div>
           <button type="button" onClick={next} aria-label="Next featured plant" className={`${roundButtonStyles} ${roundButtonOnDarkHover}`}>

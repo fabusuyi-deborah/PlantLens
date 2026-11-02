@@ -31,7 +31,7 @@ export function NoResults({ query, inCategory }: { query: string; inCategory: bo
 
 export function SearchHint() {
   return (
-    <aside className="mt-14 flex flex-wrap items-center justify-between gap-4 rounded-panel bg-pink px-6 py-5.5">
+    <section aria-label="Search tips" className="mt-14 flex flex-wrap items-center justify-between gap-4 rounded-panel bg-pink px-6 py-5.5">
       <div>
         <h2 className="font-display text-xl font-medium text-green">Looking for something else?</h2>
         <p className="mt-1">
@@ -49,6 +49,6 @@ export function SearchHint() {
           </Link>
         ))}
       </div>
-    </aside>
+    </section>
   );
 }

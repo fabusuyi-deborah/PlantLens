@@ -11,12 +11,12 @@ export function Disclaimer() {
   const pathname = usePathname();
   if (pathname.startsWith("/plants/") || pathname === "/categories") return null;
   return (
-    <aside aria-label="Medical disclaimer" className="bg-warm-light text-[#6b4a00]">
+    <div role="note" aria-label="Medical disclaimer" className="bg-warm-light text-[#6b4a00]">
       <p className="mx-auto flex max-w-300 items-center gap-2.5 px-4 py-3.5 text-body-sm font-medium md:px-8">
         <TriangleAlert className="size-4.5 shrink-0 text-warm" aria-hidden />
         Phytochemical data is informational only, not medical advice. Always consult a healthcare
         professional.
       </p>
-    </aside>
+    </div>
   );
 }

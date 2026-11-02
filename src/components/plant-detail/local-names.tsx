@@ -71,7 +71,7 @@ export function LocalNames({ names }: { names: LocalName[] }) {
           <h2 className="font-display text-[clamp(1.5rem,2.6vw,2rem)] leading-tight font-medium text-green">
             Local names
           </h2>
-          <p className="mt-1 text-body-sm text-ink-secondary">
+          <p className="mt-1 text-body-sm text-ink">
             Known in {plural(names.length, "language")}
             {regionCount > 1 && ` across ${plural(regionCount, "region")}`}
           </p>
@@ -114,17 +114,17 @@ export function LocalNames({ names }: { names: LocalName[] }) {
                 aria-hidden={!isCurrent}
                 className={`min-w-0 [grid-area:1/1] ${isCurrent ? "animate-fade-up" : "invisible"}`}
               >
-                <p className="text-overline text-ink-secondary uppercase">
+                <p className="text-overline text-ink uppercase">
                   {entry.language} · {languageRegion(entry.language)}
                 </p>
                 <p className="mt-1 font-display text-[clamp(2.5rem,6vw,5rem)] leading-none font-semibold tracking-[-0.03em] break-words text-green">
                   {parts.main}
                 </p>
                 {parts.alternates.length > 0 && (
-                  <p className="mt-2 text-body text-ink-secondary">also {parts.alternates.join(", ")}</p>
+                  <p className="mt-2 text-body text-ink">also {parts.alternates.join(", ")}</p>
                 )}
                 {entry.verified === false ? (
-                  <p className="mt-2.5 inline-flex flex-wrap items-center gap-x-1.5 text-caption font-normal tracking-normal text-ink-secondary">
+                  <p className="mt-2.5 inline-flex flex-wrap items-center gap-x-1.5 text-caption font-normal tracking-normal text-ink">
                     <span className="rounded-full bg-paper/70 px-2 py-0.5 text-[0.6875rem] font-bold tracking-[0.06em] text-ink uppercase">
                       Not yet verified
                     </span>
@@ -134,7 +134,7 @@ export function LocalNames({ names }: { names: LocalName[] }) {
                   </p>
                 ) : (
                   entry.source && (
-                    <p className="mt-2 text-caption font-normal tracking-normal text-ink-secondary">
+                    <p className="mt-2 text-caption font-normal tracking-normal text-ink">
                       <a href="#sources" className="underline underline-offset-2 hover:text-purple">
                         Source {entry.ref}
                       </a>
@@ -163,7 +163,7 @@ export function LocalNames({ names }: { names: LocalName[] }) {
           <div id={listId} hidden={!listOpen} className="mt-3 columns-1 gap-8 sm:columns-2 lg:columns-3">
             {groups.map(({ region, entries }) => (
               <section key={region} aria-label={region} className="mb-3">
-                <h3 className="mb-1 break-after-avoid text-overline text-ink-secondary uppercase">{region}</h3>
+                <h3 className="mb-1 break-after-avoid text-overline text-ink uppercase">{region}</h3>
                 <ul>
                   {entries.map((entry) => {
                     const active = entry.language === current.language;
@@ -177,11 +177,11 @@ export function LocalNames({ names }: { names: LocalName[] }) {
                             active ? "bg-paper" : ""
                           }`}
                         >
-                          <span className="w-24 shrink-0 text-ink-secondary">{entry.language}</span>
+                          <span className="w-24 shrink-0 text-ink">{entry.language}</span>
                           <span className="min-w-0 font-semibold break-words">
                             {entry.name.split("/").map((part) => part.trim()).join(", ")}
                             {entry.verified === false && (
-                              <span className="ml-1.5 font-normal text-ink-secondary">(unverified)</span>
+                              <span className="ml-1.5 font-normal text-ink">(unverified)</span>
                             )}
                           </span>
                         </button>
