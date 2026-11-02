@@ -54,7 +54,6 @@ export function LocalNames({ names }: { names: LocalName[] }) {
   const [listOpen, setListOpen] = useState(false);
   const listId = useId();
   const current = names.find((entry) => entry.language === stored) ?? names[0];
-  const { main, alternates } = splitName(current.name);
   const groups = groupByRegion(names);
   // Arrows step through languages in the list's order (region by region), wrapping round.
   const ordered = groups.flatMap((group) => group.entries);
@@ -101,16 +100,32 @@ export function LocalNames({ names }: { names: LocalName[] }) {
           </div>
         </div>
 
-        <div key={current.language} aria-live="polite" className="min-w-0 animate-fade-up">
-          <p className="text-overline text-ink-secondary uppercase">
-            {current.language} · {languageRegion(current.language)}
-          </p>
-          <p className="mt-1 font-display text-[clamp(2.5rem,6vw,5rem)] leading-none font-semibold tracking-[-0.03em] break-words text-green">
-            {main}
-          </p>
-          {alternates.length > 0 && (
-            <p className="mt-2 text-body text-ink-secondary">also {alternates.join(", ")}</p>
-          )}
+        {/*
+          Every name is laid in the same grid cell and only the current one is visible, so the
+          card is always as tall as this plant's longest name and doesn't jump when switching.
+        */}
+        <div className="grid min-w-0" aria-live="polite">
+          {ordered.map((entry) => {
+            const isCurrent = entry.language === current.language;
+            const parts = splitName(entry.name);
+            return (
+              <div
+                key={entry.language}
+                aria-hidden={!isCurrent}
+                className={`min-w-0 [grid-area:1/1] ${isCurrent ? "animate-fade-up" : "invisible"}`}
+              >
+                <p className="text-overline text-ink-secondary uppercase">
+                  {entry.language} · {languageRegion(entry.language)}
+                </p>
+                <p className="mt-1 font-display text-[clamp(2.5rem,6vw,5rem)] leading-none font-semibold tracking-[-0.03em] break-words text-green">
+                  {parts.main}
+                </p>
+                {parts.alternates.length > 0 && (
+                  <p className="mt-2 text-body text-ink-secondary">also {parts.alternates.join(", ")}</p>
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
 
