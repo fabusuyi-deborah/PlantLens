@@ -5,10 +5,10 @@ import { notFound } from "next/navigation";
 import { ArrowUpRight, PencilLine, ShieldAlert } from "lucide-react";
 import { PhotoCard } from "@/components/home/plant-cards";
 import { CitationProvider } from "@/components/plant-detail/citations";
+import { LocalNames } from "@/components/plant-detail/local-names";
 import {
   CautionList,
   CompoundGrid,
-  SayItIn,
   SourceList,
   UsesList,
 } from "@/components/plant-detail/sections";
@@ -183,8 +183,8 @@ export default async function PlantPage(props: PageProps<"/plants/[id]">) {
       </section>
 
       {names.length > 0 && (
-        <section aria-label="Local names" className="mx-auto max-w-300 px-4 py-6 md:px-8">
-          <SayItIn names={names} />
+        <section aria-label="Local names" id="names" className="mx-auto max-w-300 px-4 py-6 md:px-8">
+          <LocalNames names={names} />
           {site.correctionsFormUrl && (
             <p className="mt-3.5 flex flex-wrap items-center gap-x-2 gap-y-1.5 text-[0.9375rem] text-ink-secondary">
               <PencilLine className="size-4 shrink-0 text-purple" aria-hidden />

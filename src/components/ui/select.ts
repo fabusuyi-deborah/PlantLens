@@ -1,3 +1,3 @@
 /** Pill-shaped native <select> with a custom chevron. */
 export const selectStyles =
-  "min-h-13.5 min-w-0 cursor-pointer appearance-none rounded-full border-[1.5px] border-line bg-paper bg-[url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%230B3D27' stroke-width='2' fill='none'/%3E%3C/svg%3E\")] bg-[position:right_14px_center] bg-no-repeat pr-9.5 pl-4 text-body-sm font-semibold text-ink transition-[border-color,box-shadow] hover:border-[#cdbfa8] focus-visible:border-green focus-visible:shadow-[0_0_0_4px_rgba(14,90,56,0.14)] focus-visible:outline-none";
+  "min-h-13.5 min-w-0 cursor-pointer appearance-none rounded-full border-[1.5px] border-line bg-paper select-chevron pr-9.5 pl-4 text-body-sm font-semibold text-ink transition-[border-color,box-shadow] hover:border-[#cdbfa8] focus-visible:border-green focus-visible:shadow-[0_0_0_4px_rgba(14,90,56,0.14)] focus-visible:outline-none";

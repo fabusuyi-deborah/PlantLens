@@ -7,40 +7,6 @@ import type { ProfileCaution, ProfileCompound, ProfileUse } from "@/lib/plant-pr
 import { CitedText, useOpenCitation } from "./citations";
 import { SeverityPill } from "./severity";
 
-/** Pink panel that shows the plant's name in one language at a time. */
-export function SayItIn({ names }: { names: { language: string; name: string }[] }) {
-  const [index, setIndex] = useState(0);
-  const current = names[index];
-  return (
-    <div className="grid items-center gap-8 rounded-3xl bg-pink p-6 sm:p-9 lg:grid-cols-2">
-      <div>
-        <p className="text-overline text-ink uppercase">Say it in</p>
-        <div role="radiogroup" aria-label="Language" className="mt-3 flex flex-wrap gap-1.5">
-          {names.map((entry, i) => (
-            <button
-              key={entry.language}
-              type="button"
-              role="radio"
-              aria-checked={i === index}
-              onClick={() => setIndex(i)}
-              className="inline-flex min-h-10 items-center rounded-full border-[1.5px] border-ink px-4 text-[0.8125rem] font-bold text-ink transition-colors hover:bg-paper aria-checked:bg-ink aria-checked:text-paper"
-            >
-              {entry.language}
-            </button>
-          ))}
-        </div>
-      </div>
-      <p
-        key={current.language}
-        aria-live="polite"
-        className="animate-fade-up font-display text-[clamp(2.75rem,6vw,5.25rem)] leading-none font-semibold tracking-[-0.03em] break-words text-green"
-      >
-        {current.name}
-      </p>
-    </div>
-  );
-}
-
 const regionTag = (region: string) =>
   region === "Nigeria" ? "bg-pink" : region === "General" ? "bg-yellow" : "bg-lavender";
 
