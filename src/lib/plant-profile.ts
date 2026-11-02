@@ -86,8 +86,9 @@ export function getPlantProfile(plant: Plant) {
     .map((entry) => ({
       language: entry.language,
       name: entry.name,
-      source: entry.source_citation,
-      ref: entry.source_citation ? refOf(entry.source_citation) : undefined,
+      // Unconfirmed names aren't sources, so they don't get a number in the Sources list.
+      source: entry.verified === false ? undefined : entry.source_citation,
+      ref: entry.source_citation && entry.verified !== false ? refOf(entry.source_citation) : undefined,
       verified: entry.verified !== false,
     }));
 

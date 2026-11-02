@@ -15,7 +15,7 @@ export interface LocalName {
   /** Where the name was confirmed. Optional for the original Yoruba, Igbo and Hausa names. */
   source_citation?: string;
   /**
-   * false while the name comes only from a lead such as Wikidata and hasn't been confirmed in a
+   * false while the name comes only from a lead (Wikidata, an online post) and hasn't been confirmed in a
    * published reference yet. The site labels these names "not yet verified".
    */
   verified?: boolean;

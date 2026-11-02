@@ -255,7 +255,7 @@ python fetch_name_candidates.py apply
 
 ### Verifying names
 
-Names taken from Wikidata without a published reference carry `"verified": false` and a Wikidata `source_citation`. The site marks them "not yet verified" on each plant, and the Sources page counts how many are left. To verify one, find it in PROTA4U, Burkill, Kokwaro or SANBI's PlantZAfrica, then:
+Names taken from a lead (Wikidata, an online post) without a published reference carry `"verified": false` and an "Unconfirmed: …" `source_citation`. The site marks them "not yet verified" on each plant, and the Sources page counts how many are left. To verify one, find it in PROTA4U, Burkill, Kokwaro or SANBI's PlantZAfrica, then:
 
 - **Confirmed:** replace `source_citation` with that reference and delete `"verified": false`.
 - **Spelled differently there:** correct `name` too.

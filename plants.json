@@ -17,15 +17,9 @@
         "name": "Daidoya"
       },
       {
-        "language": "Swahili",
-        "name": "Kivumbasi",
-        "source_citation": "Wikidata, Swahili label for Ocimum gratissimum",
-        "verified": false
-      },
-      {
         "language": "Akan (Twi)",
         "name": "Nunum",
-        "source_citation": "Wikidata, Akan (Twi) label for Ocimum gratissimum",
+        "source_citation": "Unconfirmed: Akan (Twi) name for Ocimum gratissimum from Wikidata or online posts, not yet found in a published reference",
         "verified": false
       },
       {
@@ -135,7 +129,7 @@
       {
         "language": "Swahili",
         "name": "Mtukutu",
-        "source_citation": "Wikidata, Swahili label for Vernonia amygdalina",
+        "source_citation": "Unconfirmed: Swahili name for Vernonia amygdalina from Wikidata or online posts, not yet found in a published reference",
         "verified": false
       },
       {
@@ -146,7 +140,7 @@
       {
         "language": "Fula",
         "name": "Kossa fina",
-        "source_citation": "Wikidata, Fula label for Vernonia amygdalina",
+        "source_citation": "Unconfirmed: Fula name for Vernonia amygdalina from Wikidata or online posts, not yet found in a published reference",
         "verified": false
       }
     ],
@@ -413,7 +407,7 @@
       {
         "language": "Fula",
         "name": "Ganyi",
-        "source_citation": "Wikidata, Fula label for Azadirachta indica",
+        "source_citation": "Unconfirmed: Fula name for Azadirachta indica from Wikidata or online posts, not yet found in a published reference",
         "verified": false
       }
     ],
@@ -523,19 +517,19 @@
       {
         "language": "Swahili",
         "name": "Mkola",
-        "source_citation": "Wikidata, Swahili label for Garcinia kola",
+        "source_citation": "Unconfirmed: Swahili name for Garcinia kola from Wikidata or online posts, not yet found in a published reference",
         "verified": false
       },
       {
         "language": "Akan (Twi)",
         "name": "Tweapea",
-        "source_citation": "Wikidata, Akan (Twi) label for Garcinia kola",
+        "source_citation": "Unconfirmed: Akan (Twi) name for Garcinia kola from Wikidata or online posts, not yet found in a published reference",
         "verified": false
       },
       {
         "language": "Fula",
         "name": "Goro-badi",
-        "source_citation": "Wikidata, Fula label for Garcinia kola",
+        "source_citation": "Unconfirmed: Fula name for Garcinia kola from Wikidata or online posts, not yet found in a published reference",
         "verified": false
       }
     ],
@@ -629,7 +623,7 @@
       {
         "language": "Swahili",
         "name": "Mukezu",
-        "source_citation": "Wikidata, Swahili label for Cola nitida",
+        "source_citation": "Unconfirmed: Swahili name for Cola nitida from Wikidata or online posts, not yet found in a published reference",
         "verified": false
       },
       {
@@ -858,7 +852,7 @@
       {
         "language": "Akan (Twi)",
         "name": "Sere-berebe",
-        "source_citation": "Wikidata, Akan (Twi) label for Aloe vera",
+        "source_citation": "Unconfirmed: Akan (Twi) name for Aloe vera from Wikidata or online posts, not yet found in a published reference",
         "verified": false
       }
     ],
@@ -951,13 +945,13 @@
       {
         "language": "Swahili",
         "name": "Choya",
-        "source_citation": "Wikidata, Swahili label for Hibiscus sabdariffa",
+        "source_citation": "Unconfirmed: Swahili name for Hibiscus sabdariffa from Wikidata or online posts, not yet found in a published reference",
         "verified": false
       },
       {
         "language": "Akan (Twi)",
         "name": "Sobolo",
-        "source_citation": "Wikidata, Akan (Twi) label for Hibiscus sabdariffa",
+        "source_citation": "Unconfirmed: Akan (Twi) name for Hibiscus sabdariffa from Wikidata or online posts, not yet found in a published reference",
         "verified": false
       }
     ],
@@ -1348,7 +1342,7 @@
       {
         "language": "Swahili",
         "name": "Mchaichai",
-        "source_citation": "Wikidata, Swahili label for Cymbopogon citratus",
+        "source_citation": "Unconfirmed: Swahili name for Cymbopogon citratus from Wikidata or online posts, not yet found in a published reference",
         "verified": false
       },
       {
@@ -1454,7 +1448,7 @@
       {
         "language": "Akan (Twi)",
         "name": "Aluguntugui",
-        "source_citation": "Wikidata, Akan (Twi) label for Annona muricata",
+        "source_citation": "Unconfirmed: Akan (Twi) name for Annona muricata from Wikidata or online posts, not yet found in a published reference",
         "verified": false
       }
     ],
@@ -1631,7 +1625,7 @@
       {
         "language": "Akan (Twi)",
         "name": "Atia",
-        "source_citation": "Wikidata, Akan (Twi) label for Anacardium occidentale",
+        "source_citation": "Unconfirmed: Akan (Twi) name for Anacardium occidentale from Wikidata or online posts, not yet found in a published reference",
         "verified": false
       }
     ],
@@ -1869,13 +1863,13 @@
       {
         "language": "Swahili",
         "name": "Tikiti chungu",
-        "source_citation": "Wikidata, Swahili label for Momordica charantia",
+        "source_citation": "Unconfirmed: Swahili name for Momordica charantia from Wikidata or online posts, not yet found in a published reference",
         "verified": false
       },
       {
         "language": "Akan (Twi)",
         "name": "Nyanya",
-        "source_citation": "Wikidata, Akan (Twi) label for Momordica charantia",
+        "source_citation": "Unconfirmed: Akan (Twi) name for Momordica charantia from Wikidata or online posts, not yet found in a published reference",
         "verified": false
       }
     ],
@@ -1980,13 +1974,13 @@
       {
         "language": "Akan (Twi)",
         "name": "Nkabe ase",
-        "source_citation": "Wikidata, Akan (Twi) label for Curcuma longa",
+        "source_citation": "Unconfirmed: Akan (Twi) name for Curcuma longa from Wikidata or online posts, not yet found in a published reference",
         "verified": false
       },
       {
         "language": "Fula",
         "name": "Kurkur",
-        "source_citation": "Wikidata, Fula label for Curcuma longa",
+        "source_citation": "Unconfirmed: Fula name for Curcuma longa from Wikidata or online posts, not yet found in a published reference",
         "verified": false
       }
     ],
@@ -2080,7 +2074,7 @@
       {
         "language": "Fula",
         "name": "Kakadufu",
-        "source_citation": "Wikidata, Fula label for Zingiber officinale",
+        "source_citation": "Unconfirmed: Fula name for Zingiber officinale from Wikidata or online posts, not yet found in a published reference",
         "verified": false
       }
     ],

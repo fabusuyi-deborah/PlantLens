@@ -129,11 +129,7 @@ export function LocalNames({ names }: { names: LocalName[] }) {
                       Not yet verified
                     </span>
                     <span>
-                      From Wikidata, still being checked against published references (
-                      <a href="#sources" className="underline underline-offset-2 hover:text-purple">
-                        source {entry.ref}
-                      </a>
-                      ).
+                      Not yet found in a published reference. Know a source? Tell us below.
                     </span>
                   </p>
                 ) : (

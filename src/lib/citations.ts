@@ -4,6 +4,7 @@ import type { Plant } from "@/types/plant";
 export function getPlantCitations(plant: Plant): string[] {
   const items = [...plant.traditional_uses, ...(plant.phytochemicals ?? []), ...plant.cautions];
   const nameCitations = plant.names_local
+    .filter((entry) => entry.verified !== false)
     .map((entry) => entry.source_citation)
     .filter((citation): citation is string => Boolean(citation));
   return [...new Set([...items.map((item) => item.source_citation), ...nameCitations])];
