@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { CategoryPill } from "@/components/ui/category-pill";
-import { roundButtonStyles } from "@/components/ui/button";
+import { roundButtonOnDarkHover, roundButtonStyles } from "@/components/ui/button";
 import { useInterval, usePrefersReducedMotion } from "@/lib/use-motion";
 import type { PlantCategory } from "@/types/plant";
 
@@ -99,7 +99,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
             type="button"
             onClick={() => setIndex((i) => (i - 1 + slides.length) % slides.length)}
             aria-label="Previous featured plant"
-            className={roundButtonStyles}
+            className={`${roundButtonStyles} ${roundButtonOnDarkHover}`}
           >
             <ArrowLeft className="size-4.5" aria-hidden />
           </button>
@@ -115,7 +115,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
               />
             ))}
           </div>
-          <button type="button" onClick={next} aria-label="Next featured plant" className={roundButtonStyles}>
+          <button type="button" onClick={next} aria-label="Next featured plant" className={`${roundButtonStyles} ${roundButtonOnDarkHover}`}>
             <ArrowRight className="size-4.5" aria-hidden />
           </button>
         </div>

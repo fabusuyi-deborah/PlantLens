@@ -2,7 +2,6 @@
 
 import { useId, useState, useSyncExternalStore } from "react";
 import { ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
-import { roundButtonStyles } from "@/components/ui/button";
 import { groupByRegion, languageRegion } from "@/lib/languages";
 import { plural } from "@/lib/plant-text";
 
@@ -63,7 +62,8 @@ export function LocalNames({ names }: { names: LocalName[] }) {
   const step = (by: 1 | -1) => store(ordered[(position + by + ordered.length) % ordered.length].language);
   const regionCount = groups.length;
   const several = ordered.length > 1;
-  const arrow = `${roundButtonStyles} size-12 border-ink/20 bg-paper text-ink hover:border-ink hover:bg-ink hover:text-paper`;
+  const arrow =
+    "inline-flex size-12 shrink-0 items-center justify-center rounded-full border-[1.5px] border-ink/20 bg-paper text-ink transition-colors hover:border-ink hover:bg-ink hover:text-paper";
 
   return (
     <div className="rounded-3xl bg-pink p-5 sm:p-8">
