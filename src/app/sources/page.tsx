@@ -20,7 +20,7 @@ const steps = [
   },
   {
     title: "Cross-check names and range",
-    body: "Yoruba, Igbo and Hausa names and Nigerian uses are checked against NMPPDB. Names in other African languages start from leads such as Wikidata and are marked unverified until confirmed in a regional reference. Where each plant grows comes from Kew's Plants of the World Online.",
+    body: "Yoruba, Igbo and Hausa names and Nigerian uses are checked against NMPPDB. Names in other African languages start from leads such as Wikidata and are only added once confirmed in a published reference. Where each plant grows comes from Kew's Plants of the World Online.",
   },
   {
     title: "Curate by hand",
@@ -95,7 +95,7 @@ export default function SourcesPage() {
           <SourceCard
             title="Local names"
             kicker="NMPPDB, Wikidata and regional plant references"
-            body={`Nigerian names come from NMPPDB. Names in Swahili, Akan (Twi), Fula and other languages start from leads such as Wikidata and are confirmed in references such as PROTA4U, the World Agroforestry Agroforestree Database, Burkill's Useful Plants of West Tropical Africa and the Akan (Twi) Dictionary.${
+            body={`Nigerian names come from NMPPDB. Names in Swahili, Akan (Twi), Fula and other languages start from leads such as Wikidata and are only added once confirmed in references such as PROTA4U, the World Agroforestry Agroforestree Database, Burkill's Useful Plants of West Tropical Africa and the Akan (Twi) Dictionary.${
               unverifiedNames > 0
                 ? ` Until then they're marked "not yet verified" on each plant (${unverifiedNames} of ${nameCount} names).`
                 : ""

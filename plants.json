@@ -17,12 +17,6 @@
         "name": "Daidoya"
       },
       {
-        "language": "Akan (Twi)",
-        "name": "Nunum",
-        "source_citation": "Unconfirmed: Akan (Twi) name for Ocimum gratissimum from Wikidata or online posts, not yet found in a published reference",
-        "verified": false
-      },
-      {
         "language": "Fula",
         "name": "Kunféré",
         "source_citation": "Burkill (1985), The useful plants of west tropical Africa, Vol. 3 (Fula-Pulaar, Senegal), via JSTOR Global Plants"
@@ -127,21 +121,9 @@
         "name": "Etidot"
       },
       {
-        "language": "Swahili",
-        "name": "Mtukutu",
-        "source_citation": "Unconfirmed: Swahili name for Vernonia amygdalina from Wikidata or online posts, not yet found in a published reference",
-        "verified": false
-      },
-      {
         "language": "Akan (Twi)",
         "name": "Awonwono",
         "source_citation": "Infonet-Biovision: Bitter leaf (Twi), citing Appiah et al. (2018)"
-      },
-      {
-        "language": "Fula",
-        "name": "Kossa fina",
-        "source_citation": "Unconfirmed: Fula name for Vernonia amygdalina from Wikidata or online posts, not yet found in a published reference",
-        "verified": false
       }
     ],
     "regions": [
@@ -403,12 +385,6 @@
         "language": "Swahili",
         "name": "Mwarubaini / Mkilifi",
         "source_citation": "Orwa et al. (2009), Agroforestree Database 4.0, World Agroforestry: Azadirachta indica"
-      },
-      {
-        "language": "Fula",
-        "name": "Ganyi",
-        "source_citation": "Unconfirmed: Fula name for Azadirachta indica from Wikidata or online posts, not yet found in a published reference",
-        "verified": false
       }
     ],
     "regions": [
@@ -513,24 +489,6 @@
       {
         "language": "Igala",
         "name": "Ogholigo"
-      },
-      {
-        "language": "Swahili",
-        "name": "Mkola",
-        "source_citation": "Unconfirmed: Swahili name for Garcinia kola from Wikidata or online posts, not yet found in a published reference",
-        "verified": false
-      },
-      {
-        "language": "Akan (Twi)",
-        "name": "Tweapea",
-        "source_citation": "Unconfirmed: Akan (Twi) name for Garcinia kola from Wikidata or online posts, not yet found in a published reference",
-        "verified": false
-      },
-      {
-        "language": "Fula",
-        "name": "Goro-badi",
-        "source_citation": "Unconfirmed: Fula name for Garcinia kola from Wikidata or online posts, not yet found in a published reference",
-        "verified": false
       }
     ],
     "regions": [
@@ -619,12 +577,6 @@
       {
         "language": "Hausa",
         "name": "Goro"
-      },
-      {
-        "language": "Swahili",
-        "name": "Mukezu",
-        "source_citation": "Unconfirmed: Swahili name for Cola nitida from Wikidata or online posts, not yet found in a published reference",
-        "verified": false
       },
       {
         "language": "Akan (Twi)",
@@ -848,12 +800,6 @@
         "language": "Swahili",
         "name": "Mshubiri",
         "source_citation": "Paukwa (Kenyan heritage site): Aloes, \"mshubiri (Swahili)\" for aloes generally"
-      },
-      {
-        "language": "Akan (Twi)",
-        "name": "Sere-berebe",
-        "source_citation": "Unconfirmed: Akan (Twi) name for Aloe vera from Wikidata or online posts, not yet found in a published reference",
-        "verified": false
       }
     ],
     "regions": [
@@ -941,18 +887,6 @@
       {
         "language": "Hausa",
         "name": "Yakuwa / Zobo / Zoborodo"
-      },
-      {
-        "language": "Swahili",
-        "name": "Choya",
-        "source_citation": "Unconfirmed: Swahili name for Hibiscus sabdariffa from Wikidata or online posts, not yet found in a published reference",
-        "verified": false
-      },
-      {
-        "language": "Akan (Twi)",
-        "name": "Sobolo",
-        "source_citation": "Unconfirmed: Akan (Twi) name for Hibiscus sabdariffa from Wikidata or online posts, not yet found in a published reference",
-        "verified": false
       }
     ],
     "regions": [
@@ -1340,12 +1274,6 @@
         "name": "Tsauri"
       },
       {
-        "language": "Swahili",
-        "name": "Mchaichai",
-        "source_citation": "Unconfirmed: Swahili name for Cymbopogon citratus from Wikidata or online posts, not yet found in a published reference",
-        "verified": false
-      },
-      {
         "language": "Akan (Twi)",
         "name": "Ti-ahaban",
         "source_citation": "African Plants, KNUST Department of Pharmacology: Cymbopogon citratus (Fante)"
@@ -1444,12 +1372,6 @@
         "language": "Swahili",
         "name": "Mstafeli",
         "source_citation": "Orwa et al. (2009), Agroforestree Database 4.0, World Agroforestry: Annona muricata"
-      },
-      {
-        "language": "Akan (Twi)",
-        "name": "Aluguntugui",
-        "source_citation": "Unconfirmed: Akan (Twi) name for Annona muricata from Wikidata or online posts, not yet found in a published reference",
-        "verified": false
       }
     ],
     "regions": [
@@ -1621,12 +1543,6 @@
         "language": "Swahili",
         "name": "Mkorosho / Mkanju / Mbibo",
         "source_citation": "Orwa et al. (2009), Agroforestree Database 4.0, World Agroforestry: Anacardium occidentale"
-      },
-      {
-        "language": "Akan (Twi)",
-        "name": "Atia",
-        "source_citation": "Unconfirmed: Akan (Twi) name for Anacardium occidentale from Wikidata or online posts, not yet found in a published reference",
-        "verified": false
       }
     ],
     "regions": [
@@ -1859,18 +1775,6 @@
       {
         "language": "Hausa",
         "name": "Daddasu"
-      },
-      {
-        "language": "Swahili",
-        "name": "Tikiti chungu",
-        "source_citation": "Unconfirmed: Swahili name for Momordica charantia from Wikidata or online posts, not yet found in a published reference",
-        "verified": false
-      },
-      {
-        "language": "Akan (Twi)",
-        "name": "Nyanya",
-        "source_citation": "Unconfirmed: Akan (Twi) name for Momordica charantia from Wikidata or online posts, not yet found in a published reference",
-        "verified": false
       }
     ],
     "regions": [
@@ -1970,18 +1874,6 @@
         "language": "Swahili",
         "name": "Mmanjano",
         "source_citation": "Jansen (2005), PROTA4U (Plant Resources of Tropical Africa): Curcuma longa"
-      },
-      {
-        "language": "Akan (Twi)",
-        "name": "Nkabe ase",
-        "source_citation": "Unconfirmed: Akan (Twi) name for Curcuma longa from Wikidata or online posts, not yet found in a published reference",
-        "verified": false
-      },
-      {
-        "language": "Fula",
-        "name": "Kurkur",
-        "source_citation": "Unconfirmed: Fula name for Curcuma longa from Wikidata or online posts, not yet found in a published reference",
-        "verified": false
       }
     ],
     "regions": [
@@ -2070,12 +1962,6 @@
         "language": "Akan (Twi)",
         "name": "Akekaduro",
         "source_citation": "Akan (Twi) Dictionary, akandictionary.com: Akekaduro (ginger)"
-      },
-      {
-        "language": "Fula",
-        "name": "Kakadufu",
-        "source_citation": "Unconfirmed: Fula name for Zingiber officinale from Wikidata or online posts, not yet found in a published reference",
-        "verified": false
       }
     ],
     "regions": [

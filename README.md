@@ -255,12 +255,11 @@ python fetch_name_candidates.py apply
 
 ### Verifying names
 
-Names taken from a lead (Wikidata, an online post) without a published reference carry `"verified": false` and an "Unconfirmed: …" `source_citation`. The site marks them "not yet verified" on each plant, and the Sources page counts how many are left. To verify one, find it in PROTA4U, Burkill, Kokwaro or SANBI's PlantZAfrica, then:
+Only names confirmed in a published reference go on the site. Wikidata, online posts and word of mouth are leads: look each one up in PROTA4U, the Agroforestree Database, Burkill, Kokwaro, the Akan (Twi) Dictionary or a peer-reviewed study, and put that reference in `source_citation`. If a name can't be confirmed, leave it out.
 
-- **Confirmed:** replace `source_citation` with that reference and delete `"verified": false`.
-- **Spelled differently there:** correct `name` too.
-- **Wrong or not found in a reliable source:** delete the entry.
-- Wikidata files some plants under another botanical name (bitter leaf as *Gymnanthemum amygdalinum*). The script lists plants with no candidates so you can look those up by hand.
+In November 2026, 52 names from Wikidata and online posts were checked this way: 23 were confirmed and kept, and the rest (including all Zulu names) were removed.
+
+The app still supports `"verified": false` on a name, which labels it "not yet verified" on the plant page and leaves it out of the Sources list, in case you ever need to stage a name before it's confirmed.
 
 ## Status
 
