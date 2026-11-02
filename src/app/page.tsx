@@ -189,7 +189,7 @@ export default function Home() {
             <p className="text-[1.0625rem] text-ink-secondary">
               Every use, compound and caution on PlantLens cites its source: NMPPDB (Nigeria&apos;s own
               medicinal plant database), Dr. Duke&apos;s USDA databases, or a peer-reviewed study. Local
-              names are checked against NMPPDB for Nigerian languages and against regional references for the rest.
+              names are checked against NMPPDB for Nigerian languages; names in other languages are marked until they&apos;re confirmed.
             </p>
             <CiteReveal
               claim="Bitter leaf is widely used in Nigeria for managing type 2 diabetes."

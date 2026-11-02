@@ -35,6 +35,8 @@ export interface ProfileName {
   /** Where the name was confirmed, and its number in the Sources list, when recorded. */
   source?: string;
   ref?: number;
+  /** False for names taken from a lead (e.g. Wikidata) and not yet confirmed. */
+  verified: boolean;
 }
 export interface ProfileCaution {
   key: string;
@@ -86,6 +88,7 @@ export function getPlantProfile(plant: Plant) {
       name: entry.name,
       source: entry.source_citation,
       ref: entry.source_citation ? refOf(entry.source_citation) : undefined,
+      verified: entry.verified !== false,
     }));
 
   return { uses, compounds, cautions, names, refs };

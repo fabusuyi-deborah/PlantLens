@@ -5,7 +5,7 @@ import { ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
 import { groupByRegion, languageRegion } from "@/lib/languages";
 import { plural } from "@/lib/plant-text";
 
-type LocalName = { language: string; name: string; source?: string; ref?: number };
+type LocalName = { language: string; name: string; source?: string; ref?: number; verified?: boolean };
 
 // The reader's chosen language, remembered across plants in this browser.
 const STORAGE_KEY = "plantlens:name-language";
@@ -123,13 +123,28 @@ export function LocalNames({ names }: { names: LocalName[] }) {
                 {parts.alternates.length > 0 && (
                   <p className="mt-2 text-body text-ink-secondary">also {parts.alternates.join(", ")}</p>
                 )}
-                {entry.source && (
-                  <p className="mt-2 text-caption font-normal tracking-normal text-ink-secondary">
-                    <a href="#sources" className="underline underline-offset-2 hover:text-purple">
-                      Source {entry.ref}
-                    </a>
-                    : {entry.source}
+                {entry.verified === false ? (
+                  <p className="mt-2.5 inline-flex flex-wrap items-center gap-x-1.5 text-caption font-normal tracking-normal text-ink-secondary">
+                    <span className="rounded-full bg-paper/70 px-2 py-0.5 text-[0.6875rem] font-bold tracking-[0.06em] text-ink uppercase">
+                      Not yet verified
+                    </span>
+                    <span>
+                      From Wikidata, still being checked against published references (
+                      <a href="#sources" className="underline underline-offset-2 hover:text-purple">
+                        source {entry.ref}
+                      </a>
+                      ).
+                    </span>
                   </p>
+                ) : (
+                  entry.source && (
+                    <p className="mt-2 text-caption font-normal tracking-normal text-ink-secondary">
+                      <a href="#sources" className="underline underline-offset-2 hover:text-purple">
+                        Source {entry.ref}
+                      </a>
+                      : {entry.source}
+                    </p>
+                  )
                 )}
               </div>
             );
@@ -169,6 +184,9 @@ export function LocalNames({ names }: { names: LocalName[] }) {
                           <span className="w-24 shrink-0 text-ink-secondary">{entry.language}</span>
                           <span className="min-w-0 font-semibold break-words">
                             {entry.name.split("/").map((part) => part.trim()).join(", ")}
+                            {entry.verified === false && (
+                              <span className="ml-1.5 font-normal text-ink-secondary">(unverified)</span>
+                            )}
                           </span>
                         </button>
                       </li>

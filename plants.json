@@ -18,19 +18,27 @@
       },
       {
         "language": "Swahili",
-        "name": "Kivumbasi"
+        "name": "Kivumbasi",
+        "source_citation": "Wikidata, Swahili label for Ocimum gratissimum",
+        "verified": false
       },
       {
         "language": "Akan (Twi)",
-        "name": "Nunum"
+        "name": "Nunum",
+        "source_citation": "Wikidata, Akan (Twi) label for Ocimum gratissimum",
+        "verified": false
       },
       {
         "language": "Fula",
-        "name": "Kunfere"
+        "name": "Kunfere",
+        "source_citation": "Wikidata, Fula label for Ocimum gratissimum",
+        "verified": false
       },
       {
         "language": "Zulu",
-        "name": "Umbijazane"
+        "name": "Umbijazane",
+        "source_citation": "Wikidata, Zulu label for Ocimum gratissimum",
+        "verified": false
       }
     ],
     "regions": [
@@ -133,15 +141,21 @@
       },
       {
         "language": "Swahili",
-        "name": "Mtukutu"
+        "name": "Mtukutu",
+        "source_citation": "Wikidata, Swahili label for Vernonia amygdalina",
+        "verified": false
       },
       {
         "language": "Akan (Twi)",
-        "name": "Awonwono"
+        "name": "Awonwono",
+        "source_citation": "Wikidata, Akan (Twi) label for Vernonia amygdalina",
+        "verified": false
       },
       {
         "language": "Fula",
-        "name": "Kossa fina"
+        "name": "Kossa fina",
+        "source_citation": "Wikidata, Fula label for Vernonia amygdalina",
+        "verified": false
       }
     ],
     "regions": [
@@ -296,7 +310,9 @@
       },
       {
         "language": "Swahili",
-        "name": "Mlonge"
+        "name": "Mlonge",
+        "source_citation": "Wikidata, Swahili label for Moringa oleifera",
+        "verified": false
       }
     ],
     "regions": [
@@ -400,11 +416,15 @@
       },
       {
         "language": "Swahili",
-        "name": "Mwarobaini"
+        "name": "Mwarobaini",
+        "source_citation": "Wikidata, Swahili label for Azadirachta indica",
+        "verified": false
       },
       {
         "language": "Fula",
-        "name": "Ganyi"
+        "name": "Ganyi",
+        "source_citation": "Wikidata, Fula label for Azadirachta indica",
+        "verified": false
       }
     ],
     "regions": [
@@ -512,15 +532,21 @@
       },
       {
         "language": "Swahili",
-        "name": "Mkola"
+        "name": "Mkola",
+        "source_citation": "Wikidata, Swahili label for Garcinia kola",
+        "verified": false
       },
       {
         "language": "Akan (Twi)",
-        "name": "Tweapea"
+        "name": "Tweapea",
+        "source_citation": "Wikidata, Akan (Twi) label for Garcinia kola",
+        "verified": false
       },
       {
         "language": "Fula",
-        "name": "Goro-badi"
+        "name": "Goro-badi",
+        "source_citation": "Wikidata, Fula label for Garcinia kola",
+        "verified": false
       }
     ],
     "regions": [
@@ -612,19 +638,27 @@
       },
       {
         "language": "Swahili",
-        "name": "Mukezu"
+        "name": "Mukezu",
+        "source_citation": "Wikidata, Swahili label for Cola nitida",
+        "verified": false
       },
       {
         "language": "Akan (Twi)",
-        "name": "Bese"
+        "name": "Bese",
+        "source_citation": "Wikidata, Akan (Twi) label for Cola nitida",
+        "verified": false
       },
       {
         "language": "Fula",
-        "name": "Goro"
+        "name": "Goro",
+        "source_citation": "Wikidata, Fula label for Cola nitida",
+        "verified": false
       },
       {
         "language": "Zulu",
-        "name": "Ikola"
+        "name": "Ikola",
+        "source_citation": "Wikidata, Zulu label for Cola nitida",
+        "verified": false
       }
     ],
     "regions": [
@@ -709,7 +743,9 @@
       },
       {
         "language": "Akan (Twi)",
-        "name": "Soro wisa"
+        "name": "Soro wisa",
+        "source_citation": "Wikidata, Akan (Twi) label for Piper guineense",
+        "verified": false
       }
     ],
     "regions": [
@@ -835,11 +871,15 @@
       },
       {
         "language": "Swahili",
-        "name": "Mshubiri"
+        "name": "Mshubiri",
+        "source_citation": "Wikidata, Swahili label for Aloe vera",
+        "verified": false
       },
       {
         "language": "Akan (Twi)",
-        "name": "Sere-berebe"
+        "name": "Sere-berebe",
+        "source_citation": "Wikidata, Akan (Twi) label for Aloe vera",
+        "verified": false
       }
     ],
     "regions": [
@@ -930,11 +970,15 @@
       },
       {
         "language": "Swahili",
-        "name": "Choya"
+        "name": "Choya",
+        "source_citation": "Wikidata, Swahili label for Hibiscus sabdariffa",
+        "verified": false
       },
       {
         "language": "Akan (Twi)",
-        "name": "Sobolo"
+        "name": "Sobolo",
+        "source_citation": "Wikidata, Akan (Twi) label for Hibiscus sabdariffa",
+        "verified": false
       }
     ],
     "regions": [
@@ -1026,15 +1070,21 @@
       },
       {
         "language": "Swahili",
-        "name": "Papai"
+        "name": "Papai",
+        "source_citation": "Wikidata, Swahili label for Carica papaya",
+        "verified": false
       },
       {
         "language": "Akan (Twi)",
-        "name": "Bofre"
+        "name": "Bofre",
+        "source_citation": "Wikidata, Akan (Twi) label for Carica papaya",
+        "verified": false
       },
       {
         "language": "Zulu",
-        "name": "Uphopho"
+        "name": "Uphopho",
+        "source_citation": "Wikidata, Zulu label for Carica papaya",
+        "verified": false
       }
     ],
     "regions": [
@@ -1130,11 +1180,15 @@
       },
       {
         "language": "Swahili",
-        "name": "Pera"
+        "name": "Pera",
+        "source_citation": "Wikidata, Swahili label for Psidium guajava",
+        "verified": false
       },
       {
         "language": "Akan (Twi)",
-        "name": "Oguaa"
+        "name": "Oguaa",
+        "source_citation": "Wikidata, Akan (Twi) label for Psidium guajava",
+        "verified": false
       }
     ],
     "regions": [
@@ -1237,15 +1291,21 @@
       },
       {
         "language": "Swahili",
-        "name": "Embe"
+        "name": "Embe",
+        "source_citation": "Wikidata, Swahili label for Mangifera indica",
+        "verified": false
       },
       {
         "language": "Akan (Twi)",
-        "name": "Amango"
+        "name": "Amango",
+        "source_citation": "Wikidata, Akan (Twi) label for Mangifera indica",
+        "verified": false
       },
       {
         "language": "Zulu",
-        "name": "Umango"
+        "name": "Umango",
+        "source_citation": "Wikidata, Zulu label for Mangifera indica",
+        "verified": false
       }
     ],
     "regions": [
@@ -1325,15 +1385,21 @@
       },
       {
         "language": "Swahili",
-        "name": "Mchaichai"
+        "name": "Mchaichai",
+        "source_citation": "Wikidata, Swahili label for Cymbopogon citratus",
+        "verified": false
       },
       {
         "language": "Akan (Twi)",
-        "name": "Ti-ahaban"
+        "name": "Ti-ahaban",
+        "source_citation": "Wikidata, Akan (Twi) label for Cymbopogon citratus",
+        "verified": false
       },
       {
         "language": "Zulu",
-        "name": "Isiqunga"
+        "name": "Isiqunga",
+        "source_citation": "Wikidata, Zulu label for Cymbopogon citratus",
+        "verified": false
       }
     ],
     "regions": [
@@ -1427,15 +1493,21 @@
       },
       {
         "language": "Swahili",
-        "name": "Stafeli"
+        "name": "Stafeli",
+        "source_citation": "Wikidata, Swahili label for Annona muricata",
+        "verified": false
       },
       {
         "language": "Akan (Twi)",
-        "name": "Aluguntugui"
+        "name": "Aluguntugui",
+        "source_citation": "Wikidata, Akan (Twi) label for Annona muricata",
+        "verified": false
       },
       {
         "language": "Zulu",
-        "name": "Kalipefu"
+        "name": "Kalipefu",
+        "source_citation": "Wikidata, Zulu label for Annona muricata",
+        "verified": false
       }
     ],
     "regions": [
@@ -1518,11 +1590,15 @@
       },
       {
         "language": "Swahili",
-        "name": "Ngogwe"
+        "name": "Ngogwe",
+        "source_citation": "Wikidata, Swahili label for Solanum aethiopicum",
+        "verified": false
       },
       {
         "language": "Akan (Twi)",
-        "name": "Nyaadewa"
+        "name": "Nyaadewa",
+        "source_citation": "Wikidata, Akan (Twi) label for Solanum aethiopicum",
+        "verified": false
       }
     ],
     "regions": [
@@ -1603,11 +1679,15 @@
       },
       {
         "language": "Swahili",
-        "name": "Mkorosho"
+        "name": "Mkorosho",
+        "source_citation": "Wikidata, Swahili label for Anacardium occidentale",
+        "verified": false
       },
       {
         "language": "Akan (Twi)",
-        "name": "Atia"
+        "name": "Atia",
+        "source_citation": "Wikidata, Akan (Twi) label for Anacardium occidentale",
+        "verified": false
       }
     ],
     "regions": [
@@ -1725,7 +1805,9 @@
       },
       {
         "language": "Akan (Twi)",
-        "name": "Krobonko"
+        "name": "Krobonko",
+        "source_citation": "Wikidata, Akan (Twi) label for Telfairia occidentalis",
+        "verified": false
       }
     ],
     "regions": [
@@ -1842,15 +1924,21 @@
       },
       {
         "language": "Swahili",
-        "name": "Tikiti chungu"
+        "name": "Tikiti chungu",
+        "source_citation": "Wikidata, Swahili label for Momordica charantia",
+        "verified": false
       },
       {
         "language": "Akan (Twi)",
-        "name": "Nyanya"
+        "name": "Nyanya",
+        "source_citation": "Wikidata, Akan (Twi) label for Momordica charantia",
+        "verified": false
       },
       {
         "language": "Zulu",
-        "name": "Intshungu"
+        "name": "Intshungu",
+        "source_citation": "Wikidata, Zulu label for Momordica charantia",
+        "verified": false
       }
     ],
     "regions": [
@@ -1948,19 +2036,27 @@
       },
       {
         "language": "Swahili",
-        "name": "Manjano"
+        "name": "Manjano",
+        "source_citation": "Wikidata, Swahili label for Curcuma longa",
+        "verified": false
       },
       {
         "language": "Akan (Twi)",
-        "name": "Nkabe ase"
+        "name": "Nkabe ase",
+        "source_citation": "Wikidata, Akan (Twi) label for Curcuma longa",
+        "verified": false
       },
       {
         "language": "Fula",
-        "name": "Kurkur"
+        "name": "Kurkur",
+        "source_citation": "Wikidata, Fula label for Curcuma longa",
+        "verified": false
       },
       {
         "language": "Zulu",
-        "name": "I-turmeric"
+        "name": "I-turmeric",
+        "source_citation": "Wikidata, Zulu label for Curcuma longa",
+        "verified": false
       }
     ],
     "regions": [
@@ -2042,19 +2138,27 @@
       },
       {
         "language": "Swahili",
-        "name": "Tangawizi"
+        "name": "Tangawizi",
+        "source_citation": "Wikidata, Swahili label for Zingiber officinale",
+        "verified": false
       },
       {
         "language": "Akan (Twi)",
-        "name": "Akekaduro"
+        "name": "Akekaduro",
+        "source_citation": "Wikidata, Akan (Twi) label for Zingiber officinale",
+        "verified": false
       },
       {
         "language": "Fula",
-        "name": "Kakadufu"
+        "name": "Kakadufu",
+        "source_citation": "Wikidata, Fula label for Zingiber officinale",
+        "verified": false
       },
       {
         "language": "Zulu",
-        "name": "Ujinja"
+        "name": "Ujinja",
+        "source_citation": "Wikidata, Zulu label for Zingiber officinale",
+        "verified": false
       }
     ],
     "regions": [

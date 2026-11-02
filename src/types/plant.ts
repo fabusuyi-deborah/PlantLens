@@ -14,6 +14,11 @@ export interface LocalName {
   name: string;
   /** Where the name was confirmed. Optional for the original Yoruba, Igbo and Hausa names. */
   source_citation?: string;
+  /**
+   * false while the name comes only from a lead such as Wikidata and hasn't been confirmed in a
+   * published reference yet. The site labels these names "not yet verified".
+   */
+  verified?: boolean;
 }
 
 /** Parts of Africa where a plant grows wild or is commonly cultivated. */
