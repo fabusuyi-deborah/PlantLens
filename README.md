@@ -93,7 +93,7 @@ Each item in the array looks like this. Fields marked *optional* can be left out
     { "language": "Igbo", "name": "Nchanwu" },
     { "language": "Hausa", "name": "Daidoya" },
     { "language": "Swahili", "name": "…", "source_citation": "Kokwaro (2009)…" }, // optional citation
-    { "language": "Zulu", "name": "…", "source_citation": "Wikidata, …", "verified": false } // not yet confirmed
+    { "language": "Fula", "name": "…", "source_citation": "Wikidata, …", "verified": false } // not yet confirmed
   ],
   "regions": ["west", "central", "east", "southern"], // see "Regions" below
   "regions_source": {                         // optional: the plant's POWO page
@@ -248,7 +248,8 @@ python fetch_name_candidates.py candidates
 python fetch_name_candidates.py apply
 ```
 
-- Wikidata is a lead, not a source. Confirm each name in PROTA4U, Kokwaro's *Medicinal Plants of East Africa*, Burkill's *Useful Plants of West Tropical Africa* or SANBI's PlantZAfrica, and cite that.
+- Wikidata is a lead, not a source. Confirm each name in PROTA4U (read on [Pl@ntUse](https://plantuse.plantnet.org)), the [Agroforestree Database](https://apps.worldagroforestry.org/treedb/) species sheets, Burkill's *Useful Plants of West Tropical Africa*, Kokwaro's *Medicinal Plants of East Africa*, the [Akan (Twi) Dictionary](https://www.akandictionary.com) or, for native South African plants, Koopman's *Zulu Plant Names* and SANBI's PlantZAfrica, and cite that.
+- Zulu names were removed in November 2026: the ones Wikidata gave for these introduced crops couldn't be confirmed in any Zulu reference. Add them back only with a citation.
 - `apply` refuses kept rows with no `source_citation`, and skips names a plant already has, so it's safe to run again.
 - Found a name in a book that Wikidata doesn't have? Add a row yourself with `plant_id`, `language`, `name`, `source_citation` and `keep=y`.
 

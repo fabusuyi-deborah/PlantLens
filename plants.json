@@ -32,12 +32,6 @@
         "language": "Fula",
         "name": "Kunféré",
         "source_citation": "Burkill (1985), The useful plants of west tropical Africa, Vol. 3 (Fula-Pulaar, Senegal), via JSTOR Global Plants"
-      },
-      {
-        "language": "Zulu",
-        "name": "Umbijazane",
-        "source_citation": "Wikidata, Zulu label for Ocimum gratissimum",
-        "verified": false
       }
     ],
     "regions": [
@@ -648,12 +642,6 @@
         "language": "Fula",
         "name": "Goro",
         "source_citation": "Orwa et al. (2009), Agroforestree Database 4.0, World Agroforestry: Cola nitida"
-      },
-      {
-        "language": "Zulu",
-        "name": "Ikola",
-        "source_citation": "Wikidata, Zulu label for Cola nitida",
-        "verified": false
       }
     ],
     "regions": [
@@ -1071,12 +1059,6 @@
         "language": "Akan (Twi)",
         "name": "Borofere",
         "source_citation": "Akan (Twi) Dictionary, akandictionary.com: Borofere (pawpaw)"
-      },
-      {
-        "language": "Zulu",
-        "name": "Uphopho",
-        "source_citation": "Wikidata, Zulu label for Carica papaya",
-        "verified": false
       }
     ],
     "regions": [
@@ -1289,12 +1271,6 @@
         "name": "Amango",
         "source_citation": "Wikidata, Akan (Twi) label for Mangifera indica",
         "verified": false
-      },
-      {
-        "language": "Zulu",
-        "name": "Umango",
-        "source_citation": "Wikidata, Zulu label for Mangifera indica",
-        "verified": false
       }
     ],
     "regions": [
@@ -1382,12 +1358,6 @@
         "language": "Akan (Twi)",
         "name": "Ti-ahaban",
         "source_citation": "Wikidata, Akan (Twi) label for Cymbopogon citratus",
-        "verified": false
-      },
-      {
-        "language": "Zulu",
-        "name": "Isiqunga",
-        "source_citation": "Wikidata, Zulu label for Cymbopogon citratus",
         "verified": false
       }
     ],
@@ -1489,12 +1459,6 @@
         "language": "Akan (Twi)",
         "name": "Aluguntugui",
         "source_citation": "Wikidata, Akan (Twi) label for Annona muricata",
-        "verified": false
-      },
-      {
-        "language": "Zulu",
-        "name": "Kalipefu",
-        "source_citation": "Wikidata, Zulu label for Annona muricata",
         "verified": false
       }
     ],
@@ -1918,12 +1882,6 @@
         "name": "Nyanya",
         "source_citation": "Wikidata, Akan (Twi) label for Momordica charantia",
         "verified": false
-      },
-      {
-        "language": "Zulu",
-        "name": "Intshungu",
-        "source_citation": "Wikidata, Zulu label for Momordica charantia",
-        "verified": false
       }
     ],
     "regions": [
@@ -2035,12 +1993,6 @@
         "name": "Kurkur",
         "source_citation": "Wikidata, Fula label for Curcuma longa",
         "verified": false
-      },
-      {
-        "language": "Zulu",
-        "name": "I-turmeric",
-        "source_citation": "Wikidata, Zulu label for Curcuma longa",
-        "verified": false
       }
     ],
     "regions": [
@@ -2135,12 +2087,6 @@
         "language": "Fula",
         "name": "Kakadufu",
         "source_citation": "Wikidata, Fula label for Zingiber officinale",
-        "verified": false
-      },
-      {
-        "language": "Zulu",
-        "name": "Ujinja",
-        "source_citation": "Wikidata, Zulu label for Zingiber officinale",
         "verified": false
       }
     ],

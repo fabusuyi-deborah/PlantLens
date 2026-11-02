@@ -95,7 +95,7 @@ export default function SourcesPage() {
           <SourceCard
             title="Local names"
             kicker="NMPPDB, Wikidata and regional plant references"
-            body={`Nigerian names come from NMPPDB. Names in Swahili, Akan, Fula, Zulu and other languages start from Wikidata and are being confirmed in references such as PROTA4U, Burkill's Useful Plants of West Tropical Africa, Kokwaro's Medicinal Plants of East Africa and SANBI's PlantZAfrica.${
+            body={`Nigerian names come from NMPPDB. Names in Swahili, Akan (Twi), Fula and other languages start from Wikidata and are confirmed in references such as PROTA4U, the World Agroforestry Agroforestree Database, Burkill's Useful Plants of West Tropical Africa and the Akan (Twi) Dictionary.${
               unverifiedNames > 0
                 ? ` Until then they're marked "not yet verified" on each plant (${unverifiedNames} of ${nameCount} names).`
                 : ""
