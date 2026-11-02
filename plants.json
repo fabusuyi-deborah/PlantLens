@@ -17,20 +17,9 @@
         "name": "Daidoya"
       },
       {
-        "language": "Swahili",
-        "name": "Kivumbasi"
-      },
-      {
-        "language": "Akan (Twi)",
-        "name": "Nunum"
-      },
-      {
         "language": "Fula",
-        "name": "Kunfere"
-      },
-      {
-        "language": "Zulu",
-        "name": "Umbijazane"
+        "name": "Kunféré",
+        "source_citation": "Burkill (1985), The useful plants of west tropical Africa, Vol. 3 (Fula-Pulaar, Senegal), via JSTOR Global Plants"
       }
     ],
     "regions": [
@@ -132,16 +121,9 @@
         "name": "Etidot"
       },
       {
-        "language": "Swahili",
-        "name": "Mtukutu"
-      },
-      {
         "language": "Akan (Twi)",
-        "name": "Awonwono"
-      },
-      {
-        "language": "Fula",
-        "name": "Kossa fina"
+        "name": "Awonwono",
+        "source_citation": "Infonet-Biovision: Bitter leaf (Twi), citing Appiah et al. (2018)"
       }
     ],
     "regions": [
@@ -296,7 +278,8 @@
       },
       {
         "language": "Swahili",
-        "name": "Mlonge"
+        "name": "Mlonge / Mronge / Mzunze",
+        "source_citation": "Bosch (2004), PROTA4U (Plant Resources of Tropical Africa): Moringa oleifera"
       }
     ],
     "regions": [
@@ -400,11 +383,8 @@
       },
       {
         "language": "Swahili",
-        "name": "Mwarobaini"
-      },
-      {
-        "language": "Fula",
-        "name": "Ganyi"
+        "name": "Mwarubaini / Mkilifi",
+        "source_citation": "Orwa et al. (2009), Agroforestree Database 4.0, World Agroforestry: Azadirachta indica"
       }
     ],
     "regions": [
@@ -509,18 +489,6 @@
       {
         "language": "Igala",
         "name": "Ogholigo"
-      },
-      {
-        "language": "Swahili",
-        "name": "Mkola"
-      },
-      {
-        "language": "Akan (Twi)",
-        "name": "Tweapea"
-      },
-      {
-        "language": "Fula",
-        "name": "Goro-badi"
       }
     ],
     "regions": [
@@ -611,20 +579,14 @@
         "name": "Goro"
       },
       {
-        "language": "Swahili",
-        "name": "Mukezu"
-      },
-      {
         "language": "Akan (Twi)",
-        "name": "Bese"
+        "name": "Bese",
+        "source_citation": "Akan (Twi) Dictionary, akandictionary.com: Bese (kola nut)"
       },
       {
         "language": "Fula",
-        "name": "Goro"
-      },
-      {
-        "language": "Zulu",
-        "name": "Ikola"
+        "name": "Goro",
+        "source_citation": "Orwa et al. (2009), Agroforestree Database 4.0, World Agroforestry: Cola nitida"
       }
     ],
     "regions": [
@@ -709,7 +671,8 @@
       },
       {
         "language": "Akan (Twi)",
-        "name": "Soro wisa"
+        "name": "Esoro wisa",
+        "source_citation": "Akan (Twi) Dictionary, akandictionary.com: Esoro wisa (Guinea cubeb, Piper guineense)"
       }
     ],
     "regions": [
@@ -835,11 +798,8 @@
       },
       {
         "language": "Swahili",
-        "name": "Mshubiri"
-      },
-      {
-        "language": "Akan (Twi)",
-        "name": "Sere-berebe"
+        "name": "Mshubiri",
+        "source_citation": "Paukwa (Kenyan heritage site): Aloes, \"mshubiri (Swahili)\" for aloes generally"
       }
     ],
     "regions": [
@@ -927,14 +887,6 @@
       {
         "language": "Hausa",
         "name": "Yakuwa / Zobo / Zoborodo"
-      },
-      {
-        "language": "Swahili",
-        "name": "Choya"
-      },
-      {
-        "language": "Akan (Twi)",
-        "name": "Sobolo"
       }
     ],
     "regions": [
@@ -1026,15 +978,13 @@
       },
       {
         "language": "Swahili",
-        "name": "Papai"
+        "name": "Mpapai",
+        "source_citation": "Orwa et al. (2009), Agroforestree Database 4.0, World Agroforestry: Carica papaya"
       },
       {
         "language": "Akan (Twi)",
-        "name": "Bofre"
-      },
-      {
-        "language": "Zulu",
-        "name": "Uphopho"
+        "name": "Borofere",
+        "source_citation": "Akan (Twi) Dictionary, akandictionary.com: Borofere (pawpaw)"
       }
     ],
     "regions": [
@@ -1130,11 +1080,13 @@
       },
       {
         "language": "Swahili",
-        "name": "Pera"
+        "name": "Mpera",
+        "source_citation": "Orwa et al. (2009), Agroforestree Database 4.0, World Agroforestry: Psidium guajava"
       },
       {
         "language": "Akan (Twi)",
-        "name": "Oguaa"
+        "name": "Oguaa",
+        "source_citation": "Akan (Twi) Dictionary, akandictionary.com: Oguaa (guava)"
       }
     ],
     "regions": [
@@ -1237,15 +1189,13 @@
       },
       {
         "language": "Swahili",
-        "name": "Embe"
+        "name": "Mwembe / Muembe",
+        "source_citation": "Orwa et al. (2009), Agroforestree Database 4.0, World Agroforestry: Mangifera indica"
       },
       {
         "language": "Akan (Twi)",
-        "name": "Amango"
-      },
-      {
-        "language": "Zulu",
-        "name": "Umango"
+        "name": "Amango",
+        "source_citation": "KNUST Tree Trail, Kwame Nkrumah University of Science and Technology: Mangifera indica (Twi)"
       }
     ],
     "regions": [
@@ -1324,16 +1274,9 @@
         "name": "Tsauri"
       },
       {
-        "language": "Swahili",
-        "name": "Mchaichai"
-      },
-      {
         "language": "Akan (Twi)",
-        "name": "Ti-ahaban"
-      },
-      {
-        "language": "Zulu",
-        "name": "Isiqunga"
+        "name": "Ti-ahaban",
+        "source_citation": "African Plants, KNUST Department of Pharmacology: Cymbopogon citratus (Fante)"
       }
     ],
     "regions": [
@@ -1427,15 +1370,8 @@
       },
       {
         "language": "Swahili",
-        "name": "Stafeli"
-      },
-      {
-        "language": "Akan (Twi)",
-        "name": "Aluguntugui"
-      },
-      {
-        "language": "Zulu",
-        "name": "Kalipefu"
+        "name": "Mstafeli",
+        "source_citation": "Orwa et al. (2009), Agroforestree Database 4.0, World Agroforestry: Annona muricata"
       }
     ],
     "regions": [
@@ -1518,11 +1454,13 @@
       },
       {
         "language": "Swahili",
-        "name": "Ngogwe"
+        "name": "Ngogwe / Nyanya chungu",
+        "source_citation": "Lester & Seck (2004), PROTA4U (Plant Resources of Tropical Africa): Solanum aethiopicum"
       },
       {
         "language": "Akan (Twi)",
-        "name": "Nyaadewa"
+        "name": "Nyaadewa",
+        "source_citation": "Akan (Twi) Dictionary, akandictionary.com: Nyaadewa (garden eggs)"
       }
     ],
     "regions": [
@@ -1603,11 +1541,8 @@
       },
       {
         "language": "Swahili",
-        "name": "Mkorosho"
-      },
-      {
-        "language": "Akan (Twi)",
-        "name": "Atia"
+        "name": "Mkorosho / Mkanju / Mbibo",
+        "source_citation": "Orwa et al. (2009), Agroforestree Database 4.0, World Agroforestry: Anacardium occidentale"
       }
     ],
     "regions": [
@@ -1725,7 +1660,8 @@
       },
       {
         "language": "Akan (Twi)",
-        "name": "Krobonko"
+        "name": "Krobonko",
+        "source_citation": "Ali, Dandago & Ali (2024), Food Applications of Telfairia occidentalis, in Phytochemicals in Agriculture and Food, IntechOpen (Ghana)"
       }
     ],
     "regions": [
@@ -1839,18 +1775,6 @@
       {
         "language": "Hausa",
         "name": "Daddasu"
-      },
-      {
-        "language": "Swahili",
-        "name": "Tikiti chungu"
-      },
-      {
-        "language": "Akan (Twi)",
-        "name": "Nyanya"
-      },
-      {
-        "language": "Zulu",
-        "name": "Intshungu"
       }
     ],
     "regions": [
@@ -1948,19 +1872,8 @@
       },
       {
         "language": "Swahili",
-        "name": "Manjano"
-      },
-      {
-        "language": "Akan (Twi)",
-        "name": "Nkabe ase"
-      },
-      {
-        "language": "Fula",
-        "name": "Kurkur"
-      },
-      {
-        "language": "Zulu",
-        "name": "I-turmeric"
+        "name": "Mmanjano",
+        "source_citation": "Jansen (2005), PROTA4U (Plant Resources of Tropical Africa): Curcuma longa"
       }
     ],
     "regions": [
@@ -2042,19 +1955,13 @@
       },
       {
         "language": "Swahili",
-        "name": "Tangawizi"
+        "name": "Tangawizi",
+        "source_citation": "Brook (2022), \"Which Arabic Dialect Are Swahili Words From?\", Studia Orientalia Electronica 10(1), p. 8"
       },
       {
         "language": "Akan (Twi)",
-        "name": "Akekaduro"
-      },
-      {
-        "language": "Fula",
-        "name": "Kakadufu"
-      },
-      {
-        "language": "Zulu",
-        "name": "Ujinja"
+        "name": "Akekaduro",
+        "source_citation": "Akan (Twi) Dictionary, akandictionary.com: Akekaduro (ginger)"
       }
     ],
     "regions": [

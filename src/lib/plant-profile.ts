@@ -29,6 +29,15 @@ export interface ProfileCompound {
   text: string;
   ref: number;
 }
+export interface ProfileName {
+  language: string;
+  name: string;
+  /** Where the name was confirmed, and its number in the Sources list, when recorded. */
+  source?: string;
+  ref?: number;
+  /** False for names taken from a lead (e.g. Wikidata) and not yet confirmed. */
+  verified: boolean;
+}
 export interface ProfileCaution {
   key: string;
   severity: CautionSeverity;
@@ -38,7 +47,7 @@ export interface ProfileCaution {
 
 /**
  * Everything the plant page shows, with each citation numbered in order of first appearance
- * (uses, then compounds, then cautions) so the numbers match the Sources list.
+ * (uses, then compounds, then cautions, then local names) so the numbers match the Sources list.
  */
 export function getPlantProfile(plant: Plant) {
   const refs: string[] = [];
@@ -71,7 +80,17 @@ export function getPlantProfile(plant: Plant) {
     }))
     .sort((a, b) => severityOrder[a.severity] - severityOrder[b.severity]);
 
-  const names = plant.names_local.filter((entry) => entry.name);
+  // Name citations come last so the uses, compounds and cautions keep their numbers.
+  const names: ProfileName[] = plant.names_local
+    .filter((entry) => entry.name)
+    .map((entry) => ({
+      language: entry.language,
+      name: entry.name,
+      // Unconfirmed names aren't sources, so they don't get a number in the Sources list.
+      source: entry.verified === false ? undefined : entry.source_citation,
+      ref: entry.source_citation && entry.verified !== false ? refOf(entry.source_citation) : undefined,
+      verified: entry.verified !== false,
+    }));
 
   return { uses, compounds, cautions, names, refs };
 }
